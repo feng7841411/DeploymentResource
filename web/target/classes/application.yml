@@ -1,0 +1,106 @@
+# Project 配置文件
+spring:
+  # 应用名称
+  application:
+    name: web
+  # 嵌入式数据库
+  h2:
+    console:
+      settings:
+        web-allow-others: true
+        trace: true
+      path: /h2-console
+      enabled: true
+  # JPA 设置; dal-auto如果关了，就不会根据entity新建表了
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    generate-ddl: false
+    open-in-view: false
+  # 数据源设置
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:file:./web/src/main/resources/H2DataBase/h2db
+    username: san
+    password:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      filters: config,stat
+      connection-properties: config.decrypt=true;config.decrypt.key=MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALUltopkm7hVfmaxK5jkD/o0H6ELck0OtlUCABHvpgoHpWN4HsShQPAg3G49p/abo4e/T4ztIYNjRP5gEke+UTkCAwEAAQ==
+      db-type: com.alibaba.druid.pool.DruidDataSource
+      # 初始化大小，最小，最大
+      initial-size: 5
+      min-idle: 5
+      max-active: 20
+      # 配置获取连接等待超时时间
+      max-wait: 60000
+      # 配置间隔多久进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+      time-between-eviction-runs-millis: 60000
+      # 配置一个连接在池中最小生存的时间，单位是毫秒
+      min-evictable-idle-time-millis: 300000
+      # 用来检测连接是否有效的sql，要求是一个查询语句
+      validation-query: SELECT 1 FROM DUAL
+      # 建议配置为true，不影响性能，并且保证安全性。申请连接的时候检测，如果空闲时间大于timeBetweenEvictionRunsMillis，执行validationQuery检测连接是否有效。
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      # 是否缓存preparedStatement，也就是PSCache。PSCache对支持游标的数据库性能提升巨大，比如说oracle。在mysql下建议关闭。
+      pool-prepared-statements: true
+      # 要启用PSCache，必须配置大于0，当大于0时，poolPreparedStatements自动触发修改为true。
+      max-pool-prepared-statement-per-connection-size: 20
+      # 配置监控服务器
+      web-stat-filter:
+        # 添加过滤规则
+        url-pattern: "/*"
+        # 排除一些静态资源，以提高效率
+        exclusions: "*.js,*.gif,*.jpg,*.bmp,*.png,*.css,*.ico,/druid/*"
+        enabled: true
+      stat-view-servlet:
+        enabled: true
+        #  禁用HTML页面上的“Reset All”功能
+        reset-enable: fasle
+        url-pattern: "/druid/*"
+        login-username: admin
+        login-password: 123456
+
+  servlet:
+    multipart:
+      max-file-size: 1000MB
+      max-request-size: 1000MB
+
+
+
+# 应用服务 WEB 访问端口
+server:
+  port: 19201
+  ip: 0.0.0.0
+  tomcat:
+    max-swallow-size: 1000MB
+
+
+# MP设置
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+#log4j2配置文件
+logging:
+  config: classpath:log4j2.xml
+
+
+
+#文件存储路径
+files:
+  upload:
+    path: web/src/main/resources/files
+  temp:
+    path: web/src/main/resources/fileTemp
+  zip:
+    path: web/src/main/resources/zips
+  scheme:
+    path: web/src/main/resources/scheme
+  image:
+    path: web/src/main/resources/image
+  unZip:
+    path: web/src/main/resources/unZip

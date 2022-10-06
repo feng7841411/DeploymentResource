@@ -1,0 +1,794 @@
+2022-10-04 09:32:22.569 INFO [main][StartupInfoLogger.java:55] - Starting WebApplication using Java 1.8.0_332 on FJH2022 with PID 7576 (D:\IDEAProject\DeploymentResource\web\target\classes started by Administrator in D:\IDEAProject\DeploymentResource)
+2022-10-04 09:32:22.573 INFO [main][SpringApplication.java:660] - No active profile set, falling back to default profiles: default
+2022-10-04 09:32:23.802 INFO [main][RepositoryConfigurationDelegate.java:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-04 09:32:23.811 INFO [main][RepositoryConfigurationDelegate.java:188] - Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
+2022-10-04 09:32:24.112 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 19201 (http)
+2022-10-04 09:32:24.117 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-19201"]
+2022-10-04 09:32:24.117 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+2022-10-04 09:32:24.117 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-10-04 09:32:24.165 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+2022-10-04 09:32:24.165 INFO [main][ServletWebServerApplicationContext.java:289] - Root WebApplicationContext: initialization completed in 1545 ms
+2022-10-04 09:32:24.202 INFO [main][DruidDataSourceAutoConfigure.java:56] - Init DruidDataSource
+2022-10-04 09:32:24.454 INFO [main][DruidDataSource.java:1003] - {dataSource-1} inited
+2022-10-04 09:32:24.462 INFO [main][H2ConsoleAutoConfiguration.java:68] - H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./web/src/main/resources/H2DataBase/h2db'
+2022-10-04 09:32:24.540 INFO [main][LogHelper.java:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-04 09:32:24.578 INFO [main][Version.java:44] - HHH000412: Hibernate ORM core version 5.4.25.Final
+2022-10-04 09:32:24.686 INFO [main][JavaReflectionManager.java:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-04 09:32:24.767 INFO [main][Dialect.java:175] - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-10-04 09:32:25.117 INFO [main][JtaPlatformInitiator.java:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-04 09:32:25.122 INFO [main][AbstractEntityManagerFactoryBean.java:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-04 09:32:25.846 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-04 09:32:25.969 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-19201"]
+2022-10-04 09:32:25.984 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 19201 (http) with context path ''
+2022-10-04 09:32:26.210 INFO [main][StartupInfoLogger.java:61] - Started WebApplication in 3.901 seconds (JVM running for 4.724)
+2022-10-04 09:32:50.362 INFO [http-nio-19201-exec-1][DirectJDKLog.java:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-04 09:32:50.362 INFO [http-nio-19201-exec-1][FrameworkServlet.java:525] - Initializing Servlet 'dispatcherServlet'
+2022-10-04 09:32:50.363 INFO [http-nio-19201-exec-1][FrameworkServlet.java:547] - Completed initialization in 0 ms
+2022-10-04 09:58:47.576 INFO [http-nio-19201-exec-1][FileInfoServiceImpl.java:74] - 当前文件存储路径：web\src\main\resources\files\69ccce304324483ba63e382476c1fbff.application不存在，已经新建
+2022-10-04 09:58:47.612 ERROR [http-nio-19201-exec-1][FileInfoServiceImpl.java:117] - error, 数据库没有查询到这个文件，往磁盘存储新文件失败。
+2022-10-04 10:06:22.085 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-04 10:06:22.087 INFO [SpringContextShutdownHook][AbstractEntityManagerFactoryBean.java:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-04 10:06:22.105 INFO [SpringContextShutdownHook][DruidDataSource.java:1948] - {dataSource-1} closing ...
+2022-10-04 10:06:22.106 INFO [SpringContextShutdownHook][DruidDataSource.java:2020] - {dataSource-1} closed
+2022-10-04 10:06:25.159 INFO [main][StartupInfoLogger.java:55] - Starting WebApplication using Java 1.8.0_332 on FJH2022 with PID 11612 (D:\IDEAProject\DeploymentResource\web\target\classes started by Administrator in D:\IDEAProject\DeploymentResource)
+2022-10-04 10:06:25.162 INFO [main][SpringApplication.java:660] - No active profile set, falling back to default profiles: default
+2022-10-04 10:06:25.632 INFO [main][RepositoryConfigurationDelegate.java:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-04 10:06:25.639 INFO [main][RepositoryConfigurationDelegate.java:188] - Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
+2022-10-04 10:06:25.873 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 19201 (http)
+2022-10-04 10:06:25.877 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-19201"]
+2022-10-04 10:06:25.877 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+2022-10-04 10:06:25.877 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-10-04 10:06:25.911 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+2022-10-04 10:06:25.911 INFO [main][ServletWebServerApplicationContext.java:289] - Root WebApplicationContext: initialization completed in 700 ms
+2022-10-04 10:06:25.935 INFO [main][DruidDataSourceAutoConfigure.java:56] - Init DruidDataSource
+2022-10-04 10:06:26.097 INFO [main][DruidDataSource.java:1003] - {dataSource-1} inited
+2022-10-04 10:06:26.105 INFO [main][H2ConsoleAutoConfiguration.java:68] - H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./web/src/main/resources/H2DataBase/h2db'
+2022-10-04 10:06:26.161 INFO [main][LogHelper.java:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-04 10:06:26.185 INFO [main][Version.java:44] - HHH000412: Hibernate ORM core version 5.4.25.Final
+2022-10-04 10:06:26.236 INFO [main][JavaReflectionManager.java:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-04 10:06:26.282 INFO [main][Dialect.java:175] - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-10-04 10:06:26.534 INFO [main][JtaPlatformInitiator.java:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-04 10:06:26.538 INFO [main][AbstractEntityManagerFactoryBean.java:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-04 10:06:27.048 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-04 10:06:27.124 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-19201"]
+2022-10-04 10:06:27.132 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 19201 (http) with context path ''
+2022-10-04 10:06:27.326 INFO [main][StartupInfoLogger.java:61] - Started WebApplication in 2.331 seconds (JVM running for 2.842)
+2022-10-04 10:06:35.734 INFO [http-nio-19201-exec-1][DirectJDKLog.java:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-04 10:06:35.735 INFO [http-nio-19201-exec-1][FrameworkServlet.java:525] - Initializing Servlet 'dispatcherServlet'
+2022-10-04 10:06:35.736 INFO [http-nio-19201-exec-1][FrameworkServlet.java:547] - Completed initialization in 1 ms
+2022-10-04 10:06:35.794 INFO [http-nio-19201-exec-1][FileInfoServiceImpl.java:72] - fileUid: 610575f32a43438a8ac4d9bc0345d6bc.application/x-zip-compressed
+2022-10-04 10:06:35.795 INFO [http-nio-19201-exec-1][FileInfoServiceImpl.java:73] - uploadFile: web\src\main\resources\files\610575f32a43438a8ac4d9bc0345d6bc.application\x-zip-compressed
+2022-10-04 10:06:35.795 INFO [http-nio-19201-exec-1][FileInfoServiceImpl.java:74] - dest: D:\IDEAProject\DeploymentResource\web\src\main\resources\files\610575f32a43438a8ac4d9bc0345d6bc.application\x-zip-compressed
+2022-10-04 10:06:35.795 INFO [http-nio-19201-exec-1][FileInfoServiceImpl.java:75] - parentFile: web\src\main\resources\files\610575f32a43438a8ac4d9bc0345d6bc.application
+2022-10-04 10:06:35.795 INFO [http-nio-19201-exec-1][FileInfoServiceImpl.java:78] - 当前文件存储路径：web\src\main\resources\files\610575f32a43438a8ac4d9bc0345d6bc.application不存在，已经新建
+2022-10-04 10:06:35.843 ERROR [http-nio-19201-exec-1][FileInfoServiceImpl.java:121] - error, 数据库没有查询到这个文件，往磁盘存储新文件失败。
+2022-10-04 10:08:53.736 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-04 10:08:53.737 INFO [SpringContextShutdownHook][AbstractEntityManagerFactoryBean.java:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-04 10:08:53.739 INFO [SpringContextShutdownHook][DruidDataSource.java:1948] - {dataSource-1} closing ...
+2022-10-04 10:08:53.739 INFO [SpringContextShutdownHook][DruidDataSource.java:2020] - {dataSource-1} closed
+2022-10-04 10:08:56.682 INFO [main][StartupInfoLogger.java:55] - Starting WebApplication using Java 1.8.0_332 on FJH2022 with PID 14520 (D:\IDEAProject\DeploymentResource\web\target\classes started by Administrator in D:\IDEAProject\DeploymentResource)
+2022-10-04 10:08:56.687 INFO [main][SpringApplication.java:660] - No active profile set, falling back to default profiles: default
+2022-10-04 10:08:57.106 INFO [main][RepositoryConfigurationDelegate.java:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-04 10:08:57.113 INFO [main][RepositoryConfigurationDelegate.java:188] - Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2022-10-04 10:08:57.343 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 19201 (http)
+2022-10-04 10:08:57.347 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-19201"]
+2022-10-04 10:08:57.347 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+2022-10-04 10:08:57.347 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-10-04 10:08:57.380 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+2022-10-04 10:08:57.380 INFO [main][ServletWebServerApplicationContext.java:289] - Root WebApplicationContext: initialization completed in 637 ms
+2022-10-04 10:08:57.404 INFO [main][DruidDataSourceAutoConfigure.java:56] - Init DruidDataSource
+2022-10-04 10:08:57.544 INFO [main][DruidDataSource.java:1003] - {dataSource-1} inited
+2022-10-04 10:08:57.552 INFO [main][H2ConsoleAutoConfiguration.java:68] - H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./web/src/main/resources/H2DataBase/h2db'
+2022-10-04 10:08:57.605 INFO [main][LogHelper.java:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-04 10:08:57.626 INFO [main][Version.java:44] - HHH000412: Hibernate ORM core version 5.4.25.Final
+2022-10-04 10:08:57.678 INFO [main][JavaReflectionManager.java:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-04 10:08:57.726 INFO [main][Dialect.java:175] - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-10-04 10:08:57.974 INFO [main][JtaPlatformInitiator.java:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-04 10:08:57.978 INFO [main][AbstractEntityManagerFactoryBean.java:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-04 10:08:58.532 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-04 10:08:58.621 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-19201"]
+2022-10-04 10:08:58.630 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 19201 (http) with context path ''
+2022-10-04 10:08:58.824 INFO [main][StartupInfoLogger.java:61] - Started WebApplication in 2.307 seconds (JVM running for 2.78)
+2022-10-04 10:09:03.477 INFO [http-nio-19201-exec-1][DirectJDKLog.java:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-04 10:09:03.478 INFO [http-nio-19201-exec-1][FrameworkServlet.java:525] - Initializing Servlet 'dispatcherServlet'
+2022-10-04 10:09:03.478 INFO [http-nio-19201-exec-1][FrameworkServlet.java:547] - Completed initialization in 0 ms
+2022-10-04 10:09:03.537 INFO [http-nio-19201-exec-1][FileInfoServiceImpl.java:72] - originalFileName: aaa-bb-cc-c.zip
+2022-10-04 10:09:03.537 INFO [http-nio-19201-exec-1][FileInfoServiceImpl.java:73] - contentType: application/x-zip-compressed
+2022-10-04 10:09:03.537 INFO [http-nio-19201-exec-1][FileInfoServiceImpl.java:74] - fileUid: c053b3bee20b48b690c5819887c95367.application/x-zip-compressed
+2022-10-04 10:09:03.537 INFO [http-nio-19201-exec-1][FileInfoServiceImpl.java:75] - uploadFile: web\src\main\resources\files\c053b3bee20b48b690c5819887c95367.application\x-zip-compressed
+2022-10-04 10:09:03.538 INFO [http-nio-19201-exec-1][FileInfoServiceImpl.java:76] - dest: D:\IDEAProject\DeploymentResource\web\src\main\resources\files\c053b3bee20b48b690c5819887c95367.application\x-zip-compressed
+2022-10-04 10:09:03.538 INFO [http-nio-19201-exec-1][FileInfoServiceImpl.java:77] - parentFile: web\src\main\resources\files\c053b3bee20b48b690c5819887c95367.application
+2022-10-04 10:09:03.538 INFO [http-nio-19201-exec-1][FileInfoServiceImpl.java:80] - 当前文件存储路径：web\src\main\resources\files\c053b3bee20b48b690c5819887c95367.application不存在，已经新建
+2022-10-04 10:09:03.586 ERROR [http-nio-19201-exec-1][FileInfoServiceImpl.java:123] - error, 数据库没有查询到这个文件，往磁盘存储新文件失败。
+2022-10-04 10:10:22.380 INFO [http-nio-19201-exec-3][FileInfoServiceImpl.java:72] - originalFileName: 0530.rar
+2022-10-04 10:10:22.381 INFO [http-nio-19201-exec-3][FileInfoServiceImpl.java:73] - contentType: application/octet-stream
+2022-10-04 10:10:22.381 INFO [http-nio-19201-exec-3][FileInfoServiceImpl.java:74] - fileUid: cc47b5aed3d84733a2b3bbd07586f2b0.application/octet-stream
+2022-10-04 10:10:22.381 INFO [http-nio-19201-exec-3][FileInfoServiceImpl.java:75] - uploadFile: web\src\main\resources\files\cc47b5aed3d84733a2b3bbd07586f2b0.application\octet-stream
+2022-10-04 10:10:22.381 INFO [http-nio-19201-exec-3][FileInfoServiceImpl.java:76] - dest: D:\IDEAProject\DeploymentResource\web\src\main\resources\files\cc47b5aed3d84733a2b3bbd07586f2b0.application\octet-stream
+2022-10-04 10:10:22.381 INFO [http-nio-19201-exec-3][FileInfoServiceImpl.java:77] - parentFile: web\src\main\resources\files\cc47b5aed3d84733a2b3bbd07586f2b0.application
+2022-10-04 10:10:22.381 INFO [http-nio-19201-exec-3][FileInfoServiceImpl.java:80] - 当前文件存储路径：web\src\main\resources\files\cc47b5aed3d84733a2b3bbd07586f2b0.application不存在，已经新建
+2022-10-04 10:10:22.600 ERROR [http-nio-19201-exec-3][FileInfoServiceImpl.java:123] - error, 数据库没有查询到这个文件，往磁盘存储新文件失败。
+2022-10-04 10:18:27.178 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-04 10:18:27.179 INFO [SpringContextShutdownHook][AbstractEntityManagerFactoryBean.java:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-04 10:18:27.180 INFO [SpringContextShutdownHook][DruidDataSource.java:1948] - {dataSource-1} closing ...
+2022-10-04 10:18:27.181 INFO [SpringContextShutdownHook][DruidDataSource.java:2020] - {dataSource-1} closed
+2022-10-04 10:18:29.997 INFO [main][StartupInfoLogger.java:55] - Starting WebApplication using Java 1.8.0_332 on FJH2022 with PID 14020 (D:\IDEAProject\DeploymentResource\web\target\classes started by Administrator in D:\IDEAProject\DeploymentResource)
+2022-10-04 10:18:30.001 INFO [main][SpringApplication.java:660] - No active profile set, falling back to default profiles: default
+2022-10-04 10:18:30.410 INFO [main][RepositoryConfigurationDelegate.java:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-04 10:18:30.416 INFO [main][RepositoryConfigurationDelegate.java:188] - Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2022-10-04 10:18:30.640 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 19201 (http)
+2022-10-04 10:18:30.644 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-19201"]
+2022-10-04 10:18:30.644 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+2022-10-04 10:18:30.644 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-10-04 10:18:30.672 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+2022-10-04 10:18:30.672 INFO [main][ServletWebServerApplicationContext.java:289] - Root WebApplicationContext: initialization completed in 603 ms
+2022-10-04 10:18:30.685 INFO [main][DruidDataSourceAutoConfigure.java:56] - Init DruidDataSource
+2022-10-04 10:18:30.853 INFO [main][DruidDataSource.java:1003] - {dataSource-1} inited
+2022-10-04 10:18:30.860 INFO [main][H2ConsoleAutoConfiguration.java:68] - H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./web/src/main/resources/H2DataBase/h2db'
+2022-10-04 10:18:30.908 INFO [main][LogHelper.java:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-04 10:18:30.927 INFO [main][Version.java:44] - HHH000412: Hibernate ORM core version 5.4.25.Final
+2022-10-04 10:18:30.975 INFO [main][JavaReflectionManager.java:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-04 10:18:31.016 INFO [main][Dialect.java:175] - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-10-04 10:18:31.263 INFO [main][JtaPlatformInitiator.java:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-04 10:18:31.267 INFO [main][AbstractEntityManagerFactoryBean.java:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-04 10:18:31.764 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-04 10:18:31.841 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-19201"]
+2022-10-04 10:18:31.849 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 19201 (http) with context path ''
+2022-10-04 10:18:32.044 INFO [main][StartupInfoLogger.java:61] - Started WebApplication in 2.212 seconds (JVM running for 2.692)
+2022-10-04 10:19:14.687 INFO [http-nio-19201-exec-1][DirectJDKLog.java:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-04 10:19:14.687 INFO [http-nio-19201-exec-1][FrameworkServlet.java:525] - Initializing Servlet 'dispatcherServlet'
+2022-10-04 10:19:14.688 INFO [http-nio-19201-exec-1][FrameworkServlet.java:547] - Completed initialization in 1 ms
+2022-10-04 10:19:14.749 INFO [http-nio-19201-exec-1][FileInfoServiceImpl.java:74] - originalFileName: aaa-bb-cc-c.zip
+2022-10-04 10:19:14.749 INFO [http-nio-19201-exec-1][FileInfoServiceImpl.java:75] - contentType: zip
+2022-10-04 10:19:14.749 INFO [http-nio-19201-exec-1][FileInfoServiceImpl.java:76] - fileUid: 80ea79ee205f44179ec1d82719606394.zip
+2022-10-04 10:19:14.749 INFO [http-nio-19201-exec-1][FileInfoServiceImpl.java:77] - uploadFile: web\src\main\resources\files\80ea79ee205f44179ec1d82719606394.zip
+2022-10-04 10:19:14.749 INFO [http-nio-19201-exec-1][FileInfoServiceImpl.java:78] - dest: D:\IDEAProject\DeploymentResource\web\src\main\resources\files\80ea79ee205f44179ec1d82719606394.zip
+2022-10-04 10:19:14.749 INFO [http-nio-19201-exec-1][FileInfoServiceImpl.java:79] - parentFile: web\src\main\resources\files
+2022-10-04 10:19:14.750 INFO [http-nio-19201-exec-1][FileInfoServiceImpl.java:82] - 当前文件存储路径：web\src\main\resources\files不存在，已经新建
+2022-10-04 10:19:14.798 INFO [http-nio-19201-exec-1][FileInfoServiceImpl.java:114] - 文件：aaa-bb-cc-c.zip已经成功接收并存储
+2022-10-04 16:13:25.971 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-04 16:13:25.972 INFO [SpringContextShutdownHook][AbstractEntityManagerFactoryBean.java:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-04 16:13:25.974 INFO [SpringContextShutdownHook][DruidDataSource.java:1948] - {dataSource-1} closing ...
+2022-10-04 16:13:25.974 INFO [SpringContextShutdownHook][DruidDataSource.java:2020] - {dataSource-1} closed
+2022-10-04 16:13:28.982 INFO [main][StartupInfoLogger.java:55] - Starting WebApplication using Java 1.8.0_332 on FJH2022 with PID 32060 (D:\IDEAProject\DeploymentResource\web\target\classes started by Administrator in D:\IDEAProject\DeploymentResource)
+2022-10-04 16:13:28.986 INFO [main][SpringApplication.java:660] - No active profile set, falling back to default profiles: default
+2022-10-04 16:13:29.390 INFO [main][RepositoryConfigurationDelegate.java:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-04 16:13:29.397 INFO [main][RepositoryConfigurationDelegate.java:188] - Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
+2022-10-04 16:13:29.635 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 19201 (http)
+2022-10-04 16:13:29.639 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-19201"]
+2022-10-04 16:13:29.639 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+2022-10-04 16:13:29.639 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-10-04 16:13:29.671 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+2022-10-04 16:13:29.671 INFO [main][ServletWebServerApplicationContext.java:289] - Root WebApplicationContext: initialization completed in 647 ms
+2022-10-04 16:13:29.696 INFO [main][DruidDataSourceAutoConfigure.java:56] - Init DruidDataSource
+2022-10-04 16:13:29.830 INFO [main][DruidDataSource.java:1003] - {dataSource-1} inited
+2022-10-04 16:13:29.838 INFO [main][H2ConsoleAutoConfiguration.java:68] - H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./web/src/main/resources/H2DataBase/h2db'
+2022-10-04 16:13:29.890 INFO [main][LogHelper.java:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-04 16:13:29.909 INFO [main][Version.java:44] - HHH000412: Hibernate ORM core version 5.4.25.Final
+2022-10-04 16:13:29.959 INFO [main][JavaReflectionManager.java:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-04 16:13:30.003 INFO [main][Dialect.java:175] - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-10-04 16:13:30.275 INFO [main][JtaPlatformInitiator.java:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-04 16:13:30.281 INFO [main][AbstractEntityManagerFactoryBean.java:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-04 16:13:30.815 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-04 16:13:30.894 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-19201"]
+2022-10-04 16:13:30.903 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 19201 (http) with context path ''
+2022-10-04 16:13:31.098 INFO [main][StartupInfoLogger.java:61] - Started WebApplication in 2.288 seconds (JVM running for 2.776)
+2022-10-04 16:13:45.207 INFO [http-nio-19201-exec-1][DirectJDKLog.java:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-04 16:13:45.208 INFO [http-nio-19201-exec-1][FrameworkServlet.java:525] - Initializing Servlet 'dispatcherServlet'
+2022-10-04 16:13:45.208 INFO [http-nio-19201-exec-1][FrameworkServlet.java:547] - Completed initialization in 0 ms
+2022-10-04 16:14:24.362 INFO [http-nio-19201-exec-3][PackageController.java:34] - [Lorg.springframework.web.multipart.MultipartFile;@3285b27f
+2022-10-04 16:14:24.362 INFO [http-nio-19201-exec-3][PackageController.java:36] - 文件信息：
+2022-10-04 16:14:24.362 INFO [http-nio-19201-exec-3][PackageController.java:37] - aaa-bb-cc-c.zip
+2022-10-04 16:14:24.362 INFO [http-nio-19201-exec-3][PackageController.java:38] - 449
+2022-10-04 16:14:24.362 INFO [http-nio-19201-exec-3][PackageController.java:36] - 文件信息：
+2022-10-04 16:14:24.362 INFO [http-nio-19201-exec-3][PackageController.java:37] - gdfgadfgaff---.zip
+2022-10-04 16:14:24.362 INFO [http-nio-19201-exec-3][PackageController.java:38] - 302142839
+2022-10-04 16:15:35.600 INFO [http-nio-19201-exec-5][PackageController.java:34] - [Lorg.springframework.web.multipart.MultipartFile;@2fee8706
+2022-10-04 16:15:35.600 INFO [http-nio-19201-exec-5][PackageController.java:36] - 文件信息：
+2022-10-04 16:15:35.600 INFO [http-nio-19201-exec-5][PackageController.java:37] - aaa-bb-cc-c.zip
+2022-10-04 16:15:35.600 INFO [http-nio-19201-exec-5][PackageController.java:38] - 449
+2022-10-04 16:16:24.173 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-04 16:16:24.175 INFO [SpringContextShutdownHook][AbstractEntityManagerFactoryBean.java:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-04 16:16:24.176 INFO [SpringContextShutdownHook][DruidDataSource.java:1948] - {dataSource-1} closing ...
+2022-10-04 16:16:24.176 INFO [SpringContextShutdownHook][DruidDataSource.java:2020] - {dataSource-1} closed
+2022-10-04 16:16:26.921 INFO [main][StartupInfoLogger.java:55] - Starting WebApplication using Java 1.8.0_332 on FJH2022 with PID 29180 (D:\IDEAProject\DeploymentResource\web\target\classes started by Administrator in D:\IDEAProject\DeploymentResource)
+2022-10-04 16:16:26.925 INFO [main][SpringApplication.java:660] - No active profile set, falling back to default profiles: default
+2022-10-04 16:16:27.315 INFO [main][RepositoryConfigurationDelegate.java:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-04 16:16:27.322 INFO [main][RepositoryConfigurationDelegate.java:188] - Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2022-10-04 16:16:27.559 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 19201 (http)
+2022-10-04 16:16:27.563 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-19201"]
+2022-10-04 16:16:27.564 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+2022-10-04 16:16:27.564 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-10-04 16:16:27.599 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+2022-10-04 16:16:27.599 INFO [main][ServletWebServerApplicationContext.java:289] - Root WebApplicationContext: initialization completed in 632 ms
+2022-10-04 16:16:27.625 INFO [main][DruidDataSourceAutoConfigure.java:56] - Init DruidDataSource
+2022-10-04 16:16:27.765 INFO [main][DruidDataSource.java:1003] - {dataSource-1} inited
+2022-10-04 16:16:27.772 INFO [main][H2ConsoleAutoConfiguration.java:68] - H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./web/src/main/resources/H2DataBase/h2db'
+2022-10-04 16:16:27.826 INFO [main][LogHelper.java:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-04 16:16:27.846 INFO [main][Version.java:44] - HHH000412: Hibernate ORM core version 5.4.25.Final
+2022-10-04 16:16:27.897 INFO [main][JavaReflectionManager.java:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-04 16:16:27.942 INFO [main][Dialect.java:175] - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-10-04 16:16:28.202 INFO [main][JtaPlatformInitiator.java:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-04 16:16:28.207 INFO [main][AbstractEntityManagerFactoryBean.java:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-04 16:16:28.745 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-04 16:16:28.828 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-19201"]
+2022-10-04 16:16:28.836 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 19201 (http) with context path ''
+2022-10-04 16:16:29.044 INFO [main][StartupInfoLogger.java:61] - Started WebApplication in 2.297 seconds (JVM running for 2.773)
+2022-10-04 16:16:39.440 INFO [http-nio-19201-exec-1][DirectJDKLog.java:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-04 16:16:39.440 INFO [http-nio-19201-exec-1][FrameworkServlet.java:525] - Initializing Servlet 'dispatcherServlet'
+2022-10-04 16:16:39.441 INFO [http-nio-19201-exec-1][FrameworkServlet.java:547] - Completed initialization in 1 ms
+2022-10-04 16:16:39.496 INFO [http-nio-19201-exec-1][PackageController.java:34] - null
+2022-10-04 16:16:39.496 INFO [http-nio-19201-exec-1][PackageController.java:36] - 文件信息：
+2022-10-04 16:16:39.502 ERROR [http-nio-19201-exec-1][DirectJDKLog.java:175] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at com.feng.web.controller.PackageController.uploadNginx(PackageController.java:37) ~[classes/:?]
+	at com.feng.web.controller.PackageController$$FastClassBySpringCGLIB$$a2cbf4b3.invoke(<generated>) ~[classes/:?]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-5.3.2.jar:5.3.2]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-5.3.2.jar:5.3.2]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691) ~[spring-aop-5.3.2.jar:5.3.2]
+	at com.feng.web.controller.PackageController$$EnhancerBySpringCGLIB$$b2fc51fd.uploadNginx(<generated>) ~[classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_332]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_332]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_332]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_332]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1061) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:961) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652) ~[tomcat-embed-core-9.0.41.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.41.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:124) ~[druid-1.1.18.jar:1.1.18]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_332]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_332]
+2022-10-04 16:16:53.572 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-04 16:16:53.573 INFO [SpringContextShutdownHook][AbstractEntityManagerFactoryBean.java:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-04 16:16:53.574 INFO [SpringContextShutdownHook][DruidDataSource.java:1948] - {dataSource-1} closing ...
+2022-10-04 16:16:53.575 INFO [SpringContextShutdownHook][DruidDataSource.java:2020] - {dataSource-1} closed
+2022-10-04 16:16:56.288 INFO [main][StartupInfoLogger.java:55] - Starting WebApplication using Java 1.8.0_332 on FJH2022 with PID 8500 (D:\IDEAProject\DeploymentResource\web\target\classes started by Administrator in D:\IDEAProject\DeploymentResource)
+2022-10-04 16:16:56.292 INFO [main][SpringApplication.java:660] - No active profile set, falling back to default profiles: default
+2022-10-04 16:16:56.676 INFO [main][RepositoryConfigurationDelegate.java:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-04 16:16:56.683 INFO [main][RepositoryConfigurationDelegate.java:188] - Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2022-10-04 16:16:56.917 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 19201 (http)
+2022-10-04 16:16:56.921 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-19201"]
+2022-10-04 16:16:56.922 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+2022-10-04 16:16:56.922 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-10-04 16:16:56.955 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+2022-10-04 16:16:56.955 INFO [main][ServletWebServerApplicationContext.java:289] - Root WebApplicationContext: initialization completed in 617 ms
+2022-10-04 16:16:56.979 INFO [main][DruidDataSourceAutoConfigure.java:56] - Init DruidDataSource
+2022-10-04 16:16:57.123 INFO [main][DruidDataSource.java:1003] - {dataSource-1} inited
+2022-10-04 16:16:57.130 INFO [main][H2ConsoleAutoConfiguration.java:68] - H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./web/src/main/resources/H2DataBase/h2db'
+2022-10-04 16:16:57.183 INFO [main][LogHelper.java:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-04 16:16:57.203 INFO [main][Version.java:44] - HHH000412: Hibernate ORM core version 5.4.25.Final
+2022-10-04 16:16:57.253 INFO [main][JavaReflectionManager.java:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-04 16:16:57.296 INFO [main][Dialect.java:175] - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-10-04 16:16:57.547 INFO [main][JtaPlatformInitiator.java:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-04 16:16:57.551 INFO [main][AbstractEntityManagerFactoryBean.java:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-04 16:16:58.058 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-04 16:16:58.133 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-19201"]
+2022-10-04 16:16:58.142 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 19201 (http) with context path ''
+2022-10-04 16:16:58.331 INFO [main][StartupInfoLogger.java:61] - Started WebApplication in 2.216 seconds (JVM running for 2.68)
+2022-10-04 16:17:01.919 INFO [http-nio-19201-exec-3][DirectJDKLog.java:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-04 16:17:01.919 INFO [http-nio-19201-exec-3][FrameworkServlet.java:525] - Initializing Servlet 'dispatcherServlet'
+2022-10-04 16:17:01.920 INFO [http-nio-19201-exec-3][FrameworkServlet.java:547] - Completed initialization in 1 ms
+2022-10-04 16:17:01.976 INFO [http-nio-19201-exec-3][PackageController.java:34] - [Lorg.springframework.web.multipart.MultipartFile;@f4c5141
+2022-10-04 16:17:01.976 INFO [http-nio-19201-exec-3][PackageController.java:36] - 文件信息：
+2022-10-04 16:17:01.976 INFO [http-nio-19201-exec-3][PackageController.java:37] - aaa-bb-cc-c.zip
+2022-10-04 16:17:01.976 INFO [http-nio-19201-exec-3][PackageController.java:38] - 449
+2022-10-04 16:17:10.546 INFO [http-nio-19201-exec-1][PackageController.java:34] - [Lorg.springframework.web.multipart.MultipartFile;@33f3dc12
+2022-10-04 16:17:10.546 INFO [http-nio-19201-exec-1][PackageController.java:36] - 文件信息：
+2022-10-04 16:17:10.546 INFO [http-nio-19201-exec-1][PackageController.java:37] - aaa-bb-cc-c.zip
+2022-10-04 16:17:10.546 INFO [http-nio-19201-exec-1][PackageController.java:38] - 449
+2022-10-04 16:17:20.619 INFO [http-nio-19201-exec-4][PackageController.java:34] - [Lorg.springframework.web.multipart.MultipartFile;@359efd26
+2022-10-04 16:17:20.619 INFO [http-nio-19201-exec-4][PackageController.java:36] - 文件信息：
+2022-10-04 16:17:20.619 INFO [http-nio-19201-exec-4][PackageController.java:37] - xxfw-xttz-xxfw-java.zip
+2022-10-04 16:17:20.619 INFO [http-nio-19201-exec-4][PackageController.java:38] - 3405138
+2022-10-04 16:18:17.127 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-04 16:18:17.128 INFO [SpringContextShutdownHook][AbstractEntityManagerFactoryBean.java:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-04 16:18:17.129 INFO [SpringContextShutdownHook][DruidDataSource.java:1948] - {dataSource-1} closing ...
+2022-10-04 16:18:17.130 INFO [SpringContextShutdownHook][DruidDataSource.java:2020] - {dataSource-1} closed
+2022-10-04 16:18:19.992 INFO [main][StartupInfoLogger.java:55] - Starting WebApplication using Java 1.8.0_332 on FJH2022 with PID 27172 (D:\IDEAProject\DeploymentResource\web\target\classes started by Administrator in D:\IDEAProject\DeploymentResource)
+2022-10-04 16:18:19.996 INFO [main][SpringApplication.java:660] - No active profile set, falling back to default profiles: default
+2022-10-04 16:18:20.376 INFO [main][RepositoryConfigurationDelegate.java:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-04 16:18:20.382 INFO [main][RepositoryConfigurationDelegate.java:188] - Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2022-10-04 16:18:20.611 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 19201 (http)
+2022-10-04 16:18:20.615 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-19201"]
+2022-10-04 16:18:20.615 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+2022-10-04 16:18:20.615 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-10-04 16:18:20.647 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+2022-10-04 16:18:20.647 INFO [main][ServletWebServerApplicationContext.java:289] - Root WebApplicationContext: initialization completed in 607 ms
+2022-10-04 16:18:20.670 INFO [main][DruidDataSourceAutoConfigure.java:56] - Init DruidDataSource
+2022-10-04 16:18:20.803 INFO [main][DruidDataSource.java:1003] - {dataSource-1} inited
+2022-10-04 16:18:20.810 INFO [main][H2ConsoleAutoConfiguration.java:68] - H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./web/src/main/resources/H2DataBase/h2db'
+2022-10-04 16:18:20.863 INFO [main][LogHelper.java:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-04 16:18:20.883 INFO [main][Version.java:44] - HHH000412: Hibernate ORM core version 5.4.25.Final
+2022-10-04 16:18:20.935 INFO [main][JavaReflectionManager.java:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-04 16:18:20.979 INFO [main][Dialect.java:175] - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-10-04 16:18:21.231 INFO [main][JtaPlatformInitiator.java:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-04 16:18:21.235 INFO [main][AbstractEntityManagerFactoryBean.java:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-04 16:18:21.754 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-04 16:18:21.843 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-19201"]
+2022-10-04 16:18:21.852 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 19201 (http) with context path ''
+2022-10-04 16:18:22.056 INFO [main][StartupInfoLogger.java:61] - Started WebApplication in 2.232 seconds (JVM running for 2.702)
+2022-10-04 16:18:24.495 INFO [http-nio-19201-exec-1][DirectJDKLog.java:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-04 16:18:24.495 INFO [http-nio-19201-exec-1][FrameworkServlet.java:525] - Initializing Servlet 'dispatcherServlet'
+2022-10-04 16:18:24.496 INFO [http-nio-19201-exec-1][FrameworkServlet.java:547] - Completed initialization in 1 ms
+2022-10-04 16:18:24.567 INFO [http-nio-19201-exec-1][PackageController.java:34] - [Lorg.springframework.web.multipart.MultipartFile;@7a576bc1
+2022-10-04 16:18:24.567 INFO [http-nio-19201-exec-1][PackageController.java:35] - 接收文件数组：files_length = 1
+2022-10-04 16:18:24.567 INFO [http-nio-19201-exec-1][PackageController.java:37] - 文件信息：
+2022-10-04 16:18:24.567 INFO [http-nio-19201-exec-1][PackageController.java:38] - xxfw-xttz-xxfw-java.zip
+2022-10-04 16:18:24.568 INFO [http-nio-19201-exec-1][PackageController.java:39] - 3405138
+2022-10-04 16:27:19.131 INFO [http-nio-19201-exec-3][PackageController.java:34] - [Lorg.springframework.web.multipart.MultipartFile;@6761ad2e
+2022-10-04 16:27:19.131 INFO [http-nio-19201-exec-3][PackageController.java:35] - 接收文件数组：files_length = 1
+2022-10-04 16:27:19.131 INFO [http-nio-19201-exec-3][PackageController.java:37] - 文件信息：
+2022-10-04 16:27:19.131 INFO [http-nio-19201-exec-3][PackageController.java:38] - 飞仙.txt
+2022-10-04 16:27:19.132 INFO [http-nio-19201-exec-3][PackageController.java:39] - 128
+2022-10-04 16:33:20.394 INFO [http-nio-19201-exec-5][PackageController.java:34] - [Lorg.springframework.web.multipart.MultipartFile;@3fed15c1
+2022-10-04 16:33:20.394 INFO [http-nio-19201-exec-5][PackageController.java:35] - 接收文件数组：files_length = 1
+2022-10-04 16:33:20.394 INFO [http-nio-19201-exec-5][PackageController.java:37] - 文件信息：
+2022-10-04 16:33:20.394 INFO [http-nio-19201-exec-5][PackageController.java:38] - 新建文本文档 (2).txt
+2022-10-04 16:33:20.394 INFO [http-nio-19201-exec-5][PackageController.java:39] - 89
+2022-10-04 16:33:39.248 INFO [http-nio-19201-exec-6][PackageController.java:34] - [Lorg.springframework.web.multipart.MultipartFile;@312e302
+2022-10-04 16:33:39.248 INFO [http-nio-19201-exec-6][PackageController.java:35] - 接收文件数组：files_length = 1
+2022-10-04 16:33:39.248 INFO [http-nio-19201-exec-6][PackageController.java:37] - 文件信息：
+2022-10-04 16:33:39.249 INFO [http-nio-19201-exec-6][PackageController.java:38] - aaa-bb-cc-c.zip
+2022-10-04 16:33:39.249 INFO [http-nio-19201-exec-6][PackageController.java:39] - 449
+2022-10-04 16:40:47.683 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-04 16:40:47.684 INFO [SpringContextShutdownHook][AbstractEntityManagerFactoryBean.java:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-04 16:40:47.686 INFO [SpringContextShutdownHook][DruidDataSource.java:1948] - {dataSource-1} closing ...
+2022-10-04 16:40:47.687 INFO [SpringContextShutdownHook][DruidDataSource.java:2020] - {dataSource-1} closed
+2022-10-04 16:40:50.674 INFO [main][StartupInfoLogger.java:55] - Starting WebApplication using Java 1.8.0_332 on FJH2022 with PID 12584 (D:\IDEAProject\DeploymentResource\web\target\classes started by Administrator in D:\IDEAProject\DeploymentResource)
+2022-10-04 16:40:50.679 INFO [main][SpringApplication.java:660] - No active profile set, falling back to default profiles: default
+2022-10-04 16:40:51.073 INFO [main][RepositoryConfigurationDelegate.java:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-04 16:40:51.080 INFO [main][RepositoryConfigurationDelegate.java:188] - Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2022-10-04 16:40:51.308 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 19201 (http)
+2022-10-04 16:40:51.312 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-19201"]
+2022-10-04 16:40:51.313 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+2022-10-04 16:40:51.313 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-10-04 16:40:51.345 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+2022-10-04 16:40:51.345 INFO [main][ServletWebServerApplicationContext.java:289] - Root WebApplicationContext: initialization completed in 604 ms
+2022-10-04 16:40:51.369 INFO [main][DruidDataSourceAutoConfigure.java:56] - Init DruidDataSource
+2022-10-04 16:40:51.506 INFO [main][DruidDataSource.java:1003] - {dataSource-1} inited
+2022-10-04 16:40:51.513 INFO [main][H2ConsoleAutoConfiguration.java:68] - H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./web/src/main/resources/H2DataBase/h2db'
+2022-10-04 16:40:51.567 INFO [main][LogHelper.java:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-04 16:40:51.587 INFO [main][Version.java:44] - HHH000412: Hibernate ORM core version 5.4.25.Final
+2022-10-04 16:40:51.636 INFO [main][JavaReflectionManager.java:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-04 16:40:51.679 INFO [main][Dialect.java:175] - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-10-04 16:40:51.925 INFO [main][JtaPlatformInitiator.java:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-04 16:40:51.930 INFO [main][AbstractEntityManagerFactoryBean.java:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-04 16:40:52.455 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-04 16:40:52.538 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-19201"]
+2022-10-04 16:40:52.548 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 19201 (http) with context path ''
+2022-10-04 16:40:52.747 INFO [main][StartupInfoLogger.java:61] - Started WebApplication in 2.244 seconds (JVM running for 2.707)
+2022-10-04 16:41:04.628 INFO [http-nio-19201-exec-1][DirectJDKLog.java:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-04 16:41:04.628 INFO [http-nio-19201-exec-1][FrameworkServlet.java:525] - Initializing Servlet 'dispatcherServlet'
+2022-10-04 16:41:04.629 INFO [http-nio-19201-exec-1][FrameworkServlet.java:547] - Completed initialization in 1 ms
+2022-10-04 16:41:04.684 INFO [http-nio-19201-exec-1][PackageController.java:34] - [Lorg.springframework.web.multipart.MultipartFile;@aa348d2
+2022-10-04 16:41:04.684 INFO [http-nio-19201-exec-1][PackageController.java:35] - 接收文件数组：files_length = 1
+2022-10-04 16:41:04.684 INFO [http-nio-19201-exec-1][PackageController.java:37] - 文件信息：
+2022-10-04 16:41:04.684 INFO [http-nio-19201-exec-1][PackageController.java:38] - aaa-bb-cc-c.zip
+2022-10-04 16:41:04.684 INFO [http-nio-19201-exec-1][PackageController.java:39] - 449
+2022-10-04 16:47:07.603 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-04 16:47:07.604 INFO [SpringContextShutdownHook][AbstractEntityManagerFactoryBean.java:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-04 16:47:07.605 INFO [SpringContextShutdownHook][DruidDataSource.java:1948] - {dataSource-1} closing ...
+2022-10-04 16:47:07.606 INFO [SpringContextShutdownHook][DruidDataSource.java:2020] - {dataSource-1} closed
+2022-10-04 16:47:11.003 INFO [main][StartupInfoLogger.java:55] - Starting WebApplication using Java 1.8.0_332 on FJH2022 with PID 31280 (D:\IDEAProject\DeploymentResource\web\target\classes started by Administrator in D:\IDEAProject\DeploymentResource)
+2022-10-04 16:47:11.006 INFO [main][SpringApplication.java:660] - No active profile set, falling back to default profiles: default
+2022-10-04 16:47:11.378 INFO [main][RepositoryConfigurationDelegate.java:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-04 16:47:11.385 INFO [main][RepositoryConfigurationDelegate.java:188] - Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2022-10-04 16:47:11.610 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 19201 (http)
+2022-10-04 16:47:11.615 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-19201"]
+2022-10-04 16:47:11.615 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+2022-10-04 16:47:11.615 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-10-04 16:47:11.647 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+2022-10-04 16:47:11.648 INFO [main][ServletWebServerApplicationContext.java:289] - Root WebApplicationContext: initialization completed in 602 ms
+2022-10-04 16:47:11.671 INFO [main][DruidDataSourceAutoConfigure.java:56] - Init DruidDataSource
+2022-10-04 16:47:11.807 INFO [main][DruidDataSource.java:1003] - {dataSource-1} inited
+2022-10-04 16:47:11.814 INFO [main][H2ConsoleAutoConfiguration.java:68] - H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./web/src/main/resources/H2DataBase/h2db'
+2022-10-04 16:47:11.868 INFO [main][LogHelper.java:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-04 16:47:11.887 INFO [main][Version.java:44] - HHH000412: Hibernate ORM core version 5.4.25.Final
+2022-10-04 16:47:11.935 INFO [main][JavaReflectionManager.java:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-04 16:47:11.978 INFO [main][Dialect.java:175] - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-10-04 16:47:12.254 INFO [main][JtaPlatformInitiator.java:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-04 16:47:12.258 INFO [main][AbstractEntityManagerFactoryBean.java:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-04 16:47:12.777 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-04 16:47:12.857 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-19201"]
+2022-10-04 16:47:12.865 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 19201 (http) with context path ''
+2022-10-04 16:47:13.074 INFO [main][StartupInfoLogger.java:61] - Started WebApplication in 2.238 seconds (JVM running for 2.718)
+2022-10-04 16:47:21.252 INFO [http-nio-19201-exec-1][DirectJDKLog.java:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-04 16:47:21.252 INFO [http-nio-19201-exec-1][FrameworkServlet.java:525] - Initializing Servlet 'dispatcherServlet'
+2022-10-04 16:47:21.253 INFO [http-nio-19201-exec-1][FrameworkServlet.java:547] - Completed initialization in 1 ms
+2022-10-04 16:47:21.309 INFO [http-nio-19201-exec-1][PackageController.java:35] - [Lorg.springframework.web.multipart.MultipartFile;@5bc01261
+2022-10-04 16:47:21.309 INFO [http-nio-19201-exec-1][PackageController.java:36] - 接收文件数组：files_length = 1
+2022-10-04 16:47:21.309 INFO [http-nio-19201-exec-1][PackageController.java:38] - 文件信息：
+2022-10-04 16:47:21.309 INFO [http-nio-19201-exec-1][PackageController.java:39] - aaa-bb-cc-c.zip
+2022-10-04 16:47:21.309 INFO [http-nio-19201-exec-1][PackageController.java:40] - 449
+2022-10-04 16:47:26.330 INFO [http-nio-19201-exec-1][PackageController.java:56] - 上传的文件类型为：zip
+2022-10-04 16:50:38.701 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-04 16:50:38.702 INFO [SpringContextShutdownHook][AbstractEntityManagerFactoryBean.java:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-04 16:50:38.703 INFO [SpringContextShutdownHook][DruidDataSource.java:1948] - {dataSource-1} closing ...
+2022-10-04 16:50:38.704 INFO [SpringContextShutdownHook][DruidDataSource.java:2020] - {dataSource-1} closed
+2022-10-04 16:50:41.587 INFO [main][StartupInfoLogger.java:55] - Starting WebApplication using Java 1.8.0_332 on FJH2022 with PID 11824 (D:\IDEAProject\DeploymentResource\web\target\classes started by Administrator in D:\IDEAProject\DeploymentResource)
+2022-10-04 16:50:41.591 INFO [main][SpringApplication.java:660] - No active profile set, falling back to default profiles: default
+2022-10-04 16:50:42.016 INFO [main][RepositoryConfigurationDelegate.java:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-04 16:50:42.023 INFO [main][RepositoryConfigurationDelegate.java:188] - Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2022-10-04 16:50:42.264 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 19201 (http)
+2022-10-04 16:50:42.269 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-19201"]
+2022-10-04 16:50:42.269 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+2022-10-04 16:50:42.269 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-10-04 16:50:42.304 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+2022-10-04 16:50:42.304 INFO [main][ServletWebServerApplicationContext.java:289] - Root WebApplicationContext: initialization completed in 669 ms
+2022-10-04 16:50:42.330 INFO [main][DruidDataSourceAutoConfigure.java:56] - Init DruidDataSource
+2022-10-04 16:50:42.480 INFO [main][DruidDataSource.java:1003] - {dataSource-1} inited
+2022-10-04 16:50:42.488 INFO [main][H2ConsoleAutoConfiguration.java:68] - H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./web/src/main/resources/H2DataBase/h2db'
+2022-10-04 16:50:42.547 INFO [main][LogHelper.java:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-04 16:50:42.570 INFO [main][Version.java:44] - HHH000412: Hibernate ORM core version 5.4.25.Final
+2022-10-04 16:50:42.633 INFO [main][JavaReflectionManager.java:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-04 16:50:42.687 INFO [main][Dialect.java:175] - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-10-04 16:50:42.972 INFO [main][JtaPlatformInitiator.java:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-04 16:50:42.977 INFO [main][AbstractEntityManagerFactoryBean.java:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-04 16:50:43.551 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-04 16:50:43.637 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-19201"]
+2022-10-04 16:50:43.647 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 19201 (http) with context path ''
+2022-10-04 16:50:43.863 INFO [main][StartupInfoLogger.java:61] - Started WebApplication in 2.454 seconds (JVM running for 2.934)
+2022-10-04 16:51:01.592 INFO [http-nio-19201-exec-1][DirectJDKLog.java:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-04 16:51:01.592 INFO [http-nio-19201-exec-1][FrameworkServlet.java:525] - Initializing Servlet 'dispatcherServlet'
+2022-10-04 16:51:01.593 INFO [http-nio-19201-exec-1][FrameworkServlet.java:547] - Completed initialization in 1 ms
+2022-10-04 16:51:01.648 INFO [http-nio-19201-exec-1][PackageController.java:35] - [Lorg.springframework.web.multipart.MultipartFile;@1b21ec1e
+2022-10-04 16:51:01.649 INFO [http-nio-19201-exec-1][PackageController.java:36] - 接收文件数组：files_length = 1
+2022-10-04 16:51:01.649 INFO [http-nio-19201-exec-1][PackageController.java:38] - 文件信息：
+2022-10-04 16:51:01.649 INFO [http-nio-19201-exec-1][PackageController.java:39] - 飞仙.txt
+2022-10-04 16:51:01.649 INFO [http-nio-19201-exec-1][PackageController.java:40] - 128
+2022-10-04 16:51:01.653 INFO [http-nio-19201-exec-1][PackageController.java:51] - 上传的文件类型为：txt
+2022-10-04 16:51:21.276 WARN [http-nio-19201-exec-2][AbstractHandlerExceptionResolver.java:207] - Resolved [org.springframework.web.multipart.support.MissingServletRequestPartException: Required request part 'files' is not present]
+2022-10-04 16:53:59.332 INFO [http-nio-19201-exec-3][PackageController.java:35] - [Lorg.springframework.web.multipart.MultipartFile;@2fee8706
+2022-10-04 16:53:59.332 INFO [http-nio-19201-exec-3][PackageController.java:36] - 接收文件数组：files_length = 1
+2022-10-04 16:53:59.333 INFO [http-nio-19201-exec-3][PackageController.java:38] - 文件信息：
+2022-10-04 16:53:59.333 INFO [http-nio-19201-exec-3][PackageController.java:39] - 飞仙.txt
+2022-10-04 16:53:59.333 INFO [http-nio-19201-exec-3][PackageController.java:40] - 128
+2022-10-04 16:53:59.333 INFO [http-nio-19201-exec-3][PackageController.java:51] - 上传的文件类型为：txt
+2022-10-04 18:06:14.522 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-04 18:06:14.523 INFO [SpringContextShutdownHook][AbstractEntityManagerFactoryBean.java:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-04 18:06:14.524 INFO [SpringContextShutdownHook][DruidDataSource.java:1948] - {dataSource-1} closing ...
+2022-10-04 18:06:14.525 INFO [SpringContextShutdownHook][DruidDataSource.java:2020] - {dataSource-1} closed
+2022-10-04 18:06:18.981 INFO [main][StartupInfoLogger.java:55] - Starting WebApplication using Java 1.8.0_332 on FJH2022 with PID 30836 (D:\IDEAProject\DeploymentResource\web\target\classes started by Administrator in D:\IDEAProject\DeploymentResource)
+2022-10-04 18:06:18.985 INFO [main][SpringApplication.java:660] - No active profile set, falling back to default profiles: default
+2022-10-04 18:06:19.417 INFO [main][RepositoryConfigurationDelegate.java:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-04 18:06:19.424 INFO [main][RepositoryConfigurationDelegate.java:188] - Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2022-10-04 18:06:19.649 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 19201 (http)
+2022-10-04 18:06:19.653 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-19201"]
+2022-10-04 18:06:19.653 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+2022-10-04 18:06:19.653 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-10-04 18:06:19.685 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+2022-10-04 18:06:19.685 INFO [main][ServletWebServerApplicationContext.java:289] - Root WebApplicationContext: initialization completed in 645 ms
+2022-10-04 18:06:19.712 INFO [main][DruidDataSourceAutoConfigure.java:56] - Init DruidDataSource
+2022-10-04 18:06:19.845 INFO [main][DruidDataSource.java:1003] - {dataSource-1} inited
+2022-10-04 18:06:19.863 INFO [main][H2ConsoleAutoConfiguration.java:68] - H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./web/src/main/resources/H2DataBase/h2db'
+2022-10-04 18:06:19.930 INFO [main][LogHelper.java:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-04 18:06:19.954 INFO [main][Version.java:44] - HHH000412: Hibernate ORM core version 5.4.25.Final
+2022-10-04 18:06:20.032 INFO [main][JavaReflectionManager.java:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-04 18:06:20.088 INFO [main][Dialect.java:175] - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-10-04 18:06:20.352 INFO [main][JtaPlatformInitiator.java:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-04 18:06:20.357 INFO [main][AbstractEntityManagerFactoryBean.java:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-04 18:06:20.875 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-04 18:06:20.953 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-19201"]
+2022-10-04 18:06:20.962 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 19201 (http) with context path ''
+2022-10-04 18:06:21.155 INFO [main][StartupInfoLogger.java:61] - Started WebApplication in 2.339 seconds (JVM running for 2.81)
+2022-10-04 18:06:28.906 INFO [http-nio-19201-exec-1][DirectJDKLog.java:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-04 18:06:28.906 INFO [http-nio-19201-exec-1][FrameworkServlet.java:525] - Initializing Servlet 'dispatcherServlet'
+2022-10-04 18:06:28.907 INFO [http-nio-19201-exec-1][FrameworkServlet.java:547] - Completed initialization in 1 ms
+2022-10-04 18:06:28.963 INFO [http-nio-19201-exec-1][PackageController.java:47] - [Lorg.springframework.web.multipart.MultipartFile;@234a5153
+2022-10-04 18:06:28.963 INFO [http-nio-19201-exec-1][PackageController.java:48] - 接收文件数组：files_length = 1
+2022-10-04 18:06:28.963 INFO [http-nio-19201-exec-1][PackageController.java:50] - 文件信息：
+2022-10-04 18:06:28.963 INFO [http-nio-19201-exec-1][PackageController.java:51] - aaa-bb-cc-c.zip
+2022-10-04 18:06:28.963 INFO [http-nio-19201-exec-1][PackageController.java:52] - 449
+2022-10-04 18:06:28.968 INFO [http-nio-19201-exec-1][PackageController.java:61] - 上传的文件类型为：zip
+2022-10-04 18:06:28.969 INFO [http-nio-19201-exec-1][PackageServiceImpl.java:46] - originalFileName: aaa-bb-cc-c.zip
+2022-10-04 18:06:28.969 INFO [http-nio-19201-exec-1][PackageServiceImpl.java:47] - contentType: zip
+2022-10-04 18:06:28.969 INFO [http-nio-19201-exec-1][PackageServiceImpl.java:48] - fileUid: 7e07dbc659e442d090ad255c58741de5.zip
+2022-10-04 18:06:28.969 INFO [http-nio-19201-exec-1][PackageServiceImpl.java:49] - uploadFile: web\src\main\resources\files\7e07dbc659e442d090ad255c58741de5.zip
+2022-10-04 18:06:28.969 INFO [http-nio-19201-exec-1][PackageServiceImpl.java:50] - dest: D:\IDEAProject\DeploymentResource\web\src\main\resources\files\7e07dbc659e442d090ad255c58741de5.zip
+2022-10-04 18:06:28.969 INFO [http-nio-19201-exec-1][PackageServiceImpl.java:51] - parentFile: web\src\main\resources\files
+2022-10-04 18:06:28.973 INFO [http-nio-19201-exec-1][PackageController.java:68] - 文件：aaa-bb-cc-c.zip存储成功
+2022-10-04 18:06:28.973 INFO [http-nio-19201-exec-1][PackageController.java:69] - fileUid: 7e07dbc659e442d090ad255c58741de5.zip
+2022-10-04 18:28:48.048 INFO [http-nio-19201-exec-5][PackageController.java:47] - [Lorg.springframework.web.multipart.MultipartFile;@162a429b
+2022-10-04 18:28:48.049 INFO [http-nio-19201-exec-5][PackageController.java:48] - 接收文件数组：files_length = 1
+2022-10-04 18:28:48.049 INFO [http-nio-19201-exec-5][PackageController.java:50] - 文件信息：
+2022-10-04 18:28:48.049 INFO [http-nio-19201-exec-5][PackageController.java:51] - aaa-bb-cc-c.zip
+2022-10-04 18:28:48.049 INFO [http-nio-19201-exec-5][PackageController.java:52] - 449
+2022-10-04 18:28:48.049 INFO [http-nio-19201-exec-5][PackageController.java:61] - 上传的文件类型为：zip
+2022-10-04 18:28:48.049 INFO [http-nio-19201-exec-5][PackageServiceImpl.java:46] - originalFileName: aaa-bb-cc-c.zip
+2022-10-04 18:28:48.049 INFO [http-nio-19201-exec-5][PackageServiceImpl.java:47] - contentType: zip
+2022-10-04 18:28:48.049 INFO [http-nio-19201-exec-5][PackageServiceImpl.java:48] - fileUid: 2c7d0fab1fef48fcaadb2a331659cca1.zip
+2022-10-04 18:28:48.049 INFO [http-nio-19201-exec-5][PackageServiceImpl.java:49] - uploadFile: web\src\main\resources\files\2c7d0fab1fef48fcaadb2a331659cca1.zip
+2022-10-04 18:28:48.049 INFO [http-nio-19201-exec-5][PackageServiceImpl.java:50] - dest: D:\IDEAProject\DeploymentResource\web\src\main\resources\files\2c7d0fab1fef48fcaadb2a331659cca1.zip
+2022-10-04 18:28:48.049 INFO [http-nio-19201-exec-5][PackageServiceImpl.java:51] - parentFile: web\src\main\resources\files
+2022-10-04 18:28:48.051 INFO [http-nio-19201-exec-5][PackageController.java:68] - 文件：aaa-bb-cc-c.zip存储成功
+2022-10-04 18:28:48.052 INFO [http-nio-19201-exec-5][PackageController.java:69] - fileUid: 2c7d0fab1fef48fcaadb2a331659cca1.zip
+2022-10-04 22:38:45.515 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-04 22:38:45.516 INFO [SpringContextShutdownHook][AbstractEntityManagerFactoryBean.java:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-04 22:38:45.517 INFO [SpringContextShutdownHook][DruidDataSource.java:1948] - {dataSource-1} closing ...
+2022-10-04 22:38:45.519 INFO [SpringContextShutdownHook][DruidDataSource.java:2020] - {dataSource-1} closed
+2022-10-04 22:38:50.593 INFO [main][StartupInfoLogger.java:55] - Starting WebApplication using Java 1.8.0_332 on FJH2022 with PID 12776 (D:\IDEAProject\DeploymentResource\web\target\classes started by Administrator in D:\IDEAProject\DeploymentResource)
+2022-10-04 22:38:50.598 INFO [main][SpringApplication.java:660] - No active profile set, falling back to default profiles: default
+2022-10-04 22:38:51.086 INFO [main][RepositoryConfigurationDelegate.java:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-04 22:38:51.094 INFO [main][RepositoryConfigurationDelegate.java:188] - Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
+2022-10-04 22:38:51.328 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 19201 (http)
+2022-10-04 22:38:51.333 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-19201"]
+2022-10-04 22:38:51.333 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+2022-10-04 22:38:51.333 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-10-04 22:38:51.366 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+2022-10-04 22:38:51.367 INFO [main][ServletWebServerApplicationContext.java:289] - Root WebApplicationContext: initialization completed in 728 ms
+2022-10-04 22:38:51.409 INFO [main][DruidDataSourceAutoConfigure.java:56] - Init DruidDataSource
+2022-10-04 22:38:51.591 INFO [main][DruidDataSource.java:1003] - {dataSource-1} inited
+2022-10-04 22:38:51.600 INFO [main][H2ConsoleAutoConfiguration.java:68] - H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./web/src/main/resources/H2DataBase/h2db'
+2022-10-04 22:38:51.655 INFO [main][LogHelper.java:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-04 22:38:51.676 INFO [main][Version.java:44] - HHH000412: Hibernate ORM core version 5.4.25.Final
+2022-10-04 22:38:51.727 INFO [main][JavaReflectionManager.java:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-04 22:38:51.777 INFO [main][Dialect.java:175] - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-10-04 22:38:52.052 INFO [main][JtaPlatformInitiator.java:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-04 22:38:52.057 INFO [main][AbstractEntityManagerFactoryBean.java:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-04 22:38:52.706 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-04 22:38:52.827 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-19201"]
+2022-10-04 22:38:52.841 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 19201 (http) with context path ''
+2022-10-04 22:38:53.056 INFO [main][StartupInfoLogger.java:61] - Started WebApplication in 2.638 seconds (JVM running for 3.169)
+2022-10-04 22:39:03.922 INFO [http-nio-19201-exec-1][DirectJDKLog.java:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-04 22:39:03.922 INFO [http-nio-19201-exec-1][FrameworkServlet.java:525] - Initializing Servlet 'dispatcherServlet'
+2022-10-04 22:39:03.923 INFO [http-nio-19201-exec-1][FrameworkServlet.java:547] - Completed initialization in 1 ms
+2022-10-04 22:39:04.493 INFO [http-nio-19201-exec-1][PackageController.java:48] - 
+2022-10-04 22:39:04.493 INFO [http-nio-19201-exec-1][PackageController.java:49] - 扫描接收的文件数组信息：
+2022-10-04 22:39:04.493 INFO [http-nio-19201-exec-1][PackageController.java:50] - [Lorg.springframework.web.multipart.MultipartFile;@32d7fb1d
+2022-10-04 22:39:04.493 INFO [http-nio-19201-exec-1][PackageController.java:51] - 接收文件数组：files_length = 1
+2022-10-04 22:39:04.493 INFO [http-nio-19201-exec-1][PackageController.java:53] - 文件信息：
+2022-10-04 22:39:04.493 INFO [http-nio-19201-exec-1][PackageController.java:54] - xxfw-xttz-xttz-java (1).zip
+2022-10-04 22:39:04.493 INFO [http-nio-19201-exec-1][PackageController.java:55] - 118856530
+2022-10-04 22:39:04.493 INFO [http-nio-19201-exec-1][PackageController.java:57] - 扫描接收的文件数组信息完成：
+2022-10-04 22:39:04.493 INFO [http-nio-19201-exec-1][PackageController.java:58] - 
+2022-10-04 22:39:04.498 INFO [http-nio-19201-exec-1][PackageController.java:66] - 上传的文件类型为：zip
+2022-10-04 22:39:04.498 INFO [http-nio-19201-exec-1][PackageController.java:72] - 
+2022-10-04 22:39:04.499 INFO [http-nio-19201-exec-1][PackageServiceImpl.java:51] - originalFileName: xxfw-xttz-xttz-java (1).zip
+2022-10-04 22:39:04.499 INFO [http-nio-19201-exec-1][PackageServiceImpl.java:52] - contentType: zip
+2022-10-04 22:39:04.499 INFO [http-nio-19201-exec-1][PackageServiceImpl.java:53] - fileUid: e00221b0beb1404b8954c9be92c51bd2.zip
+2022-10-04 22:39:04.499 INFO [http-nio-19201-exec-1][PackageServiceImpl.java:54] - uploadFile: web\src\main\resources\files\e00221b0beb1404b8954c9be92c51bd2.zip
+2022-10-04 22:39:04.499 INFO [http-nio-19201-exec-1][PackageServiceImpl.java:55] - dest: D:\IDEAProject\DeploymentResource\web\src\main\resources\files\e00221b0beb1404b8954c9be92c51bd2.zip
+2022-10-04 22:39:04.499 INFO [http-nio-19201-exec-1][PackageServiceImpl.java:56] - parentFile: web\src\main\resources\files
+2022-10-04 22:39:04.588 INFO [http-nio-19201-exec-1][PackageController.java:74] - 文件：xxfw-xttz-xttz-java (1).zip存储成功
+2022-10-04 22:39:04.588 INFO [http-nio-19201-exec-1][PackageController.java:75] - fileUid: e00221b0beb1404b8954c9be92c51bd2.zip
+2022-10-04 23:31:47.345 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-04 23:31:47.346 INFO [SpringContextShutdownHook][AbstractEntityManagerFactoryBean.java:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-04 23:31:47.348 INFO [SpringContextShutdownHook][DruidDataSource.java:1948] - {dataSource-1} closing ...
+2022-10-04 23:31:47.349 INFO [SpringContextShutdownHook][DruidDataSource.java:2020] - {dataSource-1} closed
+2022-10-04 23:31:53.592 INFO [main][StartupInfoLogger.java:55] - Starting WebApplication using Java 1.8.0_332 on FJH2022 with PID 4392 (D:\IDEAProject\DeploymentResource\web\target\classes started by Administrator in D:\IDEAProject\DeploymentResource)
+2022-10-04 23:31:53.596 INFO [main][SpringApplication.java:660] - No active profile set, falling back to default profiles: default
+2022-10-04 23:31:54.019 INFO [main][RepositoryConfigurationDelegate.java:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-04 23:31:54.026 INFO [main][RepositoryConfigurationDelegate.java:188] - Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2022-10-04 23:31:54.257 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 19201 (http)
+2022-10-04 23:31:54.261 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-19201"]
+2022-10-04 23:31:54.261 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+2022-10-04 23:31:54.261 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-10-04 23:31:54.295 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+2022-10-04 23:31:54.295 INFO [main][ServletWebServerApplicationContext.java:289] - Root WebApplicationContext: initialization completed in 658 ms
+2022-10-04 23:31:54.320 INFO [main][DruidDataSourceAutoConfigure.java:56] - Init DruidDataSource
+2022-10-04 23:31:54.481 INFO [main][DruidDataSource.java:1003] - {dataSource-1} inited
+2022-10-04 23:31:54.489 INFO [main][H2ConsoleAutoConfiguration.java:68] - H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./web/src/main/resources/H2DataBase/h2db'
+2022-10-04 23:31:54.547 INFO [main][LogHelper.java:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-04 23:31:54.570 INFO [main][Version.java:44] - HHH000412: Hibernate ORM core version 5.4.25.Final
+2022-10-04 23:31:54.625 INFO [main][JavaReflectionManager.java:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-04 23:31:54.677 INFO [main][Dialect.java:175] - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-10-04 23:31:54.981 INFO [main][JtaPlatformInitiator.java:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-04 23:31:54.986 INFO [main][AbstractEntityManagerFactoryBean.java:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-04 23:31:55.537 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-04 23:31:55.619 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-19201"]
+2022-10-04 23:31:55.627 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 19201 (http) with context path ''
+2022-10-04 23:31:55.832 INFO [main][StartupInfoLogger.java:61] - Started WebApplication in 2.41 seconds (JVM running for 2.896)
+2022-10-04 23:32:28.548 INFO [http-nio-19201-exec-1][DirectJDKLog.java:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-04 23:32:28.549 INFO [http-nio-19201-exec-1][FrameworkServlet.java:525] - Initializing Servlet 'dispatcherServlet'
+2022-10-04 23:32:28.549 INFO [http-nio-19201-exec-1][FrameworkServlet.java:547] - Completed initialization in 0 ms
+2022-10-04 23:32:29.899 INFO [http-nio-19201-exec-1][PackageController.java:44] - 
+2022-10-04 23:32:29.899 INFO [http-nio-19201-exec-1][PackageController.java:45] - 扫描接收的文件数组信息：
+2022-10-04 23:32:29.899 INFO [http-nio-19201-exec-1][PackageController.java:46] - [Lorg.springframework.web.multipart.MultipartFile;@4d9abfdd
+2022-10-04 23:32:29.899 INFO [http-nio-19201-exec-1][PackageController.java:47] - 接收文件数组：files_length = 1
+2022-10-04 23:32:29.899 INFO [http-nio-19201-exec-1][PackageController.java:49] - 文件信息：
+2022-10-04 23:32:29.900 INFO [http-nio-19201-exec-1][PackageController.java:50] - xxfw-xttz-xttz-java.zip
+2022-10-04 23:32:29.900 INFO [http-nio-19201-exec-1][PackageController.java:51] - 302142213
+2022-10-04 23:32:29.900 INFO [http-nio-19201-exec-1][PackageController.java:53] - 扫描接收的文件数组信息完成：
+2022-10-04 23:32:29.900 INFO [http-nio-19201-exec-1][PackageController.java:54] - 
+2022-10-04 23:32:29.905 INFO [http-nio-19201-exec-1][PackageController.java:62] - 上传的文件类型为：zip
+2022-10-04 23:32:29.905 INFO [http-nio-19201-exec-1][PackageController.java:68] - 
+2022-10-04 23:32:29.906 INFO [http-nio-19201-exec-1][PackageServiceImpl.java:52] - originalFileName: xxfw-xttz-xttz-java.zip
+2022-10-04 23:32:29.906 INFO [http-nio-19201-exec-1][PackageServiceImpl.java:53] - contentType: zip
+2022-10-04 23:32:29.906 INFO [http-nio-19201-exec-1][PackageServiceImpl.java:54] - fileUid: 0a40053d350d4406a0c1784e839d4623.zip
+2022-10-04 23:32:29.906 INFO [http-nio-19201-exec-1][PackageServiceImpl.java:55] - uploadFile: web\src\main\resources\files\0a40053d350d4406a0c1784e839d4623.zip
+2022-10-04 23:32:29.906 INFO [http-nio-19201-exec-1][PackageServiceImpl.java:56] - dest: D:\IDEAProject\DeploymentResource\web\src\main\resources\files\0a40053d350d4406a0c1784e839d4623.zip
+2022-10-04 23:32:29.906 INFO [http-nio-19201-exec-1][PackageServiceImpl.java:57] - parentFile: web\src\main\resources\files
+2022-10-04 23:32:30.103 INFO [http-nio-19201-exec-1][PackageController.java:70] - 文件：xxfw-xttz-xttz-java.zip存储成功
+2022-10-04 23:32:30.104 INFO [http-nio-19201-exec-1][PackageController.java:71] - fileUid: 0a40053d350d4406a0c1784e839d4623.zip
+2022-10-04 23:32:30.110 INFO [http-nio-19201-exec-1][ZipUtils.java:50] - 解压: IMG_6466.tar
+2022-10-04 23:32:30.503 INFO [http-nio-19201-exec-1][ZipUtils.java:50] - 解压: xxfw-xttz-xttz-java.json
+2022-10-04 23:32:30.504 INFO [http-nio-19201-exec-1][ZipUtils.java:78] - 解压完成，耗时：400 ms
+2022-10-04 23:32:30.504 INFO [http-nio-19201-exec-1][PackageServiceImpl.java:96] - 文件类型：tar
+2022-10-04 23:32:30.504 INFO [http-nio-19201-exec-1][PackageServiceImpl.java:96] - 文件类型：json
+2022-10-04 23:32:30.541 INFO [http-nio-19201-exec-1][PackageServiceImpl.java:105] - json描述文件解析结果： 
+2022-10-04 23:32:30.541 INFO [http-nio-19201-exec-1][PackageServiceImpl.java:106] - PackingToolInfo(basicInfoForm=BasicInfoForm(softwareCnName=系统调整, softwareGroupName=, softwareEnvironment=, softwareUniqueName=xxfw-xttz-xttz-java, domainName=xxfw, softwareName=xttz, serviceName=xttz, languageName=java, softwareVersion=.., majorVersionNumber=, minorVersionNumber=, revisionNumber=), imageInfoForm=ImageInfoForm(imageFileUidList=[f052bb43aed24985ba1c7c5e1bd802a0.tar], imageFileNameList=null, isImageFileExist=true, isYamlFileExist=null, yamlFileUid=a027d4a3c1064f9e9566a202847a9a82.yaml, yamlFileName=null), developerInfoForm=DeveloperInfoForm(developerName=, developerGroup=, developerPhone=))
+2022-10-04 23:32:30.548 ERROR [http-nio-19201-exec-1][DirectJDKLog.java:175] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at com.feng.web.controller.PackageController.uploadSingle(PackageController.java:81) ~[classes/:?]
+	at com.feng.web.controller.PackageController$$FastClassBySpringCGLIB$$a2cbf4b3.invoke(<generated>) ~[classes/:?]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-5.3.2.jar:5.3.2]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-5.3.2.jar:5.3.2]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691) ~[spring-aop-5.3.2.jar:5.3.2]
+	at com.feng.web.controller.PackageController$$EnhancerBySpringCGLIB$$a45e4c83.uploadSingle(<generated>) ~[classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_332]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_332]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_332]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_332]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1061) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:961) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652) ~[tomcat-embed-core-9.0.41.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.41.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:124) ~[druid-1.1.18.jar:1.1.18]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_332]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_332]
+2022-10-04 23:36:43.146 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-04 23:36:43.147 INFO [SpringContextShutdownHook][AbstractEntityManagerFactoryBean.java:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-04 23:36:43.148 INFO [SpringContextShutdownHook][DruidDataSource.java:1948] - {dataSource-1} closing ...
+2022-10-04 23:36:43.149 INFO [SpringContextShutdownHook][DruidDataSource.java:2020] - {dataSource-1} closed
+2022-10-04 23:36:47.064 INFO [main][StartupInfoLogger.java:55] - Starting WebApplication using Java 1.8.0_332 on FJH2022 with PID 26564 (D:\IDEAProject\DeploymentResource\web\target\classes started by Administrator in D:\IDEAProject\DeploymentResource)
+2022-10-04 23:36:47.071 INFO [main][SpringApplication.java:660] - No active profile set, falling back to default profiles: default
+2022-10-04 23:36:47.519 INFO [main][RepositoryConfigurationDelegate.java:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-04 23:36:47.527 INFO [main][RepositoryConfigurationDelegate.java:188] - Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
+2022-10-04 23:36:47.774 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 19201 (http)
+2022-10-04 23:36:47.779 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-19201"]
+2022-10-04 23:36:47.779 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+2022-10-04 23:36:47.779 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-10-04 23:36:47.814 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+2022-10-04 23:36:47.814 INFO [main][ServletWebServerApplicationContext.java:289] - Root WebApplicationContext: initialization completed in 691 ms
+2022-10-04 23:36:47.842 INFO [main][DruidDataSourceAutoConfigure.java:56] - Init DruidDataSource
+2022-10-04 23:36:47.990 INFO [main][DruidDataSource.java:1003] - {dataSource-1} inited
+2022-10-04 23:36:47.998 INFO [main][H2ConsoleAutoConfiguration.java:68] - H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./web/src/main/resources/H2DataBase/h2db'
+2022-10-04 23:36:48.054 INFO [main][LogHelper.java:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-04 23:36:48.075 INFO [main][Version.java:44] - HHH000412: Hibernate ORM core version 5.4.25.Final
+2022-10-04 23:36:48.128 INFO [main][JavaReflectionManager.java:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-04 23:36:48.178 INFO [main][Dialect.java:175] - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-10-04 23:36:48.448 INFO [main][JtaPlatformInitiator.java:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-04 23:36:48.452 INFO [main][AbstractEntityManagerFactoryBean.java:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-04 23:36:49.008 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-04 23:36:49.098 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-19201"]
+2022-10-04 23:36:49.108 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 19201 (http) with context path ''
+2022-10-04 23:36:49.332 INFO [main][StartupInfoLogger.java:61] - Started WebApplication in 2.505 seconds (JVM running for 2.998)
+2022-10-04 23:36:57.526 INFO [http-nio-19201-exec-1][DirectJDKLog.java:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-04 23:36:57.526 INFO [http-nio-19201-exec-1][FrameworkServlet.java:525] - Initializing Servlet 'dispatcherServlet'
+2022-10-04 23:36:57.527 INFO [http-nio-19201-exec-1][FrameworkServlet.java:547] - Completed initialization in 0 ms
+2022-10-04 23:36:58.841 INFO [http-nio-19201-exec-1][PackageController.java:45] - 
+2022-10-04 23:36:58.842 INFO [http-nio-19201-exec-1][PackageController.java:46] - 扫描接收的文件数组信息：
+2022-10-04 23:36:58.842 INFO [http-nio-19201-exec-1][PackageController.java:47] - [Lorg.springframework.web.multipart.MultipartFile;@4d75acad
+2022-10-04 23:36:58.842 INFO [http-nio-19201-exec-1][PackageController.java:48] - 接收文件数组：files_length = 1
+2022-10-04 23:36:58.842 INFO [http-nio-19201-exec-1][PackageController.java:50] - 文件信息：
+2022-10-04 23:36:58.842 INFO [http-nio-19201-exec-1][PackageController.java:51] - xxfw-xttz-xttz-java.zip
+2022-10-04 23:36:58.842 INFO [http-nio-19201-exec-1][PackageController.java:52] - 302142213
+2022-10-04 23:36:58.842 INFO [http-nio-19201-exec-1][PackageController.java:54] - 扫描接收的文件数组信息完成：
+2022-10-04 23:36:58.842 INFO [http-nio-19201-exec-1][PackageController.java:55] - 
+2022-10-04 23:36:58.847 INFO [http-nio-19201-exec-1][PackageController.java:63] - 上传的文件类型为：zip
+2022-10-04 23:36:58.847 INFO [http-nio-19201-exec-1][PackageController.java:69] - 
+2022-10-04 23:36:58.848 INFO [http-nio-19201-exec-1][PackageServiceImpl.java:52] - originalFileName: xxfw-xttz-xttz-java.zip
+2022-10-04 23:36:58.848 INFO [http-nio-19201-exec-1][PackageServiceImpl.java:53] - contentType: zip
+2022-10-04 23:36:58.848 INFO [http-nio-19201-exec-1][PackageServiceImpl.java:54] - fileUid: 07d91beb315f4d368a70ab963cde231f.zip
+2022-10-04 23:36:58.848 INFO [http-nio-19201-exec-1][PackageServiceImpl.java:55] - uploadFile: web\src\main\resources\files\07d91beb315f4d368a70ab963cde231f.zip
+2022-10-04 23:36:58.848 INFO [http-nio-19201-exec-1][PackageServiceImpl.java:56] - dest: D:\IDEAProject\DeploymentResource\web\src\main\resources\files\07d91beb315f4d368a70ab963cde231f.zip
+2022-10-04 23:36:58.848 INFO [http-nio-19201-exec-1][PackageServiceImpl.java:57] - parentFile: web\src\main\resources\files
+2022-10-04 23:36:58.956 INFO [http-nio-19201-exec-1][PackageController.java:71] - 文件：xxfw-xttz-xttz-java.zip存储成功
+2022-10-04 23:36:58.956 INFO [http-nio-19201-exec-1][PackageController.java:72] - fileUid: 07d91beb315f4d368a70ab963cde231f.zip
+2022-10-04 23:36:58.960 INFO [http-nio-19201-exec-1][ZipUtils.java:50] - 解压: IMG_6466.tar
+2022-10-04 23:36:59.355 INFO [http-nio-19201-exec-1][ZipUtils.java:50] - 解压: xxfw-xttz-xttz-java.json
+2022-10-04 23:36:59.355 INFO [http-nio-19201-exec-1][ZipUtils.java:78] - 解压完成，耗时：398 ms
+2022-10-04 23:36:59.355 INFO [http-nio-19201-exec-1][PackageServiceImpl.java:96] - 文件类型：tar
+2022-10-04 23:36:59.355 INFO [http-nio-19201-exec-1][PackageServiceImpl.java:96] - 文件类型：json
+2022-10-04 23:36:59.393 INFO [http-nio-19201-exec-1][PackageServiceImpl.java:105] - json描述文件解析结果： 
+2022-10-04 23:36:59.394 INFO [http-nio-19201-exec-1][PackageServiceImpl.java:106] - PackingToolInfo(basicInfoForm=BasicInfoForm(softwareCnName=系统调整, softwareGroupName=, softwareEnvironment=, softwareUniqueName=xxfw-xttz-xttz-java, domainName=xxfw, softwareName=xttz, serviceName=xttz, languageName=java, softwareVersion=.., majorVersionNumber=, minorVersionNumber=, revisionNumber=), imageInfoForm=ImageInfoForm(imageFileUidList=[f052bb43aed24985ba1c7c5e1bd802a0.tar], imageFileNameList=null, isImageFileExist=true, isYamlFileExist=null, yamlFileUid=a027d4a3c1064f9e9566a202847a9a82.yaml, yamlFileName=null), developerInfoForm=DeveloperInfoForm(developerName=, developerGroup=, developerPhone=))
+2022-10-04 23:54:34.998 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-04 23:54:35.000 INFO [SpringContextShutdownHook][AbstractEntityManagerFactoryBean.java:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-04 23:54:35.001 INFO [SpringContextShutdownHook][DruidDataSource.java:1948] - {dataSource-1} closing ...
+2022-10-04 23:54:35.002 INFO [SpringContextShutdownHook][DruidDataSource.java:2020] - {dataSource-1} closed

@@ -1,0 +1,10 @@
+2022-09-22 00:14:36.923 INFO [http-nio-19201-exec-4][PendingReviewPackageController.java:50] - 待审核资源包列表查询
+2022-09-22 00:15:10.895 INFO [http-nio-19201-exec-5][PendingReviewPackageController.java:50] - 待审核资源包列表查询
+2022-09-22 00:15:18.747 INFO [http-nio-19201-exec-6][PendingReviewPackageController.java:50] - 待审核资源包列表查询
+2022-09-22 00:15:31.779 INFO [http-nio-19201-exec-7][PendingReviewPackageController.java:50] - 待审核资源包列表查询
+2022-09-22 00:15:44.405 INFO [http-nio-19201-exec-8][PendingReviewPackageController.java:50] - 待审核资源包列表查询
+2022-09-22 00:16:37.206 INFO [http-nio-19201-exec-9][PendingReviewPackageController.java:50] - 待审核资源包列表查询
+2022-09-22 00:18:18.524 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-09-22 00:18:18.525 INFO [SpringContextShutdownHook][AbstractEntityManagerFactoryBean.java:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-09-22 00:18:18.526 INFO [SpringContextShutdownHook][DruidDataSource.java:1948] - {dataSource-1} closing ...
+2022-09-22 00:18:18.526 INFO [SpringContextShutdownHook][DruidDataSource.java:2020] - {dataSource-1} closed

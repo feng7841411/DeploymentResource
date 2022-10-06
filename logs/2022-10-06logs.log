@@ -1,0 +1,4 @@
+2022-10-07 00:02:24.351 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-07 00:02:24.371 INFO [SpringContextShutdownHook][AbstractEntityManagerFactoryBean.java:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-07 00:02:24.386 INFO [SpringContextShutdownHook][DruidDataSource.java:1948] - {dataSource-1} closing ...
+2022-10-07 00:02:24.386 INFO [SpringContextShutdownHook][DruidDataSource.java:2020] - {dataSource-1} closed
