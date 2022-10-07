@@ -1,6 +1,7 @@
 package com.feng.entity.packageToolEntity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -91,4 +92,29 @@ public class ServicePackageDetailInfo {
 
     private String developerPhone;
 
+
+    /**
+     * 以下是相比从打包的JSON里新增的
+     */
+    @TableField(value = "CONNECTED_PACKAGE_UID")
+    private String connectedPackageUid;
+
+
+    /**
+     * 包真名
+     */
+    private String connectedPackageOriginalFileName;
+
+    /**
+     * 包大小
+     */
+    private String connectedPackageSize;
+
+
+    /**
+     * 是否确认，因为这个详情类，在确认之前就会写入数据库；
+     * pendingReview、publish、removed是确认后才会写，
+     * 所有这里留一个，之后用来清除没有被确认，且没有被取消的
+     */
+    private String isCheck;
 }

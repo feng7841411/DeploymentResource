@@ -198,3 +198,255 @@ Caused by: java.lang.ClassNotFoundException: com.feng.entity.returnClass.Result
 2022-10-07 14:05:21.483 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-19201"]
 2022-10-07 14:05:21.662 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 19201 (http) with context path ''
 2022-10-07 14:05:23.842 INFO [main][StartupInfoLogger.java:61] - Started WebApplication in 62.2 seconds (JVM running for 80.6)
+2022-10-07 22:40:45.464 INFO [main][StartupInfoLogger.java:55] - Starting WebApplication using Java 1.8.0_332 on FJH2022 with PID 23636 (D:\IDEAProject\DeploymentResource\web\target\classes started by Administrator in D:\IDEAProject\DeploymentResource)
+2022-10-07 22:40:45.468 INFO [main][SpringApplication.java:660] - No active profile set, falling back to default profiles: default
+2022-10-07 22:40:46.803 INFO [main][RepositoryConfigurationDelegate.java:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-07 22:40:46.812 INFO [main][RepositoryConfigurationDelegate.java:188] - Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
+2022-10-07 22:40:47.158 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 19201 (http)
+2022-10-07 22:40:47.163 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-19201"]
+2022-10-07 22:40:47.163 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+2022-10-07 22:40:47.163 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-10-07 22:40:47.214 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+2022-10-07 22:40:47.214 INFO [main][ServletWebServerApplicationContext.java:289] - Root WebApplicationContext: initialization completed in 1687 ms
+2022-10-07 22:40:47.259 INFO [main][DruidDataSourceAutoConfigure.java:56] - Init DruidDataSource
+2022-10-07 22:40:47.608 INFO [main][DruidDataSource.java:1003] - {dataSource-1} inited
+2022-10-07 22:40:47.617 INFO [main][H2ConsoleAutoConfiguration.java:68] - H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./web/src/main/resources/H2DataBase/h2db'
+2022-10-07 22:40:47.691 INFO [main][LogHelper.java:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-07 22:40:47.731 INFO [main][Version.java:44] - HHH000412: Hibernate ORM core version 5.4.25.Final
+2022-10-07 22:40:47.877 INFO [main][JavaReflectionManager.java:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-07 22:40:47.973 INFO [main][Dialect.java:175] - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-10-07 22:40:48.356 INFO [main][JtaPlatformInitiator.java:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-07 22:40:48.362 INFO [main][AbstractEntityManagerFactoryBean.java:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-07 22:40:49.054 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-07 22:40:49.170 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-19201"]
+2022-10-07 22:40:49.276 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 19201 (http) with context path ''
+2022-10-07 22:40:49.404 INFO [main][StartupInfoLogger.java:61] - Started WebApplication in 4.233 seconds (JVM running for 5.382)
+2022-10-07 22:40:51.126 INFO [http-nio-19201-exec-1][DirectJDKLog.java:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-07 22:40:51.126 INFO [http-nio-19201-exec-1][FrameworkServlet.java:525] - Initializing Servlet 'dispatcherServlet'
+2022-10-07 22:40:51.128 INFO [http-nio-19201-exec-1][FrameworkServlet.java:547] - Completed initialization in 2 ms
+2022-10-07 22:41:37.787 INFO [http-nio-19201-exec-3][PackageController.java:53] - 
+2022-10-07 22:41:37.787 INFO [http-nio-19201-exec-3][PackageController.java:54] - 扫描接收的文件数组信息：
+2022-10-07 22:41:37.787 INFO [http-nio-19201-exec-3][PackageController.java:55] - [Lorg.springframework.web.multipart.MultipartFile;@d0aae33
+2022-10-07 22:41:37.787 INFO [http-nio-19201-exec-3][PackageController.java:56] - 接收文件数组：files_length = 1
+2022-10-07 22:41:37.787 INFO [http-nio-19201-exec-3][PackageController.java:58] - 文件信息：
+2022-10-07 22:41:37.788 INFO [http-nio-19201-exec-3][PackageController.java:59] - xxfw-xttz-xttz-java.zip
+2022-10-07 22:41:37.788 INFO [http-nio-19201-exec-3][PackageController.java:60] - 302142213
+2022-10-07 22:41:37.788 INFO [http-nio-19201-exec-3][PackageController.java:62] - 扫描接收的文件数组信息完成：
+2022-10-07 22:41:37.788 INFO [http-nio-19201-exec-3][PackageController.java:63] - 
+2022-10-07 22:41:37.807 INFO [http-nio-19201-exec-3][PackageController.java:71] - 上传的文件类型为：zip
+2022-10-07 22:41:37.808 INFO [http-nio-19201-exec-3][PackageController.java:77] - 
+2022-10-07 22:41:37.809 INFO [http-nio-19201-exec-3][PackageServiceImpl.java:52] - originalFileName: xxfw-xttz-xttz-java.zip
+2022-10-07 22:41:37.809 INFO [http-nio-19201-exec-3][PackageServiceImpl.java:53] - contentType: zip
+2022-10-07 22:41:37.809 INFO [http-nio-19201-exec-3][PackageServiceImpl.java:54] - fileUid: ba7b5ad2d06e465683c75a2f7fbdb027.zip
+2022-10-07 22:41:37.809 INFO [http-nio-19201-exec-3][PackageServiceImpl.java:55] - uploadFile: web\src\main\resources\files\ba7b5ad2d06e465683c75a2f7fbdb027.zip
+2022-10-07 22:41:37.809 INFO [http-nio-19201-exec-3][PackageServiceImpl.java:56] - dest: D:\IDEAProject\DeploymentResource\web\src\main\resources\files\ba7b5ad2d06e465683c75a2f7fbdb027.zip
+2022-10-07 22:41:37.809 INFO [http-nio-19201-exec-3][PackageServiceImpl.java:57] - parentFile: web\src\main\resources\files
+2022-10-07 22:41:38.000 INFO [http-nio-19201-exec-3][PackageController.java:79] - 文件：xxfw-xttz-xttz-java.zip存储成功
+2022-10-07 22:41:38.001 INFO [http-nio-19201-exec-3][PackageController.java:80] - fileUid: ba7b5ad2d06e465683c75a2f7fbdb027.zip
+2022-10-07 22:41:38.005 INFO [http-nio-19201-exec-3][ZipUtils.java:50] - 解压: IMG_6466.tar
+2022-10-07 22:41:38.404 INFO [http-nio-19201-exec-3][ZipUtils.java:50] - 解压: xxfw-xttz-xttz-java.json
+2022-10-07 22:41:38.405 INFO [http-nio-19201-exec-3][ZipUtils.java:78] - 解压完成，耗时：404 ms
+2022-10-07 22:41:38.405 INFO [http-nio-19201-exec-3][PackageServiceImpl.java:96] - 文件类型：tar
+2022-10-07 22:41:38.405 INFO [http-nio-19201-exec-3][PackageServiceImpl.java:96] - 文件类型：json
+2022-10-07 22:41:38.476 INFO [http-nio-19201-exec-3][PackageServiceImpl.java:105] - json描述文件解析结果： 
+2022-10-07 22:41:38.476 INFO [http-nio-19201-exec-3][PackageServiceImpl.java:106] - PackingToolInfo(basicInfoForm=BasicInfoForm(softwareCnName=系统调整, softwareGroupName=, softwareEnvironment=, softwareUniqueName=xxfw-xttz-xttz-java, domainName=xxfw, softwareName=xttz, serviceName=xttz, languageName=java, softwareVersion=.., majorVersionNumber=, minorVersionNumber=, revisionNumber=), imageInfoForm=ImageInfoForm(imageFileUidList=[f052bb43aed24985ba1c7c5e1bd802a0.tar], imageFileNameList=null, isImageFileExist=true, isYamlFileExist=null, yamlFileUid=a027d4a3c1064f9e9566a202847a9a82.yaml, yamlFileName=null), developerInfoForm=DeveloperInfoForm(developerName=, developerGroup=, developerPhone=))
+2022-10-07 22:41:38.483 INFO [http-nio-19201-exec-3][PackageController.java:106] - 详细信息：
+2022-10-07 22:41:38.484 INFO [http-nio-19201-exec-3][PackageController.java:107] - ServicePackageDetailInfo(servicePackageDetailInfoId=1, softwareCnName=系统调整, softwareGroupName=, softwareEnvironment=, softwareUniqueName=xxfw-xttz-xttz-java, domainName=xxfw, softwareName=xttz, serviceName=xttz, languageName=java, softwareVersion=.., majorVersionNumber=, minorVersionNumber=, revisionNumber=, developerName=, developerGroup=, developerPhone=, connectedPackageUid=null)
+2022-10-07 22:41:38.484 INFO [http-nio-19201-exec-3][PackageController.java:108] - 主键：
+2022-10-07 22:41:38.484 INFO [http-nio-19201-exec-3][PackageController.java:109] - 1
+2022-10-07 22:43:29.759 INFO [http-nio-19201-exec-5][PackageController.java:53] - 
+2022-10-07 22:43:29.759 INFO [http-nio-19201-exec-5][PackageController.java:54] - 扫描接收的文件数组信息：
+2022-10-07 22:43:29.759 INFO [http-nio-19201-exec-5][PackageController.java:55] - [Lorg.springframework.web.multipart.MultipartFile;@2f4ff667
+2022-10-07 22:43:29.759 INFO [http-nio-19201-exec-5][PackageController.java:56] - 接收文件数组：files_length = 1
+2022-10-07 22:43:29.759 INFO [http-nio-19201-exec-5][PackageController.java:58] - 文件信息：
+2022-10-07 22:43:29.759 INFO [http-nio-19201-exec-5][PackageController.java:59] - xxfw-rjsd-rjsdapp-java.zip
+2022-10-07 22:43:29.759 INFO [http-nio-19201-exec-5][PackageController.java:60] - 118856568
+2022-10-07 22:43:29.759 INFO [http-nio-19201-exec-5][PackageController.java:62] - 扫描接收的文件数组信息完成：
+2022-10-07 22:43:29.759 INFO [http-nio-19201-exec-5][PackageController.java:63] - 
+2022-10-07 22:43:29.760 INFO [http-nio-19201-exec-5][PackageController.java:71] - 上传的文件类型为：zip
+2022-10-07 22:43:29.760 INFO [http-nio-19201-exec-5][PackageController.java:77] - 
+2022-10-07 22:43:29.760 INFO [http-nio-19201-exec-5][PackageServiceImpl.java:52] - originalFileName: xxfw-rjsd-rjsdapp-java.zip
+2022-10-07 22:43:29.760 INFO [http-nio-19201-exec-5][PackageServiceImpl.java:53] - contentType: zip
+2022-10-07 22:43:29.760 INFO [http-nio-19201-exec-5][PackageServiceImpl.java:54] - fileUid: 47e0a6f14e0c4f8d84e9e8455a0ef7cc.zip
+2022-10-07 22:43:29.760 INFO [http-nio-19201-exec-5][PackageServiceImpl.java:55] - uploadFile: web\src\main\resources\files\47e0a6f14e0c4f8d84e9e8455a0ef7cc.zip
+2022-10-07 22:43:29.760 INFO [http-nio-19201-exec-5][PackageServiceImpl.java:56] - dest: D:\IDEAProject\DeploymentResource\web\src\main\resources\files\47e0a6f14e0c4f8d84e9e8455a0ef7cc.zip
+2022-10-07 22:43:29.760 INFO [http-nio-19201-exec-5][PackageServiceImpl.java:57] - parentFile: web\src\main\resources\files
+2022-10-07 22:43:29.806 INFO [http-nio-19201-exec-5][PackageController.java:79] - 文件：xxfw-rjsd-rjsdapp-java.zip存储成功
+2022-10-07 22:43:29.806 INFO [http-nio-19201-exec-5][PackageController.java:80] - fileUid: 47e0a6f14e0c4f8d84e9e8455a0ef7cc.zip
+2022-10-07 22:43:29.810 INFO [http-nio-19201-exec-5][ZipUtils.java:50] - 解压: xxfw-rjsd-rjsdapp-java.json
+2022-10-07 22:43:29.811 INFO [http-nio-19201-exec-5][ZipUtils.java:50] - 解压: xxfw-xttz-xttzfw-java - 副本.yaml
+2022-10-07 22:43:29.811 INFO [http-nio-19201-exec-5][ZipUtils.java:50] - 解压: 戴.tar
+2022-10-07 22:43:29.967 INFO [http-nio-19201-exec-5][ZipUtils.java:78] - 解压完成，耗时：160 ms
+2022-10-07 22:43:29.967 INFO [http-nio-19201-exec-5][PackageServiceImpl.java:96] - 文件类型：tar
+2022-10-07 22:43:29.967 INFO [http-nio-19201-exec-5][PackageServiceImpl.java:96] - 文件类型：json
+2022-10-07 22:43:29.967 INFO [http-nio-19201-exec-5][PackageServiceImpl.java:96] - 文件类型：json
+2022-10-07 22:43:29.967 INFO [http-nio-19201-exec-5][PackageServiceImpl.java:96] - 文件类型：yaml
+2022-10-07 22:43:29.967 INFO [http-nio-19201-exec-5][PackageServiceImpl.java:96] - 文件类型：tar
+2022-10-07 22:43:29.968 INFO [http-nio-19201-exec-5][PackageServiceImpl.java:105] - json描述文件解析结果： 
+2022-10-07 22:43:29.968 INFO [http-nio-19201-exec-5][PackageServiceImpl.java:106] - PackingToolInfo(basicInfoForm=BasicInfoForm(softwareCnName=系统调整, softwareGroupName=, softwareEnvironment=, softwareUniqueName=xxfw-xttz-xttz-java, domainName=xxfw, softwareName=xttz, serviceName=xttz, languageName=java, softwareVersion=.., majorVersionNumber=, minorVersionNumber=, revisionNumber=), imageInfoForm=ImageInfoForm(imageFileUidList=[f052bb43aed24985ba1c7c5e1bd802a0.tar], imageFileNameList=null, isImageFileExist=true, isYamlFileExist=null, yamlFileUid=a027d4a3c1064f9e9566a202847a9a82.yaml, yamlFileName=null), developerInfoForm=DeveloperInfoForm(developerName=, developerGroup=, developerPhone=))
+2022-10-07 22:43:29.969 INFO [http-nio-19201-exec-5][PackageController.java:106] - 详细信息：
+2022-10-07 22:43:29.970 INFO [http-nio-19201-exec-5][PackageController.java:107] - ServicePackageDetailInfo(servicePackageDetailInfoId=2, softwareCnName=系统调整, softwareGroupName=, softwareEnvironment=, softwareUniqueName=xxfw-xttz-xttz-java, domainName=xxfw, softwareName=xttz, serviceName=xttz, languageName=java, softwareVersion=.., majorVersionNumber=, minorVersionNumber=, revisionNumber=, developerName=, developerGroup=, developerPhone=, connectedPackageUid=null)
+2022-10-07 22:43:29.970 INFO [http-nio-19201-exec-5][PackageController.java:108] - 主键：
+2022-10-07 22:43:29.970 INFO [http-nio-19201-exec-5][PackageController.java:109] - 2
+2022-10-07 23:02:28.596 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-07 23:02:28.597 INFO [SpringContextShutdownHook][AbstractEntityManagerFactoryBean.java:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-07 23:02:28.616 INFO [SpringContextShutdownHook][DruidDataSource.java:1948] - {dataSource-1} closing ...
+2022-10-07 23:02:28.617 INFO [SpringContextShutdownHook][DruidDataSource.java:2020] - {dataSource-1} closed
+2022-10-07 23:03:40.520 INFO [main][StartupInfoLogger.java:55] - Starting WebApplication using Java 1.8.0_332 on FJH2022 with PID 12980 (D:\IDEAProject\DeploymentResource\web\target\classes started by Administrator in D:\IDEAProject\DeploymentResource)
+2022-10-07 23:03:40.526 INFO [main][SpringApplication.java:660] - No active profile set, falling back to default profiles: default
+2022-10-07 23:03:41.040 INFO [main][RepositoryConfigurationDelegate.java:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-07 23:03:41.048 INFO [main][RepositoryConfigurationDelegate.java:188] - Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
+2022-10-07 23:03:41.319 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 19201 (http)
+2022-10-07 23:03:41.324 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-19201"]
+2022-10-07 23:03:41.324 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+2022-10-07 23:03:41.324 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-10-07 23:03:41.362 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+2022-10-07 23:03:41.362 INFO [main][ServletWebServerApplicationContext.java:289] - Root WebApplicationContext: initialization completed in 781 ms
+2022-10-07 23:03:41.391 INFO [main][DruidDataSourceAutoConfigure.java:56] - Init DruidDataSource
+2022-10-07 23:03:41.561 INFO [main][DruidDataSource.java:1003] - {dataSource-1} inited
+2022-10-07 23:03:41.571 INFO [main][H2ConsoleAutoConfiguration.java:68] - H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./web/src/main/resources/H2DataBase/h2db'
+2022-10-07 23:03:41.648 INFO [main][LogHelper.java:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-07 23:03:41.675 INFO [main][Version.java:44] - HHH000412: Hibernate ORM core version 5.4.25.Final
+2022-10-07 23:03:41.744 INFO [main][JavaReflectionManager.java:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-07 23:03:41.816 INFO [main][Dialect.java:175] - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-10-07 23:03:42.143 INFO [main][JtaPlatformInitiator.java:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-07 23:03:42.149 INFO [main][AbstractEntityManagerFactoryBean.java:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-07 23:03:42.785 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-07 23:03:42.883 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-19201"]
+2022-10-07 23:03:42.987 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 19201 (http) with context path ''
+2022-10-07 23:03:43.123 INFO [main][StartupInfoLogger.java:61] - Started WebApplication in 2.795 seconds (JVM running for 3.436)
+2022-10-07 23:03:47.001 INFO [http-nio-19201-exec-1][DirectJDKLog.java:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-07 23:03:47.001 INFO [http-nio-19201-exec-1][FrameworkServlet.java:525] - Initializing Servlet 'dispatcherServlet'
+2022-10-07 23:03:47.002 INFO [http-nio-19201-exec-1][FrameworkServlet.java:547] - Completed initialization in 1 ms
+2022-10-07 23:03:47.611 INFO [http-nio-19201-exec-1][PackageController.java:53] - 
+2022-10-07 23:03:47.611 INFO [http-nio-19201-exec-1][PackageController.java:54] - 扫描接收的文件数组信息：
+2022-10-07 23:03:47.611 INFO [http-nio-19201-exec-1][PackageController.java:55] - [Lorg.springframework.web.multipart.MultipartFile;@1ab7ecb3
+2022-10-07 23:03:47.611 INFO [http-nio-19201-exec-1][PackageController.java:56] - 接收文件数组：files_length = 1
+2022-10-07 23:03:47.611 INFO [http-nio-19201-exec-1][PackageController.java:58] - 文件信息：
+2022-10-07 23:03:47.612 INFO [http-nio-19201-exec-1][PackageController.java:59] - xxfw-rjsd-rjsdapp-java.zip
+2022-10-07 23:03:47.612 INFO [http-nio-19201-exec-1][PackageController.java:60] - 118856568
+2022-10-07 23:03:47.612 INFO [http-nio-19201-exec-1][PackageController.java:62] - 扫描接收的文件数组信息完成：
+2022-10-07 23:03:47.612 INFO [http-nio-19201-exec-1][PackageController.java:63] - 
+2022-10-07 23:03:47.617 INFO [http-nio-19201-exec-1][PackageController.java:71] - 上传的文件类型为：zip
+2022-10-07 23:03:47.618 INFO [http-nio-19201-exec-1][PackageController.java:77] - 
+2022-10-07 23:03:47.619 INFO [http-nio-19201-exec-1][PackageServiceImpl.java:52] - originalFileName: xxfw-rjsd-rjsdapp-java.zip
+2022-10-07 23:03:47.619 INFO [http-nio-19201-exec-1][PackageServiceImpl.java:53] - contentType: zip
+2022-10-07 23:03:47.619 INFO [http-nio-19201-exec-1][PackageServiceImpl.java:54] - fileUid: 9c89a018c37c427c896956638a416308.zip
+2022-10-07 23:03:47.619 INFO [http-nio-19201-exec-1][PackageServiceImpl.java:55] - uploadFile: web\src\main\resources\files\9c89a018c37c427c896956638a416308.zip
+2022-10-07 23:03:47.619 INFO [http-nio-19201-exec-1][PackageServiceImpl.java:56] - dest: D:\IDEAProject\DeploymentResource\web\src\main\resources\files\9c89a018c37c427c896956638a416308.zip
+2022-10-07 23:03:47.619 INFO [http-nio-19201-exec-1][PackageServiceImpl.java:57] - parentFile: web\src\main\resources\files
+2022-10-07 23:03:47.705 INFO [http-nio-19201-exec-1][PackageController.java:79] - 文件：xxfw-rjsd-rjsdapp-java.zip存储成功
+2022-10-07 23:03:47.706 INFO [http-nio-19201-exec-1][PackageController.java:80] - fileUid: 9c89a018c37c427c896956638a416308.zip
+2022-10-07 23:03:47.710 INFO [http-nio-19201-exec-1][ZipUtils.java:50] - 解压: xxfw-rjsd-rjsdapp-java.json
+2022-10-07 23:03:47.710 INFO [http-nio-19201-exec-1][ZipUtils.java:50] - 解压: xxfw-xttz-xttzfw-java - 副本.yaml
+2022-10-07 23:03:47.711 INFO [http-nio-19201-exec-1][ZipUtils.java:50] - 解压: 戴.tar
+2022-10-07 23:03:47.884 INFO [http-nio-19201-exec-1][ZipUtils.java:78] - 解压完成，耗时：177 ms
+2022-10-07 23:03:47.885 INFO [http-nio-19201-exec-1][PackageServiceImpl.java:96] - 文件类型：json
+2022-10-07 23:03:47.885 INFO [http-nio-19201-exec-1][PackageServiceImpl.java:96] - 文件类型：yaml
+2022-10-07 23:03:47.885 INFO [http-nio-19201-exec-1][PackageServiceImpl.java:96] - 文件类型：tar
+2022-10-07 23:03:47.938 INFO [http-nio-19201-exec-1][PackageServiceImpl.java:105] - json描述文件解析结果： 
+2022-10-07 23:03:47.938 INFO [http-nio-19201-exec-1][PackageServiceImpl.java:106] - PackingToolInfo(basicInfoForm=BasicInfoForm(softwareCnName=系统调整, softwareGroupName=xxfw, softwareEnvironment=x86, softwareUniqueName=xxfw-rjsd-rjsdapp-java, domainName=xxfw, softwareName=rjsd, serviceName=rjsdapp, languageName=java, softwareVersion=1.00.00, majorVersionNumber=1, minorVersionNumber=00, revisionNumber=00), imageInfoForm=ImageInfoForm(imageFileUidList=[fbad6a708f334346ac667fded41c5a7d.tar], imageFileNameList=null, isImageFileExist=true, isYamlFileExist=null, yamlFileUid=a027d4a3c1064f9e9566a202847a9a82.yaml, yamlFileName=null), developerInfoForm=DeveloperInfoForm(developerName=, developerGroup=, developerPhone=))
+2022-10-07 23:03:47.976 INFO [http-nio-19201-exec-1][PackageController.java:115] - 详细信息：
+2022-10-07 23:03:47.976 INFO [http-nio-19201-exec-1][PackageController.java:116] - ServicePackageDetailInfo(servicePackageDetailInfoId=3, softwareCnName=系统调整, softwareGroupName=xxfw, softwareEnvironment=x86, softwareUniqueName=xxfw-rjsd-rjsdapp-java, domainName=xxfw, softwareName=rjsd, serviceName=rjsdapp, languageName=java, softwareVersion=1.00.00, majorVersionNumber=1, minorVersionNumber=00, revisionNumber=00, developerName=, developerGroup=, developerPhone=, connectedPackageUid=9c89a018c37c427c896956638a416308.zip, connectedPackageOriginalFileName=xxfw-rjsd-rjsdapp-java.zip, connectedPackageSize=116070MB)
+2022-10-07 23:03:47.976 INFO [http-nio-19201-exec-1][PackageController.java:117] - 主键：
+2022-10-07 23:03:47.976 INFO [http-nio-19201-exec-1][PackageController.java:118] - 3
+2022-10-07 23:07:29.686 INFO [http-nio-19201-exec-3][PackageController.java:53] - 
+2022-10-07 23:07:29.686 INFO [http-nio-19201-exec-3][PackageController.java:54] - 扫描接收的文件数组信息：
+2022-10-07 23:07:29.686 INFO [http-nio-19201-exec-3][PackageController.java:55] - [Lorg.springframework.web.multipart.MultipartFile;@26196cb
+2022-10-07 23:07:29.686 INFO [http-nio-19201-exec-3][PackageController.java:56] - 接收文件数组：files_length = 1
+2022-10-07 23:07:29.686 INFO [http-nio-19201-exec-3][PackageController.java:58] - 文件信息：
+2022-10-07 23:07:29.686 INFO [http-nio-19201-exec-3][PackageController.java:59] - xxfw-rjsd-rjsdapp-java.zip
+2022-10-07 23:07:29.686 INFO [http-nio-19201-exec-3][PackageController.java:60] - 118856568
+2022-10-07 23:07:29.686 INFO [http-nio-19201-exec-3][PackageController.java:62] - 扫描接收的文件数组信息完成：
+2022-10-07 23:07:29.686 INFO [http-nio-19201-exec-3][PackageController.java:63] - 
+2022-10-07 23:07:29.686 INFO [http-nio-19201-exec-3][PackageController.java:71] - 上传的文件类型为：zip
+2022-10-07 23:07:29.687 INFO [http-nio-19201-exec-3][PackageController.java:77] - 
+2022-10-07 23:07:29.687 INFO [http-nio-19201-exec-3][PackageServiceImpl.java:52] - originalFileName: xxfw-rjsd-rjsdapp-java.zip
+2022-10-07 23:07:29.687 INFO [http-nio-19201-exec-3][PackageServiceImpl.java:53] - contentType: zip
+2022-10-07 23:07:29.687 INFO [http-nio-19201-exec-3][PackageServiceImpl.java:54] - fileUid: 8aa7c1e8d9f84411a93081af37a590ad.zip
+2022-10-07 23:07:29.687 INFO [http-nio-19201-exec-3][PackageServiceImpl.java:55] - uploadFile: web\src\main\resources\files\8aa7c1e8d9f84411a93081af37a590ad.zip
+2022-10-07 23:07:29.687 INFO [http-nio-19201-exec-3][PackageServiceImpl.java:56] - dest: D:\IDEAProject\DeploymentResource\web\src\main\resources\files\8aa7c1e8d9f84411a93081af37a590ad.zip
+2022-10-07 23:07:29.687 INFO [http-nio-19201-exec-3][PackageServiceImpl.java:57] - parentFile: web\src\main\resources\files
+2022-10-07 23:07:29.735 INFO [http-nio-19201-exec-3][PackageController.java:79] - 文件：xxfw-rjsd-rjsdapp-java.zip存储成功
+2022-10-07 23:07:29.735 INFO [http-nio-19201-exec-3][PackageController.java:80] - fileUid: 8aa7c1e8d9f84411a93081af37a590ad.zip
+2022-10-07 23:07:29.738 INFO [http-nio-19201-exec-3][ZipUtils.java:50] - 解压: xxfw-rjsd-rjsdapp-java.json
+2022-10-07 23:07:29.738 INFO [http-nio-19201-exec-3][ZipUtils.java:50] - 解压: xxfw-xttz-xttzfw-java - 副本.yaml
+2022-10-07 23:07:29.739 INFO [http-nio-19201-exec-3][ZipUtils.java:50] - 解压: 戴.tar
+2022-10-07 23:07:29.898 INFO [http-nio-19201-exec-3][ZipUtils.java:78] - 解压完成，耗时：162 ms
+2022-10-07 23:07:29.898 INFO [http-nio-19201-exec-3][PackageServiceImpl.java:96] - 文件类型：json
+2022-10-07 23:07:29.898 INFO [http-nio-19201-exec-3][PackageServiceImpl.java:96] - 文件类型：yaml
+2022-10-07 23:07:29.898 INFO [http-nio-19201-exec-3][PackageServiceImpl.java:96] - 文件类型：tar
+2022-10-07 23:07:29.902 INFO [http-nio-19201-exec-3][PackageServiceImpl.java:105] - json描述文件解析结果： 
+2022-10-07 23:07:29.902 INFO [http-nio-19201-exec-3][PackageServiceImpl.java:106] - PackingToolInfo(basicInfoForm=BasicInfoForm(softwareCnName=系统调整, softwareGroupName=xxfw, softwareEnvironment=x86, softwareUniqueName=xxfw-rjsd-rjsdapp-java, domainName=xxfw, softwareName=rjsd, serviceName=rjsdapp, languageName=java, softwareVersion=1.00.00, majorVersionNumber=1, minorVersionNumber=00, revisionNumber=00), imageInfoForm=ImageInfoForm(imageFileUidList=[fbad6a708f334346ac667fded41c5a7d.tar], imageFileNameList=null, isImageFileExist=true, isYamlFileExist=null, yamlFileUid=a027d4a3c1064f9e9566a202847a9a82.yaml, yamlFileName=null), developerInfoForm=DeveloperInfoForm(developerName=, developerGroup=, developerPhone=))
+2022-10-07 23:07:29.904 INFO [http-nio-19201-exec-3][PackageController.java:115] - 详细信息：
+2022-10-07 23:07:29.904 INFO [http-nio-19201-exec-3][PackageController.java:116] - ServicePackageDetailInfo(servicePackageDetailInfoId=4, softwareCnName=系统调整, softwareGroupName=xxfw, softwareEnvironment=x86, softwareUniqueName=xxfw-rjsd-rjsdapp-java, domainName=xxfw, softwareName=rjsd, serviceName=rjsdapp, languageName=java, softwareVersion=1.00.00, majorVersionNumber=1, minorVersionNumber=00, revisionNumber=00, developerName=, developerGroup=, developerPhone=, connectedPackageUid=8aa7c1e8d9f84411a93081af37a590ad.zip, connectedPackageOriginalFileName=xxfw-rjsd-rjsdapp-java.zip, connectedPackageSize=116070MB)
+2022-10-07 23:07:29.904 INFO [http-nio-19201-exec-3][PackageController.java:117] - 主键：
+2022-10-07 23:07:29.904 INFO [http-nio-19201-exec-3][PackageController.java:118] - 4
+2022-10-07 23:08:41.217 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-07 23:08:41.218 INFO [SpringContextShutdownHook][AbstractEntityManagerFactoryBean.java:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-07 23:08:41.219 INFO [SpringContextShutdownHook][DruidDataSource.java:1948] - {dataSource-1} closing ...
+2022-10-07 23:08:41.220 INFO [SpringContextShutdownHook][DruidDataSource.java:2020] - {dataSource-1} closed
+2022-10-07 23:08:44.880 INFO [main][StartupInfoLogger.java:55] - Starting WebApplication using Java 1.8.0_332 on FJH2022 with PID 2440 (D:\IDEAProject\DeploymentResource\web\target\classes started by Administrator in D:\IDEAProject\DeploymentResource)
+2022-10-07 23:08:44.884 INFO [main][SpringApplication.java:660] - No active profile set, falling back to default profiles: default
+2022-10-07 23:08:45.378 INFO [main][RepositoryConfigurationDelegate.java:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-07 23:08:45.387 INFO [main][RepositoryConfigurationDelegate.java:188] - Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
+2022-10-07 23:08:45.648 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 19201 (http)
+2022-10-07 23:08:45.653 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-19201"]
+2022-10-07 23:08:45.653 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+2022-10-07 23:08:45.653 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-10-07 23:08:45.690 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+2022-10-07 23:08:45.690 INFO [main][ServletWebServerApplicationContext.java:289] - Root WebApplicationContext: initialization completed in 755 ms
+2022-10-07 23:08:45.721 INFO [main][DruidDataSourceAutoConfigure.java:56] - Init DruidDataSource
+2022-10-07 23:08:45.873 INFO [main][DruidDataSource.java:1003] - {dataSource-1} inited
+2022-10-07 23:08:45.881 INFO [main][H2ConsoleAutoConfiguration.java:68] - H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./web/src/main/resources/H2DataBase/h2db'
+2022-10-07 23:08:45.936 INFO [main][LogHelper.java:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-07 23:08:45.960 INFO [main][Version.java:44] - HHH000412: Hibernate ORM core version 5.4.25.Final
+2022-10-07 23:08:46.016 INFO [main][JavaReflectionManager.java:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-07 23:08:46.071 INFO [main][Dialect.java:175] - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-10-07 23:08:46.367 INFO [main][JtaPlatformInitiator.java:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-07 23:08:46.373 INFO [main][AbstractEntityManagerFactoryBean.java:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-07 23:08:46.986 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-07 23:08:47.117 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-19201"]
+2022-10-07 23:08:47.234 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 19201 (http) with context path ''
+2022-10-07 23:08:47.353 INFO [main][StartupInfoLogger.java:61] - Started WebApplication in 2.664 seconds (JVM running for 3.162)
+2022-10-07 23:09:17.756 INFO [http-nio-19201-exec-1][DirectJDKLog.java:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-07 23:09:17.756 INFO [http-nio-19201-exec-1][FrameworkServlet.java:525] - Initializing Servlet 'dispatcherServlet'
+2022-10-07 23:09:17.757 INFO [http-nio-19201-exec-1][FrameworkServlet.java:547] - Completed initialization in 1 ms
+2022-10-07 23:09:17.852 INFO [http-nio-19201-exec-1][PackageController.java:53] - 
+2022-10-07 23:09:17.852 INFO [http-nio-19201-exec-1][PackageController.java:54] - 扫描接收的文件数组信息：
+2022-10-07 23:09:17.852 INFO [http-nio-19201-exec-1][PackageController.java:55] - [Lorg.springframework.web.multipart.MultipartFile;@5ee9d5e
+2022-10-07 23:09:17.852 INFO [http-nio-19201-exec-1][PackageController.java:56] - 接收文件数组：files_length = 1
+2022-10-07 23:09:17.852 INFO [http-nio-19201-exec-1][PackageController.java:58] - 文件信息：
+2022-10-07 23:09:17.853 INFO [http-nio-19201-exec-1][PackageController.java:59] - xxfw-xtks-xtks-java.zip
+2022-10-07 23:09:17.853 INFO [http-nio-19201-exec-1][PackageController.java:60] - 3304
+2022-10-07 23:09:17.853 INFO [http-nio-19201-exec-1][PackageController.java:62] - 扫描接收的文件数组信息完成：
+2022-10-07 23:09:17.853 INFO [http-nio-19201-exec-1][PackageController.java:63] - 
+2022-10-07 23:09:17.859 INFO [http-nio-19201-exec-1][PackageController.java:71] - 上传的文件类型为：zip
+2022-10-07 23:09:17.859 INFO [http-nio-19201-exec-1][PackageController.java:77] - 
+2022-10-07 23:09:17.861 INFO [http-nio-19201-exec-1][PackageServiceImpl.java:52] - originalFileName: xxfw-xtks-xtks-java.zip
+2022-10-07 23:09:17.861 INFO [http-nio-19201-exec-1][PackageServiceImpl.java:53] - contentType: zip
+2022-10-07 23:09:17.861 INFO [http-nio-19201-exec-1][PackageServiceImpl.java:54] - fileUid: d1332c151fa84843bb6f363a8c3d96e0.zip
+2022-10-07 23:09:17.862 INFO [http-nio-19201-exec-1][PackageServiceImpl.java:55] - uploadFile: web\src\main\resources\files\d1332c151fa84843bb6f363a8c3d96e0.zip
+2022-10-07 23:09:17.862 INFO [http-nio-19201-exec-1][PackageServiceImpl.java:56] - dest: D:\IDEAProject\DeploymentResource\web\src\main\resources\files\d1332c151fa84843bb6f363a8c3d96e0.zip
+2022-10-07 23:09:17.862 INFO [http-nio-19201-exec-1][PackageServiceImpl.java:57] - parentFile: web\src\main\resources\files
+2022-10-07 23:09:17.864 INFO [http-nio-19201-exec-1][PackageController.java:79] - 文件：xxfw-xtks-xtks-java.zip存储成功
+2022-10-07 23:09:17.864 INFO [http-nio-19201-exec-1][PackageController.java:80] - fileUid: d1332c151fa84843bb6f363a8c3d96e0.zip
+2022-10-07 23:09:17.865 INFO [http-nio-19201-exec-1][ZipUtils.java:50] - 解压: homeVue左侧多级菜单.tar
+2022-10-07 23:09:17.866 INFO [http-nio-19201-exec-1][ZipUtils.java:50] - 解压: xxfw-xtks-xtks-java.json
+2022-10-07 23:09:17.866 INFO [http-nio-19201-exec-1][ZipUtils.java:50] - 解压: xxfw-xttz-xttzfw-java - 副本.yaml
+2022-10-07 23:09:17.866 INFO [http-nio-19201-exec-1][ZipUtils.java:78] - 解压完成，耗时：2 ms
+2022-10-07 23:09:17.867 INFO [http-nio-19201-exec-1][PackageServiceImpl.java:96] - 文件类型：tar
+2022-10-07 23:09:17.867 INFO [http-nio-19201-exec-1][PackageServiceImpl.java:96] - 文件类型：json
+2022-10-07 23:09:17.867 INFO [http-nio-19201-exec-1][PackageServiceImpl.java:96] - 文件类型：json
+2022-10-07 23:09:17.867 INFO [http-nio-19201-exec-1][PackageServiceImpl.java:96] - 文件类型：yaml
+2022-10-07 23:09:17.867 INFO [http-nio-19201-exec-1][PackageServiceImpl.java:96] - 文件类型：tar
+2022-10-07 23:09:17.926 INFO [http-nio-19201-exec-1][PackageServiceImpl.java:105] - json描述文件解析结果： 
+2022-10-07 23:09:17.926 INFO [http-nio-19201-exec-1][PackageServiceImpl.java:106] - PackingToolInfo(basicInfoForm=BasicInfoForm(softwareCnName=测试, softwareGroupName=xxfs, softwareEnvironment=x86, softwareUniqueName=xxfw-xtks-xtks-java, domainName=xxfw, softwareName=xtks, serviceName=xtks, languageName=java, softwareVersion=1.00.01, majorVersionNumber=1, minorVersionNumber=00, revisionNumber=01), imageInfoForm=ImageInfoForm(imageFileUidList=[d21ca57ad2f84d3b83f0963c26634ef4.tar], imageFileNameList=[homeVue左侧多级菜单.tar], isImageFileExist=true, isYamlFileExist=true, yamlFileUid=a027d4a3c1064f9e9566a202847a9a82.yaml, yamlFileName=xxfw-xttz-xttzfw-java - 副本.yaml), developerInfoForm=DeveloperInfoForm(developerName=fengjinhe, developerGroup=528, developerPhone=3123123))
+2022-10-07 23:09:17.983 INFO [http-nio-19201-exec-1][PackageController.java:115] - 详细信息：
+2022-10-07 23:09:17.983 INFO [http-nio-19201-exec-1][PackageController.java:116] - ServicePackageDetailInfo(servicePackageDetailInfoId=5, softwareCnName=测试, softwareGroupName=xxfs, softwareEnvironment=x86, softwareUniqueName=xxfw-xtks-xtks-java, domainName=xxfw, softwareName=xtks, serviceName=xtks, languageName=java, softwareVersion=1.00.01, majorVersionNumber=1, minorVersionNumber=00, revisionNumber=01, developerName=fengjinhe, developerGroup=528, developerPhone=3123123, connectedPackageUid=d1332c151fa84843bb6f363a8c3d96e0.zip, connectedPackageOriginalFileName=xxfw-xtks-xtks-java.zip, connectedPackageSize=0MB)
+2022-10-07 23:09:17.983 INFO [http-nio-19201-exec-1][PackageController.java:117] - 主键：
+2022-10-07 23:09:17.983 INFO [http-nio-19201-exec-1][PackageController.java:118] - 5
+2022-10-07 23:10:05.137 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-07 23:10:05.138 INFO [SpringContextShutdownHook][AbstractEntityManagerFactoryBean.java:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-07 23:10:05.139 INFO [SpringContextShutdownHook][DruidDataSource.java:1948] - {dataSource-1} closing ...
+2022-10-07 23:10:05.140 INFO [SpringContextShutdownHook][DruidDataSource.java:2020] - {dataSource-1} closed

@@ -48,7 +48,7 @@ public class BePublishedPackageServiceImpl extends ServiceImpl<BePublishedPackag
         beRemovedPackage.setBeRemovedPackageTime(new Date());
         beRemovedPackage.setBeRemovedPackageStatus("已下架");
         beRemovedPackage.setBeRemovedPackageType(bePublishedPackage.getBePublishedPackageType());
-        beRemovedPackage.setConnectedPackageId(bePublishedPackage.getConnectedPackageId());
+        beRemovedPackage.setConnectedPackageUid(bePublishedPackage.getConnectedPackageUid());
         int insert = removedPackageMapper.insert(beRemovedPackage);
         return insert;
     }

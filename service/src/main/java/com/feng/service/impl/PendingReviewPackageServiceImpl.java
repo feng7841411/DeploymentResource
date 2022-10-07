@@ -103,7 +103,7 @@ public class PendingReviewPackageServiceImpl extends ServiceImpl<PendingReviewPa
         bePublishedPackage.setBePublishedPackageStatus("正常");
         bePublishedPackage.setBePublishedPackageType(pendingReviewPackage.getPendingReviewPackageType());
         // 记得这个关联的资源包ID也要转过来
-        bePublishedPackage.setConnectedPackageId(pendingReviewPackage.getConnectedPackageId());
+        bePublishedPackage.setConnectedPackageUid(pendingReviewPackage.getConnectedPackageUid());
         return bePublishedPackageMapper.insert(bePublishedPackage);
     }
 

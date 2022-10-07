@@ -58,11 +58,16 @@ public class PendingReviewPackage {
     private String pendingReviewPackageStatus;
 
     /**
-     * 关联的实际PackageId
+     * 在磁盘上zip的名字
      */
-    @TableField(value = "CONNECTED_PACKAGE_ID")
-    private String connectedPackageId;
+    @TableField(value = "CONNECTED_PACKAGE_UID")
+    private String connectedPackageUid;
 
+
+    /**
+     * 2022年10月7日 21点58分 上传者
+     */
+    private String uploader;
 
 
 

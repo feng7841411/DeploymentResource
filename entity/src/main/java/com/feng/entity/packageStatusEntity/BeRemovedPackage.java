@@ -53,10 +53,10 @@ public class BeRemovedPackage {
     private String beRemovedPackageType;
 
     /**
-     * 关联的实际PackageId
+     * 关联的实际PackageUId
      */
-    @TableField(value = "CONNECTED_PACKAGE_ID")
-    private String connectedPackageId;
+    @TableField(value = "CONNECTED_PACKAGE_UID")
+    private String connectedPackageUid;
 
 
 

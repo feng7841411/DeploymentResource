@@ -1,12 +1,18 @@
 package com.feng.web.controller;
 
 import cn.hutool.core.io.FileUtil;
+import com.feng.entity.packageToolEntity.BasicInfoForm;
+import com.feng.entity.packageToolEntity.DeveloperInfoForm;
 import com.feng.entity.packageToolEntity.PackingToolInfo;
+import com.feng.entity.packageToolEntity.ServicePackageDetailInfo;
 import com.feng.entity.returnClass.Result;
 import com.feng.entity.returnClass.ServiceResult;
 import com.feng.service.PackageServiceImpl;
+import com.feng.service.ServicePackageDetailInfoService;
+import com.feng.service.impl.ServicePackageDetailInfoServiceImpl;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -33,11 +39,13 @@ public class PackageController {
     private static final Logger logger = LogManager.getLogger(PackageController.class);
 
 
+    private final ServicePackageDetailInfoServiceImpl servicePackageDetailInfoService;
 
     private final PackageServiceImpl packageService;
 
-    public PackageController(PackageServiceImpl packageService) {
+    public PackageController(PackageServiceImpl packageService, ServicePackageDetailInfoServiceImpl servicePackageDetailInfoService) {
         this.packageService = packageService;
+        this.servicePackageDetailInfoService = servicePackageDetailInfoService;
     }
 
     @PostMapping("/uploadSingle")
@@ -71,6 +79,7 @@ public class PackageController {
         logger.info(storeResult.getMsg());
         logger.info("fileUid: " + storeResult.getData());
 
+
         // 3.2 解压，获得JSON文件名 (解压放到一个路径，拿到JSON信息，然后考虑再删掉临时文件吧）
         ServiceResult unZipResult = packageService.unZipPackage((String) storeResult.getData());
         if (!unZipResult.getCode().equals("200")) {
@@ -87,13 +96,30 @@ public class PackageController {
 
         // json读取成功
         PackingToolInfo packingToolInfo = (PackingToolInfo) readJsonResult.getData();
+
+        // 转化为软件商店的详情描述类
+        ServiceResult servicePackageDetailInfoFromPackingToolJson = servicePackageDetailInfoService.getServicePackageDetailInfoFromPackingToolJson(packingToolInfo);
+        ServicePackageDetailInfo servicePackageDetailInfo = (ServicePackageDetailInfo) servicePackageDetailInfoFromPackingToolJson.getData();
+
+        // 补充JSON里没有的字段
+        servicePackageDetailInfo.setConnectedPackageUid((String) storeResult.getData());
+        servicePackageDetailInfo.setConnectedPackageOriginalFileName(file.getOriginalFilename());
+        long l = file.getSize() / 1024 / 1024;
+        servicePackageDetailInfo.setConnectedPackageSize(String.valueOf(l) + "MB");
+
+
+        // 写入数据库
+        servicePackageDetailInfoService.insertServicePackageDetailInfo(servicePackageDetailInfo);
+        // 主键
+        //
+        logger.info("详细信息：");
+        logger.info(servicePackageDetailInfo.toString());
+        logger.info("主键：");
+        logger.info(servicePackageDetailInfo.getServicePackageDetailInfoId());
+
+
         // 3.3 根据JSON，写一条包详情记录，返回主键ID
-
-
-
         // 4、写入一条PendingReviewPackage记录，里面带上fileUid 和 详情记录的主键ID
-
-
 
         // 5、清理unzip文件夹
 
@@ -103,7 +129,7 @@ public class PackageController {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        return Result.success();
+        return Result.success("解析成功",servicePackageDetailInfo);
     }
 
 
