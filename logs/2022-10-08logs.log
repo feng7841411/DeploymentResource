@@ -1,0 +1,341 @@
+2022-10-08 15:11:42.168 INFO [main][StartupInfoLogger.java:55] - Starting WebApplication using Java 1.8.0_231 on myComputer with PID 19216 (C:\Users\Lenovo\IdeaProjects\DeploymentResource\web\target\classes started by Lenovo in C:\Users\Lenovo\IdeaProjects\DeploymentResource)
+2022-10-08 15:11:42.235 INFO [main][SpringApplication.java:660] - No active profile set, falling back to default profiles: default
+2022-10-08 15:11:47.892 INFO [main][RepositoryConfigurationDelegate.java:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-08 15:11:47.991 INFO [main][RepositoryConfigurationDelegate.java:188] - Finished Spring Data repository scanning in 49 ms. Found 0 JPA repository interfaces.
+2022-10-08 15:11:50.832 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 19201 (http)
+2022-10-08 15:11:50.885 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-19201"]
+2022-10-08 15:11:50.887 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+2022-10-08 15:11:50.888 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-10-08 15:11:51.606 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+2022-10-08 15:11:51.607 INFO [main][ServletWebServerApplicationContext.java:289] - Root WebApplicationContext: initialization completed in 8972 ms
+2022-10-08 15:11:51.739 INFO [main][DruidDataSourceAutoConfigure.java:56] - Init DruidDataSource
+2022-10-08 15:11:56.146 INFO [main][DruidDataSource.java:1003] - {dataSource-1} inited
+2022-10-08 15:11:56.205 INFO [main][H2ConsoleAutoConfiguration.java:68] - H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./web/src/main/resources/H2DataBase/h2db'
+2022-10-08 15:11:56.845 INFO [main][LogHelper.java:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-08 15:11:57.136 INFO [main][Version.java:44] - HHH000412: Hibernate ORM core version 5.4.25.Final
+2022-10-08 15:11:57.972 INFO [main][JavaReflectionManager.java:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-08 15:11:58.987 INFO [main][Dialect.java:175] - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-10-08 15:12:04.156 INFO [main][JtaPlatformInitiator.java:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-08 15:12:04.232 INFO [main][AbstractEntityManagerFactoryBean.java:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-08 15:12:11.688 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-08 15:12:13.272 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-19201"]
+2022-10-08 15:12:13.363 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 19201 (http) with context path ''
+2022-10-08 15:12:14.516 INFO [main][StartupInfoLogger.java:61] - Started WebApplication in 36.239 seconds (JVM running for 51.15)
+2022-10-08 15:13:14.003 INFO [http-nio-19201-exec-1][DirectJDKLog.java:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-08 15:13:14.005 INFO [http-nio-19201-exec-1][FrameworkServlet.java:525] - Initializing Servlet 'dispatcherServlet'
+2022-10-08 15:13:14.012 INFO [http-nio-19201-exec-1][FrameworkServlet.java:547] - Completed initialization in 7 ms
+2022-10-08 15:23:32.803 INFO [main][StartupInfoLogger.java:55] - Starting WebApplication using Java 1.8.0_231 on myComputer with PID 17604 (C:\Users\Lenovo\IdeaProjects\DeploymentResource\web\target\classes started by Lenovo in C:\Users\Lenovo\IdeaProjects\DeploymentResource)
+2022-10-08 15:23:32.995 INFO [main][SpringApplication.java:660] - No active profile set, falling back to default profiles: default
+2022-10-08 15:23:40.661 INFO [main][RepositoryConfigurationDelegate.java:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-08 15:23:40.758 INFO [main][RepositoryConfigurationDelegate.java:188] - Finished Spring Data repository scanning in 48 ms. Found 0 JPA repository interfaces.
+2022-10-08 15:23:44.100 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 19201 (http)
+2022-10-08 15:23:44.168 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-19201"]
+2022-10-08 15:23:44.172 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+2022-10-08 15:23:44.173 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-10-08 15:23:44.999 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+2022-10-08 15:23:45.001 INFO [main][ServletWebServerApplicationContext.java:289] - Root WebApplicationContext: initialization completed in 11741 ms
+2022-10-08 15:23:45.178 INFO [main][DruidDataSourceAutoConfigure.java:56] - Init DruidDataSource
+2022-10-08 15:23:49.199 INFO [main][DruidDataSource.java:1003] - {dataSource-1} inited
+2022-10-08 15:23:49.276 INFO [main][H2ConsoleAutoConfiguration.java:68] - H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./web/src/main/resources/H2DataBase/h2db'
+2022-10-08 15:23:50.194 INFO [main][LogHelper.java:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-08 15:23:50.581 INFO [main][Version.java:44] - HHH000412: Hibernate ORM core version 5.4.25.Final
+2022-10-08 15:23:51.511 INFO [main][JavaReflectionManager.java:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-08 15:23:52.374 INFO [main][Dialect.java:175] - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-10-08 15:23:57.741 INFO [main][JtaPlatformInitiator.java:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-08 15:23:57.804 INFO [main][AbstractEntityManagerFactoryBean.java:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-08 15:24:07.689 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-08 15:24:10.023 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-19201"]
+2022-10-08 15:24:10.136 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 19201 (http) with context path ''
+2022-10-08 15:24:11.400 INFO [main][StartupInfoLogger.java:61] - Started WebApplication in 40.463 seconds (JVM running for 48.427)
+2022-10-08 15:25:00.345 INFO [http-nio-19201-exec-1][DirectJDKLog.java:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-08 15:25:00.347 INFO [http-nio-19201-exec-1][FrameworkServlet.java:525] - Initializing Servlet 'dispatcherServlet'
+2022-10-08 15:25:00.353 INFO [http-nio-19201-exec-1][FrameworkServlet.java:547] - Completed initialization in 6 ms
+2022-10-08 15:25:03.476 INFO [http-nio-19201-exec-1][PackageController.java:48] - 
+2022-10-08 15:25:03.477 INFO [http-nio-19201-exec-1][PackageController.java:49] - 扫描接收的文件数组信息：
+2022-10-08 15:25:03.478 INFO [http-nio-19201-exec-1][PackageController.java:50] - [Lorg.springframework.web.multipart.MultipartFile;@54fd20
+2022-10-08 15:25:03.479 INFO [http-nio-19201-exec-1][PackageController.java:51] - 接收文件数组：files_length = 1
+2022-10-08 15:25:03.480 INFO [http-nio-19201-exec-1][PackageController.java:53] - 文件信息：
+2022-10-08 15:25:03.482 INFO [http-nio-19201-exec-1][PackageController.java:54] - xxfw-xtks-ksgh-java.zip
+2022-10-08 15:25:03.484 INFO [http-nio-19201-exec-1][PackageController.java:55] - 23449152
+2022-10-08 15:25:03.486 INFO [http-nio-19201-exec-1][PackageController.java:57] - 扫描接收的文件数组信息完成：
+2022-10-08 15:25:03.486 INFO [http-nio-19201-exec-1][PackageController.java:58] - 
+2022-10-08 15:25:03.535 INFO [http-nio-19201-exec-1][PackageController.java:66] - 上传的文件类型为：zip
+2022-10-08 15:25:03.536 INFO [http-nio-19201-exec-1][PackageController.java:72] - 
+2022-10-08 15:25:03.549 INFO [http-nio-19201-exec-1][PackageServiceImpl.java:61] - originalFileName: xxfw-xtks-ksgh-java.zip
+2022-10-08 15:25:03.551 INFO [http-nio-19201-exec-1][PackageServiceImpl.java:62] - contentType: zip
+2022-10-08 15:25:03.551 INFO [http-nio-19201-exec-1][PackageServiceImpl.java:63] - fileUid: b195ea67a1354678aa15ef4f3deb79f2.zip
+2022-10-08 15:25:03.552 INFO [http-nio-19201-exec-1][PackageServiceImpl.java:64] - uploadFile: web\src\main\resources\files\b195ea67a1354678aa15ef4f3deb79f2.zip
+2022-10-08 15:25:03.553 INFO [http-nio-19201-exec-1][PackageServiceImpl.java:65] - dest: C:\Users\Lenovo\IdeaProjects\DeploymentResource\web\src\main\resources\files\b195ea67a1354678aa15ef4f3deb79f2.zip
+2022-10-08 15:25:03.554 INFO [http-nio-19201-exec-1][PackageServiceImpl.java:66] - parentFile: web\src\main\resources\files
+2022-10-08 15:25:03.557 INFO [http-nio-19201-exec-1][PackageServiceImpl.java:69] - 当前文件存储路径：web\src\main\resources\files不存在，已经新建
+2022-10-08 15:25:03.567 INFO [http-nio-19201-exec-1][PackageController.java:74] - 文件：xxfw-xtks-ksgh-java.zip存储成功
+2022-10-08 15:25:03.568 INFO [http-nio-19201-exec-1][PackageController.java:75] - fileUid: b195ea67a1354678aa15ef4f3deb79f2.zip
+2022-10-08 15:25:03.571 INFO [http-nio-19201-exec-1][PackageServiceImpl.java:94] - 临时解压文件夹不存在，已经新建
+2022-10-08 15:25:03.581 INFO [http-nio-19201-exec-1][ZipUtils.java:50] - 解压: 2022图解网络.tar
+2022-10-08 15:25:03.585 ERROR [http-nio-19201-exec-1][PackageController.java:81] - 调用unZip()失败
+2022-10-08 15:29:58.226 INFO [main][StartupInfoLogger.java:55] - Starting WebApplication using Java 1.8.0_231 on myComputer with PID 19660 (C:\Users\Lenovo\IdeaProjects\DeploymentResource\web\target\classes started by Lenovo in C:\Users\Lenovo\IdeaProjects\DeploymentResource)
+2022-10-08 15:29:58.379 INFO [main][SpringApplication.java:660] - No active profile set, falling back to default profiles: default
+2022-10-08 15:30:04.428 INFO [main][RepositoryConfigurationDelegate.java:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-08 15:30:04.522 INFO [main][RepositoryConfigurationDelegate.java:188] - Finished Spring Data repository scanning in 47 ms. Found 0 JPA repository interfaces.
+2022-10-08 15:30:07.481 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 19201 (http)
+2022-10-08 15:30:07.528 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-19201"]
+2022-10-08 15:30:07.530 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+2022-10-08 15:30:07.531 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-10-08 15:30:08.246 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+2022-10-08 15:30:08.246 INFO [main][ServletWebServerApplicationContext.java:289] - Root WebApplicationContext: initialization completed in 9612 ms
+2022-10-08 15:30:08.393 INFO [main][DruidDataSourceAutoConfigure.java:56] - Init DruidDataSource
+2022-10-08 15:30:11.584 INFO [main][DruidDataSource.java:1003] - {dataSource-1} inited
+2022-10-08 15:30:11.651 INFO [main][H2ConsoleAutoConfiguration.java:68] - H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./web/src/main/resources/H2DataBase/h2db'
+2022-10-08 15:30:12.352 INFO [main][LogHelper.java:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-08 15:30:12.660 INFO [main][Version.java:44] - HHH000412: Hibernate ORM core version 5.4.25.Final
+2022-10-08 15:30:13.530 INFO [main][JavaReflectionManager.java:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-08 15:30:14.247 INFO [main][Dialect.java:175] - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-10-08 15:30:17.870 INFO [main][JtaPlatformInitiator.java:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-08 15:30:17.982 INFO [main][AbstractEntityManagerFactoryBean.java:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-08 15:30:25.338 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-08 15:30:27.041 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-19201"]
+2022-10-08 15:30:27.142 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 19201 (http) with context path ''
+2022-10-08 15:30:28.325 INFO [main][StartupInfoLogger.java:61] - Started WebApplication in 32.864 seconds (JVM running for 41.294)
+2022-10-08 15:30:38.303 INFO [http-nio-19201-exec-1][DirectJDKLog.java:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-08 15:30:38.305 INFO [http-nio-19201-exec-1][FrameworkServlet.java:525] - Initializing Servlet 'dispatcherServlet'
+2022-10-08 15:30:38.315 INFO [http-nio-19201-exec-1][FrameworkServlet.java:547] - Completed initialization in 9 ms
+2022-10-08 15:31:21.243 INFO [http-nio-19201-exec-2][PackageController.java:48] - 
+2022-10-08 15:31:21.245 INFO [http-nio-19201-exec-2][PackageController.java:49] - 扫描接收的文件数组信息：
+2022-10-08 15:31:21.246 INFO [http-nio-19201-exec-2][PackageController.java:50] - [Lorg.springframework.web.multipart.MultipartFile;@62346f9b
+2022-10-08 15:31:21.248 INFO [http-nio-19201-exec-2][PackageController.java:51] - 接收文件数组：files_length = 1
+2022-10-08 15:31:21.249 INFO [http-nio-19201-exec-2][PackageController.java:53] - 文件信息：
+2022-10-08 15:31:21.249 INFO [http-nio-19201-exec-2][PackageController.java:54] - xxfw-xtks-ksgh-java.zip
+2022-10-08 15:31:21.251 INFO [http-nio-19201-exec-2][PackageController.java:55] - 23449152
+2022-10-08 15:31:21.252 INFO [http-nio-19201-exec-2][PackageController.java:57] - 扫描接收的文件数组信息完成：
+2022-10-08 15:31:21.253 INFO [http-nio-19201-exec-2][PackageController.java:58] - 
+2022-10-08 15:31:21.300 INFO [http-nio-19201-exec-2][PackageController.java:66] - 上传的文件类型为：zip
+2022-10-08 15:31:21.301 INFO [http-nio-19201-exec-2][PackageController.java:72] - 
+2022-10-08 15:31:21.314 INFO [http-nio-19201-exec-2][PackageServiceImpl.java:61] - originalFileName: xxfw-xtks-ksgh-java.zip
+2022-10-08 15:31:21.315 INFO [http-nio-19201-exec-2][PackageServiceImpl.java:62] - contentType: zip
+2022-10-08 15:31:21.315 INFO [http-nio-19201-exec-2][PackageServiceImpl.java:63] - fileUid: fb375b0bd5d64205801100419ed9a029.zip
+2022-10-08 15:31:21.316 INFO [http-nio-19201-exec-2][PackageServiceImpl.java:64] - uploadFile: web\src\main\resources\files\fb375b0bd5d64205801100419ed9a029.zip
+2022-10-08 15:31:21.317 INFO [http-nio-19201-exec-2][PackageServiceImpl.java:65] - dest: C:\Users\Lenovo\IdeaProjects\DeploymentResource\web\src\main\resources\files\fb375b0bd5d64205801100419ed9a029.zip
+2022-10-08 15:31:21.318 INFO [http-nio-19201-exec-2][PackageServiceImpl.java:66] - parentFile: web\src\main\resources\files
+2022-10-08 15:31:21.328 INFO [http-nio-19201-exec-2][PackageController.java:74] - 文件：xxfw-xtks-ksgh-java.zip存储成功
+2022-10-08 15:31:21.330 INFO [http-nio-19201-exec-2][PackageController.java:75] - fileUid: fb375b0bd5d64205801100419ed9a029.zip
+2022-10-08 15:31:21.333 INFO [http-nio-19201-exec-2][PackageServiceImpl.java:93] - 临时解压文件夹不存在，已经新建
+2022-10-08 15:31:21.342 INFO [http-nio-19201-exec-2][ZipUtils.java:50] - 解压: 2022图解网络.tar
+2022-10-08 15:31:22.371 INFO [http-nio-19201-exec-2][ZipUtils.java:50] - 解压: jvm - 副本.yaml
+2022-10-08 15:31:22.379 INFO [http-nio-19201-exec-2][ZipUtils.java:50] - 解压: xxfw-xtks-ksgh-java.json
+2022-10-08 15:31:22.386 INFO [http-nio-19201-exec-2][ZipUtils.java:78] - 解压完成，耗时：1047 ms
+2022-10-08 15:31:22.390 INFO [http-nio-19201-exec-2][PackageServiceImpl.java:110] - 文件类型：tar
+2022-10-08 15:31:22.392 INFO [http-nio-19201-exec-2][PackageServiceImpl.java:110] - 文件类型：yaml
+2022-10-08 15:31:22.395 INFO [http-nio-19201-exec-2][PackageServiceImpl.java:110] - 文件类型：json
+2022-10-08 15:31:22.999 INFO [http-nio-19201-exec-2][PackageServiceImpl.java:119] - json描述文件解析结果： 
+2022-10-08 15:31:23.000 INFO [http-nio-19201-exec-2][PackageServiceImpl.java:120] - PackingToolInfo(basicInfoForm=BasicInfoForm(softwareCnName=测试服务, softwareGroupName=信息服务, softwareEnvironment=x86, softwareUniqueName=xxfw-xtks-ksgh-java, domainName=xxfw, softwareName=xtks, serviceName=ksgh, languageName=java, softwareVersion=1.11.22, majorVersionNumber=1, minorVersionNumber=11, revisionNumber=22), imageInfoForm=ImageInfoForm(imageFileUidList=[3ad399db38c4470291fabdef0ec0b872.tar], imageFileNameList=[2022图解网络.tar], isImageFileExist=true, isYamlFileExist=true, yamlFileUid=2b787cd6a55744e89d5a1de226f077d3.yaml, yamlFileName=jvm - 副本.yaml), developerInfoForm=DeveloperInfoForm(developerName=分几, developerGroup=55, developerPhone=))
+2022-10-08 15:31:23.082 INFO [http-nio-19201-exec-2][PackageController.java:109] - 详细信息：
+2022-10-08 15:31:23.083 INFO [http-nio-19201-exec-2][PackageController.java:110] - ServicePackageDetailInfo(servicePackageDetailInfoId=6, softwareCnName=测试服务, softwareGroupName=信息服务, softwareEnvironment=x86, softwareUniqueName=xxfw-xtks-ksgh-java, domainName=xxfw, softwareName=xtks, serviceName=ksgh, languageName=java, softwareVersion=1.11.22, majorVersionNumber=1, minorVersionNumber=11, revisionNumber=22, developerName=分几, developerGroup=55, developerPhone=, connectedPackageUid=fb375b0bd5d64205801100419ed9a029.zip, connectedPackageOriginalFileName=xxfw-xtks-ksgh-java.zip, connectedPackageSize=22MB, isConfirm=false)
+2022-10-08 15:31:23.084 INFO [http-nio-19201-exec-2][PackageController.java:111] - 主键：
+2022-10-08 15:31:23.085 INFO [http-nio-19201-exec-2][PackageController.java:112] - 6
+2022-10-08 15:31:23.087 INFO [http-nio-19201-exec-2][PackageServiceImpl.java:137] - 存放临时解压文件的目录是： web/src/main/resources/unZip
+2022-10-08 15:31:23.090 INFO [http-nio-19201-exec-2][PackageServiceImpl.java:138] - 准备清空临时解压文件夹
+2022-10-08 15:31:23.094 INFO [http-nio-19201-exec-2][PackageServiceImpl.java:146] - 目前文件夹下有【3】个文件夹或者文件
+2022-10-08 15:31:23.117 INFO [http-nio-19201-exec-2][PackageServiceImpl.java:153] - 临时解压文件夹清理完成
+2022-10-08 15:32:30.891 INFO [http-nio-19201-exec-4][PendingReviewPackageController.java:54] - 待审核资源包列表查询
+2022-10-08 15:32:31.475 INFO [http-nio-19201-exec-5][PendingReviewPackageController.java:112] - 待审核记录数目查询被调用
+2022-10-08 15:32:31.504 INFO [http-nio-19201-exec-7][BeRemovedPackageController.java:91] - 已下架记录数目查询被调用
+2022-10-08 15:32:31.505 INFO [http-nio-19201-exec-6][BePublishedPackageController.java:76] - 已发布记录数目查询被调用
+2022-10-08 15:35:59.467 INFO [http-nio-19201-exec-3][BePublishedPackageController.java:52] - 已发布资源包列表查询
+2022-10-08 15:35:59.715 INFO [http-nio-19201-exec-7][BeRemovedPackageController.java:91] - 已下架记录数目查询被调用
+2022-10-08 15:35:59.716 INFO [http-nio-19201-exec-4][PendingReviewPackageController.java:112] - 待审核记录数目查询被调用
+2022-10-08 15:35:59.719 INFO [http-nio-19201-exec-5][BePublishedPackageController.java:76] - 已发布记录数目查询被调用
+2022-10-08 15:36:23.513 INFO [http-nio-19201-exec-8][BePublishedPackageController.java:52] - 已发布资源包列表查询
+2022-10-08 15:36:23.638 INFO [http-nio-19201-exec-9][BePublishedPackageController.java:62] - 下架方法被调用
+2022-10-08 15:36:23.699 INFO [http-nio-19201-exec-9][BePublishedPackageController.java:66] - 下架:69
+2022-10-08 15:36:23.866 INFO [http-nio-19201-exec-1][BePublishedPackageController.java:76] - 已发布记录数目查询被调用
+2022-10-08 15:36:23.866 INFO [http-nio-19201-exec-10][PendingReviewPackageController.java:112] - 待审核记录数目查询被调用
+2022-10-08 15:36:23.871 INFO [http-nio-19201-exec-2][BeRemovedPackageController.java:91] - 已下架记录数目查询被调用
+2022-10-08 15:36:26.321 INFO [http-nio-19201-exec-5][BeRemovedPackageController.java:91] - 已下架记录数目查询被调用
+2022-10-08 15:36:26.322 INFO [http-nio-19201-exec-7][PendingReviewPackageController.java:112] - 待审核记录数目查询被调用
+2022-10-08 15:36:26.326 INFO [http-nio-19201-exec-4][BePublishedPackageController.java:76] - 已发布记录数目查询被调用
+2022-10-08 15:37:31.016 INFO [http-nio-19201-exec-10][PackageController.java:48] - 
+2022-10-08 15:37:31.018 INFO [http-nio-19201-exec-10][PackageController.java:49] - 扫描接收的文件数组信息：
+2022-10-08 15:37:31.019 INFO [http-nio-19201-exec-10][PackageController.java:50] - [Lorg.springframework.web.multipart.MultipartFile;@2ffadf24
+2022-10-08 15:37:31.020 INFO [http-nio-19201-exec-10][PackageController.java:51] - 接收文件数组：files_length = 1
+2022-10-08 15:37:31.020 INFO [http-nio-19201-exec-10][PackageController.java:53] - 文件信息：
+2022-10-08 15:37:31.021 INFO [http-nio-19201-exec-10][PackageController.java:54] - xxfw-xtks-ksgh-java.zip
+2022-10-08 15:37:31.023 INFO [http-nio-19201-exec-10][PackageController.java:55] - 23449152
+2022-10-08 15:37:31.024 INFO [http-nio-19201-exec-10][PackageController.java:57] - 扫描接收的文件数组信息完成：
+2022-10-08 15:37:31.024 INFO [http-nio-19201-exec-10][PackageController.java:58] - 
+2022-10-08 15:37:31.025 INFO [http-nio-19201-exec-10][PackageController.java:66] - 上传的文件类型为：zip
+2022-10-08 15:37:31.026 INFO [http-nio-19201-exec-10][PackageController.java:72] - 
+2022-10-08 15:37:31.028 INFO [http-nio-19201-exec-10][PackageServiceImpl.java:61] - originalFileName: xxfw-xtks-ksgh-java.zip
+2022-10-08 15:37:31.029 INFO [http-nio-19201-exec-10][PackageServiceImpl.java:62] - contentType: zip
+2022-10-08 15:37:31.030 INFO [http-nio-19201-exec-10][PackageServiceImpl.java:63] - fileUid: 28979c02373a4278a864a518076debb2.zip
+2022-10-08 15:37:31.031 INFO [http-nio-19201-exec-10][PackageServiceImpl.java:64] - uploadFile: web\src\main\resources\files\28979c02373a4278a864a518076debb2.zip
+2022-10-08 15:37:31.033 INFO [http-nio-19201-exec-10][PackageServiceImpl.java:65] - dest: C:\Users\Lenovo\IdeaProjects\DeploymentResource\web\src\main\resources\files\28979c02373a4278a864a518076debb2.zip
+2022-10-08 15:37:31.034 INFO [http-nio-19201-exec-10][PackageServiceImpl.java:66] - parentFile: web\src\main\resources\files
+2022-10-08 15:37:31.045 INFO [http-nio-19201-exec-10][PackageController.java:74] - 文件：xxfw-xtks-ksgh-java.zip存储成功
+2022-10-08 15:37:31.046 INFO [http-nio-19201-exec-10][PackageController.java:75] - fileUid: 28979c02373a4278a864a518076debb2.zip
+2022-10-08 15:37:31.052 INFO [http-nio-19201-exec-10][ZipUtils.java:50] - 解压: 2022图解网络.tar
+2022-10-08 15:37:32.098 INFO [http-nio-19201-exec-10][ZipUtils.java:50] - 解压: jvm - 副本.yaml
+2022-10-08 15:37:32.105 INFO [http-nio-19201-exec-10][ZipUtils.java:50] - 解压: xxfw-xtks-ksgh-java.json
+2022-10-08 15:37:32.110 INFO [http-nio-19201-exec-10][ZipUtils.java:78] - 解压完成，耗时：1062 ms
+2022-10-08 15:37:32.113 INFO [http-nio-19201-exec-10][PackageServiceImpl.java:110] - 文件类型：tar
+2022-10-08 15:37:32.114 INFO [http-nio-19201-exec-10][PackageServiceImpl.java:110] - 文件类型：yaml
+2022-10-08 15:37:32.116 INFO [http-nio-19201-exec-10][PackageServiceImpl.java:110] - 文件类型：json
+2022-10-08 15:37:32.120 INFO [http-nio-19201-exec-10][PackageServiceImpl.java:119] - json描述文件解析结果： 
+2022-10-08 15:37:32.121 INFO [http-nio-19201-exec-10][PackageServiceImpl.java:120] - PackingToolInfo(basicInfoForm=BasicInfoForm(softwareCnName=测试服务, softwareGroupName=信息服务, softwareEnvironment=x86, softwareUniqueName=xxfw-xtks-ksgh-java, domainName=xxfw, softwareName=xtks, serviceName=ksgh, languageName=java, softwareVersion=1.11.22, majorVersionNumber=1, minorVersionNumber=11, revisionNumber=22), imageInfoForm=ImageInfoForm(imageFileUidList=[3ad399db38c4470291fabdef0ec0b872.tar], imageFileNameList=[2022图解网络.tar], isImageFileExist=true, isYamlFileExist=true, yamlFileUid=2b787cd6a55744e89d5a1de226f077d3.yaml, yamlFileName=jvm - 副本.yaml), developerInfoForm=DeveloperInfoForm(developerName=分几, developerGroup=55, developerPhone=))
+2022-10-08 15:37:32.140 INFO [http-nio-19201-exec-10][PackageController.java:109] - 详细信息：
+2022-10-08 15:37:32.141 INFO [http-nio-19201-exec-10][PackageController.java:110] - ServicePackageDetailInfo(servicePackageDetailInfoId=7, softwareCnName=测试服务, softwareGroupName=信息服务, softwareEnvironment=x86, softwareUniqueName=xxfw-xtks-ksgh-java, domainName=xxfw, softwareName=xtks, serviceName=ksgh, languageName=java, softwareVersion=1.11.22, majorVersionNumber=1, minorVersionNumber=11, revisionNumber=22, developerName=分几, developerGroup=55, developerPhone=, connectedPackageUid=28979c02373a4278a864a518076debb2.zip, connectedPackageOriginalFileName=xxfw-xtks-ksgh-java.zip, connectedPackageSize=22MB, isConfirm=false)
+2022-10-08 15:37:32.142 INFO [http-nio-19201-exec-10][PackageController.java:111] - 主键：
+2022-10-08 15:37:32.143 INFO [http-nio-19201-exec-10][PackageController.java:112] - 7
+2022-10-08 15:37:32.144 INFO [http-nio-19201-exec-10][PackageServiceImpl.java:137] - 存放临时解压文件的目录是： web/src/main/resources/unZip
+2022-10-08 15:37:32.145 INFO [http-nio-19201-exec-10][PackageServiceImpl.java:138] - 准备清空临时解压文件夹
+2022-10-08 15:37:32.148 INFO [http-nio-19201-exec-10][PackageServiceImpl.java:146] - 目前文件夹下有【3】个文件夹或者文件
+2022-10-08 15:37:32.168 INFO [http-nio-19201-exec-10][PackageServiceImpl.java:153] - 临时解压文件夹清理完成
+2022-10-08 15:38:14.094 INFO [http-nio-19201-exec-1][PendingReviewPackageController.java:54] - 待审核资源包列表查询
+2022-10-08 15:38:14.376 INFO [http-nio-19201-exec-2][PendingReviewPackageController.java:112] - 待审核记录数目查询被调用
+2022-10-08 15:38:14.379 INFO [http-nio-19201-exec-5][BeRemovedPackageController.java:91] - 已下架记录数目查询被调用
+2022-10-08 15:38:14.381 INFO [http-nio-19201-exec-3][BePublishedPackageController.java:76] - 已发布记录数目查询被调用
+2022-10-08 15:38:17.596 INFO [http-nio-19201-exec-7][PendingReviewPackageController.java:54] - 待审核资源包列表查询
+2022-10-08 15:38:17.708 INFO [http-nio-19201-exec-6][BeRemovedPackageController.java:91] - 已下架记录数目查询被调用
+2022-10-08 15:38:17.709 INFO [http-nio-19201-exec-4][PendingReviewPackageController.java:112] - 待审核记录数目查询被调用
+2022-10-08 15:38:17.711 INFO [http-nio-19201-exec-9][BePublishedPackageController.java:76] - 已发布记录数目查询被调用
+2022-10-08 15:38:59.741 INFO [http-nio-19201-exec-10][PendingReviewPackageController.java:84] - 安全扫描1
+2022-10-08 15:38:59.770 INFO [http-nio-19201-exec-1][PendingReviewPackageController.java:54] - 待审核资源包列表查询
+2022-10-08 15:38:59.862 INFO [http-nio-19201-exec-2][PendingReviewPackageController.java:112] - 待审核记录数目查询被调用
+2022-10-08 15:38:59.862 INFO [http-nio-19201-exec-3][BeRemovedPackageController.java:91] - 已下架记录数目查询被调用
+2022-10-08 15:38:59.863 INFO [http-nio-19201-exec-5][BePublishedPackageController.java:76] - 已发布记录数目查询被调用
+2022-10-08 15:39:03.618 INFO [http-nio-19201-exec-7][PendingReviewPackageController.java:54] - 待审核资源包列表查询
+2022-10-08 15:39:03.773 INFO [http-nio-19201-exec-6][PendingReviewPackageController.java:112] - 待审核记录数目查询被调用
+2022-10-08 15:39:03.775 INFO [http-nio-19201-exec-9][BeRemovedPackageController.java:91] - 已下架记录数目查询被调用
+2022-10-08 15:39:03.775 INFO [http-nio-19201-exec-4][BePublishedPackageController.java:76] - 已发布记录数目查询被调用
+2022-10-08 15:39:05.828 INFO [http-nio-19201-exec-8][PendingReviewPackageController.java:54] - 待审核资源包列表查询
+2022-10-08 15:39:05.924 INFO [http-nio-19201-exec-2][BeRemovedPackageController.java:91] - 已下架记录数目查询被调用
+2022-10-08 15:39:05.927 INFO [http-nio-19201-exec-1][BePublishedPackageController.java:76] - 已发布记录数目查询被调用
+2022-10-08 15:39:05.928 INFO [http-nio-19201-exec-10][PendingReviewPackageController.java:112] - 待审核记录数目查询被调用
+2022-10-08 15:39:08.623 INFO [http-nio-19201-exec-5][PendingReviewPackageController.java:54] - 待审核资源包列表查询
+2022-10-08 15:39:08.680 INFO [http-nio-19201-exec-3][PendingReviewPackageController.java:54] - 待审核资源包列表查询
+2022-10-08 15:39:08.761 INFO [http-nio-19201-exec-7][PendingReviewPackageController.java:112] - 待审核记录数目查询被调用
+2022-10-08 15:39:08.761 INFO [http-nio-19201-exec-9][BeRemovedPackageController.java:91] - 已下架记录数目查询被调用
+2022-10-08 15:39:08.763 INFO [http-nio-19201-exec-6][BePublishedPackageController.java:76] - 已发布记录数目查询被调用
+2022-10-08 15:39:08.893 INFO [http-nio-19201-exec-4][PendingReviewPackageController.java:112] - 待审核记录数目查询被调用
+2022-10-08 15:39:08.894 INFO [http-nio-19201-exec-2][BeRemovedPackageController.java:91] - 已下架记录数目查询被调用
+2022-10-08 15:39:08.893 INFO [http-nio-19201-exec-8][BePublishedPackageController.java:76] - 已发布记录数目查询被调用
+2022-10-08 15:39:52.506 INFO [http-nio-19201-exec-1][PendingReviewPackageController.java:84] - 安全扫描4
+2022-10-08 15:39:52.535 INFO [http-nio-19201-exec-10][PendingReviewPackageController.java:54] - 待审核资源包列表查询
+2022-10-08 15:39:52.698 INFO [http-nio-19201-exec-5][PendingReviewPackageController.java:112] - 待审核记录数目查询被调用
+2022-10-08 15:39:52.700 INFO [http-nio-19201-exec-9][BeRemovedPackageController.java:91] - 已下架记录数目查询被调用
+2022-10-08 15:39:52.700 INFO [http-nio-19201-exec-3][BePublishedPackageController.java:76] - 已发布记录数目查询被调用
+2022-10-08 15:39:59.973 INFO [http-nio-19201-exec-6][PendingReviewPackageController.java:97] - 安全扫描1
+2022-10-08 15:40:00.003 INFO [http-nio-19201-exec-2][PendingReviewPackageController.java:54] - 待审核资源包列表查询
+2022-10-08 15:40:00.148 INFO [http-nio-19201-exec-1][BeRemovedPackageController.java:91] - 已下架记录数目查询被调用
+2022-10-08 15:40:00.148 INFO [http-nio-19201-exec-4][PendingReviewPackageController.java:112] - 待审核记录数目查询被调用
+2022-10-08 15:40:00.148 INFO [http-nio-19201-exec-8][BePublishedPackageController.java:76] - 已发布记录数目查询被调用
+2022-10-08 15:40:01.183 INFO [http-nio-19201-exec-10][BePublishedPackageController.java:52] - 已发布资源包列表查询
+2022-10-08 15:40:01.380 INFO [http-nio-19201-exec-3][BeRemovedPackageController.java:91] - 已下架记录数目查询被调用
+2022-10-08 15:40:01.381 INFO [http-nio-19201-exec-9][PendingReviewPackageController.java:112] - 待审核记录数目查询被调用
+2022-10-08 15:40:01.382 INFO [http-nio-19201-exec-5][BePublishedPackageController.java:76] - 已发布记录数目查询被调用
+2022-10-08 15:40:06.253 INFO [http-nio-19201-exec-7][PendingReviewPackageController.java:54] - 待审核资源包列表查询
+2022-10-08 15:40:06.491 INFO [http-nio-19201-exec-6][PendingReviewPackageController.java:112] - 待审核记录数目查询被调用
+2022-10-08 15:40:06.493 INFO [http-nio-19201-exec-8][BeRemovedPackageController.java:91] - 已下架记录数目查询被调用
+2022-10-08 15:40:06.494 INFO [http-nio-19201-exec-2][BePublishedPackageController.java:76] - 已发布记录数目查询被调用
+2022-10-08 15:40:15.874 INFO [http-nio-19201-exec-1][BePublishedPackageController.java:52] - 已发布资源包列表查询
+2022-10-08 15:40:16.035 INFO [http-nio-19201-exec-4][PendingReviewPackageController.java:112] - 待审核记录数目查询被调用
+2022-10-08 15:40:16.036 INFO [http-nio-19201-exec-3][BeRemovedPackageController.java:91] - 已下架记录数目查询被调用
+2022-10-08 15:40:16.040 INFO [http-nio-19201-exec-10][BePublishedPackageController.java:76] - 已发布记录数目查询被调用
+2022-10-08 15:40:21.257 INFO [http-nio-19201-exec-6][BeRemovedPackageController.java:91] - 已下架记录数目查询被调用
+2022-10-08 15:40:21.257 INFO [http-nio-19201-exec-5][PendingReviewPackageController.java:112] - 待审核记录数目查询被调用
+2022-10-08 15:40:21.261 INFO [http-nio-19201-exec-7][BePublishedPackageController.java:76] - 已发布记录数目查询被调用
+2022-10-08 15:40:25.699 INFO [http-nio-19201-exec-2][BePublishedPackageController.java:52] - 已发布资源包列表查询
+2022-10-08 15:40:25.873 INFO [http-nio-19201-exec-8][PendingReviewPackageController.java:112] - 待审核记录数目查询被调用
+2022-10-08 15:40:25.874 INFO [http-nio-19201-exec-1][BePublishedPackageController.java:76] - 已发布记录数目查询被调用
+2022-10-08 15:40:25.876 INFO [http-nio-19201-exec-4][BeRemovedPackageController.java:91] - 已下架记录数目查询被调用
+2022-10-08 15:40:30.241 INFO [http-nio-19201-exec-6][BePublishedPackageController.java:76] - 已发布记录数目查询被调用
+2022-10-08 15:40:30.242 INFO [http-nio-19201-exec-5][BeRemovedPackageController.java:91] - 已下架记录数目查询被调用
+2022-10-08 15:40:30.242 INFO [http-nio-19201-exec-9][PendingReviewPackageController.java:112] - 待审核记录数目查询被调用
+2022-10-08 15:40:54.482 INFO [http-nio-19201-exec-7][BePublishedPackageController.java:52] - 已发布资源包列表查询
+2022-10-08 15:40:54.677 INFO [http-nio-19201-exec-2][PendingReviewPackageController.java:112] - 待审核记录数目查询被调用
+2022-10-08 15:40:54.680 INFO [http-nio-19201-exec-8][BePublishedPackageController.java:76] - 已发布记录数目查询被调用
+2022-10-08 15:40:54.681 INFO [http-nio-19201-exec-1][BeRemovedPackageController.java:91] - 已下架记录数目查询被调用
+2022-10-08 15:40:55.132 INFO [http-nio-19201-exec-4][PendingReviewPackageController.java:54] - 待审核资源包列表查询
+2022-10-08 15:40:55.347 INFO [http-nio-19201-exec-3][PendingReviewPackageController.java:112] - 待审核记录数目查询被调用
+2022-10-08 15:40:55.347 INFO [http-nio-19201-exec-6][BeRemovedPackageController.java:91] - 已下架记录数目查询被调用
+2022-10-08 15:40:55.349 INFO [http-nio-19201-exec-10][BePublishedPackageController.java:76] - 已发布记录数目查询被调用
+2022-10-08 15:40:58.326 INFO [http-nio-19201-exec-9][PendingReviewPackageController.java:54] - 待审核资源包列表查询
+2022-10-08 15:40:58.592 INFO [http-nio-19201-exec-7][PendingReviewPackageController.java:112] - 待审核记录数目查询被调用
+2022-10-08 15:40:58.593 INFO [http-nio-19201-exec-2][BePublishedPackageController.java:76] - 已发布记录数目查询被调用
+2022-10-08 15:40:58.596 INFO [http-nio-19201-exec-8][BeRemovedPackageController.java:91] - 已下架记录数目查询被调用
+2022-10-08 15:40:58.969 INFO [http-nio-19201-exec-1][BePublishedPackageController.java:52] - 已发布资源包列表查询
+2022-10-08 15:40:59.204 INFO [http-nio-19201-exec-6][BeRemovedPackageController.java:91] - 已下架记录数目查询被调用
+2022-10-08 15:40:59.205 INFO [http-nio-19201-exec-4][PendingReviewPackageController.java:112] - 待审核记录数目查询被调用
+2022-10-08 15:40:59.205 INFO [http-nio-19201-exec-3][BePublishedPackageController.java:76] - 已发布记录数目查询被调用
+2022-10-08 15:41:05.975 INFO [http-nio-19201-exec-5][PendingReviewPackageController.java:54] - 待审核资源包列表查询
+2022-10-08 15:41:06.234 INFO [http-nio-19201-exec-2][BeRemovedPackageController.java:91] - 已下架记录数目查询被调用
+2022-10-08 15:41:06.235 INFO [http-nio-19201-exec-9][PendingReviewPackageController.java:112] - 待审核记录数目查询被调用
+2022-10-08 15:41:06.235 INFO [http-nio-19201-exec-7][BePublishedPackageController.java:76] - 已发布记录数目查询被调用
+2022-10-08 15:41:14.706 INFO [http-nio-19201-exec-8][PendingReviewPackageController.java:54] - 待审核资源包列表查询
+2022-10-08 15:41:14.945 INFO [http-nio-19201-exec-3][BeRemovedPackageController.java:91] - 已下架记录数目查询被调用
+2022-10-08 15:41:14.945 INFO [http-nio-19201-exec-1][PendingReviewPackageController.java:112] - 待审核记录数目查询被调用
+2022-10-08 15:41:14.948 INFO [http-nio-19201-exec-6][BePublishedPackageController.java:76] - 已发布记录数目查询被调用
+2022-10-08 15:41:15.388 INFO [http-nio-19201-exec-4][BePublishedPackageController.java:52] - 已发布资源包列表查询
+2022-10-08 15:41:15.559 INFO [http-nio-19201-exec-7][BeRemovedPackageController.java:91] - 已下架记录数目查询被调用
+2022-10-08 15:41:15.559 INFO [http-nio-19201-exec-10][PendingReviewPackageController.java:112] - 待审核记录数目查询被调用
+2022-10-08 15:41:15.561 INFO [http-nio-19201-exec-5][BePublishedPackageController.java:76] - 已发布记录数目查询被调用
+2022-10-08 15:41:16.170 INFO [http-nio-19201-exec-3][BeRemovedPackageController.java:91] - 已下架记录数目查询被调用
+2022-10-08 15:41:16.170 INFO [http-nio-19201-exec-2][PendingReviewPackageController.java:112] - 待审核记录数目查询被调用
+2022-10-08 15:41:16.171 INFO [http-nio-19201-exec-8][BePublishedPackageController.java:76] - 已发布记录数目查询被调用
+2022-10-08 15:41:25.559 INFO [http-nio-19201-exec-4][PendingReviewPackageController.java:112] - 待审核记录数目查询被调用
+2022-10-08 15:41:25.559 INFO [http-nio-19201-exec-7][BeRemovedPackageController.java:91] - 已下架记录数目查询被调用
+2022-10-08 15:41:25.561 INFO [http-nio-19201-exec-10][BePublishedPackageController.java:76] - 已发布记录数目查询被调用
+2022-10-08 15:41:26.134 INFO [http-nio-19201-exec-5][BePublishedPackageController.java:52] - 已发布资源包列表查询
+2022-10-08 15:41:26.384 INFO [http-nio-19201-exec-9][PendingReviewPackageController.java:112] - 待审核记录数目查询被调用
+2022-10-08 15:41:26.384 INFO [http-nio-19201-exec-3][BeRemovedPackageController.java:91] - 已下架记录数目查询被调用
+2022-10-08 15:41:26.384 INFO [http-nio-19201-exec-2][BePublishedPackageController.java:76] - 已发布记录数目查询被调用
+2022-10-08 15:41:26.825 INFO [http-nio-19201-exec-8][PendingReviewPackageController.java:54] - 待审核资源包列表查询
+2022-10-08 15:41:27.197 INFO [http-nio-19201-exec-1][PendingReviewPackageController.java:112] - 待审核记录数目查询被调用
+2022-10-08 15:41:27.203 INFO [http-nio-19201-exec-6][BePublishedPackageController.java:76] - 已发布记录数目查询被调用
+2022-10-08 15:41:27.203 INFO [http-nio-19201-exec-4][BeRemovedPackageController.java:91] - 已下架记录数目查询被调用
+2022-10-08 15:41:28.158 INFO [http-nio-19201-exec-7][BePublishedPackageController.java:52] - 已发布资源包列表查询
+2022-10-08 15:41:28.336 INFO [http-nio-19201-exec-10][PendingReviewPackageController.java:112] - 待审核记录数目查询被调用
+2022-10-08 15:41:28.337 INFO [http-nio-19201-exec-9][BeRemovedPackageController.java:91] - 已下架记录数目查询被调用
+2022-10-08 15:41:28.340 INFO [http-nio-19201-exec-5][BePublishedPackageController.java:76] - 已发布记录数目查询被调用
+2022-10-08 15:41:28.793 INFO [http-nio-19201-exec-2][PendingReviewPackageController.java:54] - 待审核资源包列表查询
+2022-10-08 15:41:29.017 INFO [http-nio-19201-exec-3][PendingReviewPackageController.java:112] - 待审核记录数目查询被调用
+2022-10-08 15:41:29.017 INFO [http-nio-19201-exec-1][BeRemovedPackageController.java:91] - 已下架记录数目查询被调用
+2022-10-08 15:41:29.020 INFO [http-nio-19201-exec-8][BePublishedPackageController.java:76] - 已发布记录数目查询被调用
+2022-10-08 15:41:37.681 INFO [http-nio-19201-exec-6][BePublishedPackageController.java:52] - 已发布资源包列表查询
+2022-10-08 15:41:37.890 INFO [http-nio-19201-exec-4][PendingReviewPackageController.java:112] - 待审核记录数目查询被调用
+2022-10-08 15:41:37.893 INFO [http-nio-19201-exec-10][BeRemovedPackageController.java:91] - 已下架记录数目查询被调用
+2022-10-08 15:41:37.893 INFO [http-nio-19201-exec-7][BePublishedPackageController.java:76] - 已发布记录数目查询被调用
+2022-10-08 15:41:38.983 INFO [http-nio-19201-exec-9][PendingReviewPackageController.java:54] - 待审核资源包列表查询
+2022-10-08 15:41:39.261 INFO [http-nio-19201-exec-5][PendingReviewPackageController.java:112] - 待审核记录数目查询被调用
+2022-10-08 15:41:39.265 INFO [http-nio-19201-exec-3][BeRemovedPackageController.java:91] - 已下架记录数目查询被调用
+2022-10-08 15:41:39.268 INFO [http-nio-19201-exec-2][BePublishedPackageController.java:76] - 已发布记录数目查询被调用
+2022-10-08 15:41:43.763 INFO [http-nio-19201-exec-1][BePublishedPackageController.java:52] - 已发布资源包列表查询
+2022-10-08 15:41:43.950 INFO [http-nio-19201-exec-8][PendingReviewPackageController.java:112] - 待审核记录数目查询被调用
+2022-10-08 15:41:43.950 INFO [http-nio-19201-exec-4][BeRemovedPackageController.java:91] - 已下架记录数目查询被调用
+2022-10-08 15:41:43.951 INFO [http-nio-19201-exec-6][BePublishedPackageController.java:76] - 已发布记录数目查询被调用
+2022-10-08 15:41:45.284 INFO [http-nio-19201-exec-10][PendingReviewPackageController.java:54] - 待审核资源包列表查询
+2022-10-08 15:41:45.538 INFO [http-nio-19201-exec-7][PendingReviewPackageController.java:112] - 待审核记录数目查询被调用
+2022-10-08 15:41:45.539 INFO [http-nio-19201-exec-9][BePublishedPackageController.java:76] - 已发布记录数目查询被调用
+2022-10-08 15:41:45.541 INFO [http-nio-19201-exec-5][BeRemovedPackageController.java:91] - 已下架记录数目查询被调用
+2022-10-08 15:41:59.043 INFO [http-nio-19201-exec-3][BePublishedPackageController.java:52] - 已发布资源包列表查询
+2022-10-08 15:41:59.243 INFO [http-nio-19201-exec-2][PendingReviewPackageController.java:112] - 待审核记录数目查询被调用
+2022-10-08 15:41:59.245 INFO [http-nio-19201-exec-8][BeRemovedPackageController.java:91] - 已下架记录数目查询被调用
+2022-10-08 15:41:59.245 INFO [http-nio-19201-exec-1][BePublishedPackageController.java:76] - 已发布记录数目查询被调用
+2022-10-08 15:41:59.565 INFO [http-nio-19201-exec-4][PendingReviewPackageController.java:54] - 待审核资源包列表查询
+2022-10-08 15:41:59.786 INFO [http-nio-19201-exec-6][PendingReviewPackageController.java:112] - 待审核记录数目查询被调用
+2022-10-08 15:41:59.787 INFO [http-nio-19201-exec-7][BeRemovedPackageController.java:91] - 已下架记录数目查询被调用
+2022-10-08 15:41:59.788 INFO [http-nio-19201-exec-10][BePublishedPackageController.java:76] - 已发布记录数目查询被调用
+2022-10-08 15:42:01.612 INFO [http-nio-19201-exec-2][BeRemovedPackageController.java:91] - 已下架记录数目查询被调用
+2022-10-08 15:42:01.612 INFO [http-nio-19201-exec-5][PendingReviewPackageController.java:112] - 待审核记录数目查询被调用
+2022-10-08 15:42:01.615 INFO [http-nio-19201-exec-3][BePublishedPackageController.java:76] - 已发布记录数目查询被调用
+2022-10-08 15:42:02.478 INFO [http-nio-19201-exec-1][BePublishedPackageController.java:52] - 已发布资源包列表查询
+2022-10-08 15:42:02.655 INFO [http-nio-19201-exec-8][PendingReviewPackageController.java:112] - 待审核记录数目查询被调用
+2022-10-08 15:42:02.658 INFO [http-nio-19201-exec-7][BeRemovedPackageController.java:91] - 已下架记录数目查询被调用
+2022-10-08 15:42:02.659 INFO [http-nio-19201-exec-4][BePublishedPackageController.java:76] - 已发布记录数目查询被调用
+2022-10-08 15:42:03.690 INFO [http-nio-19201-exec-6][PendingReviewPackageController.java:54] - 待审核资源包列表查询
+2022-10-08 15:42:03.893 INFO [http-nio-19201-exec-2][BeRemovedPackageController.java:91] - 已下架记录数目查询被调用
+2022-10-08 15:42:03.893 INFO [http-nio-19201-exec-9][BePublishedPackageController.java:76] - 已发布记录数目查询被调用
+2022-10-08 15:42:03.893 INFO [http-nio-19201-exec-10][PendingReviewPackageController.java:112] - 待审核记录数目查询被调用
+2022-10-08 15:42:04.464 INFO [http-nio-19201-exec-5][BePublishedPackageController.java:52] - 已发布资源包列表查询
+2022-10-08 15:42:04.643 INFO [http-nio-19201-exec-8][BeRemovedPackageController.java:91] - 已下架记录数目查询被调用
+2022-10-08 15:42:04.644 INFO [http-nio-19201-exec-3][PendingReviewPackageController.java:112] - 待审核记录数目查询被调用
+2022-10-08 15:42:04.645 INFO [http-nio-19201-exec-1][BePublishedPackageController.java:76] - 已发布记录数目查询被调用

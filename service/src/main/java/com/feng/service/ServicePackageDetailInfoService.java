@@ -29,4 +29,29 @@ public interface ServicePackageDetailInfoService extends IService<ServicePackage
     public ServiceResult getServicePackageDetailInfoFromPackingToolJson(PackingToolInfo packingToolInfo);
 
 
+    /**
+     * 用于资源包确认的时候，根据ID查询详情，里面有些信息用于写一条pendingReviewPackage
+     * @param id
+     * @return
+     */
+    public ServiceResult selectServicePackageDetailInfoById(Integer id);
+
+
+    /**
+     * 确认资源包，把对应的ID的isConfirm改成true
+     * @param id
+     * @return
+     */
+    public ServiceResult confirmServicePackageDetailInfoById(Integer id);
+
+
+    /**
+     * 资源包取消，直接把那条记录删了就行了
+     * @param id
+     * @return
+     */
+    public ServiceResult cancelServicePackageDetailInfoById(Integer id);
+
+
+
 }

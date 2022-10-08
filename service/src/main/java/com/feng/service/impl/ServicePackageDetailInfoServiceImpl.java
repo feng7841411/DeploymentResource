@@ -70,4 +70,24 @@ public class ServicePackageDetailInfoServiceImpl extends ServiceImpl<ServicePack
 
         return ServiceResult.success("",servicePackageDetailInfo);
     }
+
+    @Override
+    public ServiceResult selectServicePackageDetailInfoById(Integer id) {
+        ServicePackageDetailInfo servicePackageDetailInfo = servicePackageDetailInfoMapper.selectById(id);
+        return ServiceResult.success("",servicePackageDetailInfo);
+    }
+
+    @Override
+    public ServiceResult confirmServicePackageDetailInfoById(Integer id) {
+        ServicePackageDetailInfo servicePackageDetailInfo = servicePackageDetailInfoMapper.selectById(id);
+        servicePackageDetailInfo.setIsConfirm("true");
+        servicePackageDetailInfoMapper.updateById(servicePackageDetailInfo);
+        return ServiceResult.success();
+    }
+
+    @Override
+    public ServiceResult cancelServicePackageDetailInfoById(Integer id) {
+        servicePackageDetailInfoMapper.deleteById(id);
+        return ServiceResult.success();
+    }
 }

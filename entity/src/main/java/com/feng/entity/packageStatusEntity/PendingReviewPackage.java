@@ -65,7 +65,16 @@ public class PendingReviewPackage {
 
 
     /**
+     * 关联的详情表ID
+     * 这个就是表之间的关联了
+     */
+    private Integer connectedDetailInfoId;
+
+
+    /**
      * 2022年10月7日 21点58分 上传者
+     *
+     * 其实前面有作者Author这个字段了
      */
     private String uploader;
 

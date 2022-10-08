@@ -1,24 +1,19 @@
 package com.feng.web.controller;
 
 import cn.hutool.core.io.FileUtil;
-import com.feng.entity.packageToolEntity.BasicInfoForm;
-import com.feng.entity.packageToolEntity.DeveloperInfoForm;
 import com.feng.entity.packageToolEntity.PackingToolInfo;
 import com.feng.entity.packageToolEntity.ServicePackageDetailInfo;
 import com.feng.entity.returnClass.Result;
 import com.feng.entity.returnClass.ServiceResult;
-import com.feng.service.PackageServiceImpl;
-import com.feng.service.ServicePackageDetailInfoService;
+import com.feng.service.impl.PackageServiceImpl;
 import com.feng.service.impl.ServicePackageDetailInfoServiceImpl;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+
+import java.util.Map;
 
 /**
  * @author feng
@@ -82,14 +77,14 @@ public class PackageController {
 
         // 3.2 解压，获得JSON文件名 (解压放到一个路径，拿到JSON信息，然后考虑再删掉临时文件吧）
         ServiceResult unZipResult = packageService.unZipPackage((String) storeResult.getData());
-        if (!unZipResult.getCode().equals("200")) {
+        if (!"200".equals(unZipResult.getCode())) {
             logger.error("调用unZip()失败");
             return Result.error("400","系统无法正确解压资源包");
         }
 
         ServiceResult readJsonResult = packageService.readJsonFileFromUnZip();
         // json读取失败
-        if (!readJsonResult.getCode().equals("200")) {
+        if (!"200".equals(readJsonResult.getCode())) {
             logger.error(readJsonResult.getMsg());
             return Result.error("400",readJsonResult.getMsg());
         }
@@ -106,8 +101,7 @@ public class PackageController {
         servicePackageDetailInfo.setConnectedPackageOriginalFileName(file.getOriginalFilename());
         long l = file.getSize() / 1024 / 1024;
         servicePackageDetailInfo.setConnectedPackageSize(String.valueOf(l) + "MB");
-
-
+        servicePackageDetailInfo.setIsConfirm("false");
         // 写入数据库
         servicePackageDetailInfoService.insertServicePackageDetailInfo(servicePackageDetailInfo);
         // 主键
@@ -120,9 +114,11 @@ public class PackageController {
 
         // 3.3 根据JSON，写一条包详情记录，返回主键ID
         // 4、写入一条PendingReviewPackage记录，里面带上fileUid 和 详情记录的主键ID
+        // 这个目前因为需要多一道确定，所以光是上传包，只是写详情的H2数据，同时存在一个属性isConfirm，之后好的系统机构应该是对这些记录，要去清理掉包
 
         // 5、清理unzip文件夹
-
+        // 这个目前就已经可以清理的，因为目标的JSON文件已经拿到了
+        packageService.clearUnZipFiles();
         // 模拟线程休眠，对包的处理，为了检测前端同步方法对蒙层的控制
         try {
             Thread.sleep(5000);
@@ -132,6 +128,37 @@ public class PackageController {
         return Result.success("解析成功",servicePackageDetailInfo);
     }
 
+
+    /**
+     * 安装包，确认的方法
+     * @param params
+     * @return
+     */
+    @PostMapping("/confirmUploadSingle")
+    public Result confirmUploadSingle(@RequestBody Map<String, Object> params) {
+        ServiceResult serviceResult = packageService.confirmUploadPackage(params);
+        if (serviceResult.getCode().equals("200")) {
+            return Result.success();
+        } else {
+            return Result.error();
+        }
+    }
+
+    /**
+     * 安装包取消的方法
+     * @param params
+     * @return
+     */
+    @PostMapping("/cancelUploadSingle")
+    public Result cancelUploadSingle(@RequestBody Map<String, Object> params) {
+        ServiceResult serviceResult = packageService.cancelUploadPackage(params);
+        if (serviceResult.getCode().equals("200")) {
+            return Result.success();
+        } else {
+            return Result.error();
+        }
+
+    }
 
 
 

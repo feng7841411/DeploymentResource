@@ -115,6 +115,7 @@ public class ServicePackageDetailInfo {
      * 是否确认，因为这个详情类，在确认之前就会写入数据库；
      * pendingReview、publish、removed是确认后才会写，
      * 所有这里留一个，之后用来清除没有被确认，且没有被取消的
+     * 这个字段就是两种状态；true、false
      */
-    private String isCheck;
+    private String isConfirm;
 }

@@ -4,6 +4,8 @@ import com.feng.entity.packageToolEntity.PackingToolInfo;
 import com.feng.entity.returnClass.ServiceResult;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.util.Map;
+
 /**
  * @author feng
  * @date 2022/10/4
@@ -44,5 +46,26 @@ public interface PackageService {
      * @return
      */
     public ServiceResult getInfoFromPackingToolInfo(PackingToolInfo packingToolInfo);
+
+
+    /**
+     * 善后方法，解压，拿到JSON处理以后，把存放unzip的文件夹清空掉
+     * @return
+     */
+    public ServiceResult clearUnZipFiles();
+
+    /**
+     * 确认资源包
+     * @return
+     */
+    public ServiceResult confirmUploadPackage(Map<String, Object> params);
+
+
+    /**
+     * 取消安装包上传
+     * @return
+     */
+    public ServiceResult cancelUploadPackage(Map<String, Object> params);
+
 
 }
