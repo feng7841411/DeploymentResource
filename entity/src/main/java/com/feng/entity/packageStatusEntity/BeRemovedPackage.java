@@ -38,6 +38,10 @@ public class BeRemovedPackage {
 
     @TableField(value = "BE_REMOVED_PACKAGE_NAME")
     private String beRemovedPackageName;
+
+    @TableField(value = "BE_REMOVED_PACKAGE_Type")
+    private String beRemovedPackageType;
+
     @TableField(value = "BE_REMOVED_PACKAGE_AUTHOR")
     private String beRemovedPackageAuthor;
 
@@ -49,15 +53,19 @@ public class BeRemovedPackage {
     @TableField(value = "BE_REMOVED_PACKAGE_STATUS")
     private String beRemovedPackageStatus;
 
-    @TableField(value = "BE_REMOVED_PACKAGE_Type")
-    private String beRemovedPackageType;
+
 
     /**
-     * 关联的实际PackageUId
+     * 在磁盘上zip的名字
      */
     @TableField(value = "CONNECTED_PACKAGE_UID")
     private String connectedPackageUid;
 
 
+    /**
+     * 关联的详情表ID
+     * 这个就是表之间的关联了
+     */
+    private Integer connectedDetailInfoId;
 
 }

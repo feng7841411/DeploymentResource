@@ -37,10 +37,13 @@ public class BePublishedPackage {
 
     @TableField(value = "BE_PUBLISHED_PACKAGE_NAME")
     private String bePublishedPackageName;
-    @TableField(value = "BE_PUBLISHED_PACKAGE_AUTHOR")
-    private String bePublishedPackageAuthor;
+
     @TableField(value = "BE_PUBLISHED_PACKAGE_Type")
     private String bePublishedPackageType;
+
+    @TableField(value = "BE_PUBLISHED_PACKAGE_AUTHOR")
+    private String bePublishedPackageAuthor;
+
 
 
     @TableField(value = "BE_PUBLISHED_PACKAGE_TIME",fill = FieldFill.INSERT)
@@ -52,10 +55,17 @@ public class BePublishedPackage {
     private String bePublishedPackageStatus;
 
     /**
-     * 关联的实际PackageUId
+     * 在磁盘上zip的名字
      */
     @TableField(value = "CONNECTED_PACKAGE_UID")
     private String connectedPackageUid;
+
+
+    /**
+     * 关联的详情表ID
+     * 这个就是表之间的关联了
+     */
+    private Integer connectedDetailInfoId;
 
 
 

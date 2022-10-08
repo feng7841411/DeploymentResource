@@ -137,7 +137,7 @@ public class PackageController {
     @PostMapping("/confirmUploadSingle")
     public Result confirmUploadSingle(@RequestBody Map<String, Object> params) {
         ServiceResult serviceResult = packageService.confirmUploadPackage(params);
-        if (serviceResult.getCode().equals("200")) {
+        if ("200".equals(serviceResult.getCode())) {
             return Result.success();
         } else {
             return Result.error();
@@ -152,7 +152,7 @@ public class PackageController {
     @PostMapping("/cancelUploadSingle")
     public Result cancelUploadSingle(@RequestBody Map<String, Object> params) {
         ServiceResult serviceResult = packageService.cancelUploadPackage(params);
-        if (serviceResult.getCode().equals("200")) {
+        if ("200".equals(serviceResult.getCode())) {
             return Result.success();
         } else {
             return Result.error();

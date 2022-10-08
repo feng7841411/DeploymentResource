@@ -68,4 +68,13 @@ public interface PackageService {
     public ServiceResult cancelUploadPackage(Map<String, Object> params);
 
 
+    /**
+     * 前端，【我的资源方法】传输一个人名，从3张表里查Author是这个人的Package,返回
+     * @param params
+     * @return
+     */
+    public ServiceResult getMyPackage(Map<String, Object> params);
+
+
+
 }

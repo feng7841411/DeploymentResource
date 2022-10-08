@@ -170,11 +170,11 @@ public class PackageServiceImpl implements PackageService {
     public ServiceResult confirmUploadPackage(Map<String, Object> params) {
         HashMap<String, Object> map = (HashMap<String, Object>) params.get("params");
         String uploader = (String) map.get("uploader");
-        String servicePackageDetailInfoId = (String) map.get("servicePackageDetailInfoId");
+        Integer servicePackageDetailInfoId = (Integer) map.get("servicePackageDetailInfoId");
         logger.info("资源包上传确认消息，上传者：" + uploader + " 对应详情记录的主键：" + servicePackageDetailInfoId);
         PendingReviewPackage pendingReviewPackage = new PendingReviewPackage();
         logger.info("调出资源包详细信息：");
-        ServiceResult serviceResult = servicePackageDetailInfoService.selectServicePackageDetailInfoById(Integer.valueOf(servicePackageDetailInfoId));
+        ServiceResult serviceResult = servicePackageDetailInfoService.selectServicePackageDetailInfoById(servicePackageDetailInfoId);
         ServicePackageDetailInfo servicePackageDetailInfo = (ServicePackageDetailInfo) serviceResult.getData();
         pendingReviewPackage.setPendingReviewPackageName(servicePackageDetailInfo.getConnectedPackageOriginalFileName());
         pendingReviewPackage.setPendingReviewPackageAuthor(uploader);
@@ -182,7 +182,7 @@ public class PackageServiceImpl implements PackageService {
         pendingReviewPackage.setPendingReviewPackageTime(new Date());
         pendingReviewPackage.setPendingReviewPackageStatus("待审核");
         pendingReviewPackage.setConnectedPackageUid(servicePackageDetailInfo.getConnectedPackageUid());
-        pendingReviewPackage.setConnectedDetailInfoId(Integer.valueOf(servicePackageDetailInfoId));
+        pendingReviewPackage.setConnectedDetailInfoId(servicePackageDetailInfoId);
         Integer integer = pendingReviewPackageService.insertPendingReviewPackage(pendingReviewPackage);
         if (integer == 1){
             logger.info("资源包确认完成");
@@ -199,5 +199,10 @@ public class PackageServiceImpl implements PackageService {
         String servicePackageDetailInfoId = (String) map.get("servicePackageDetailInfoId");
         servicePackageDetailInfoService.cancelServicePackageDetailInfoById(Integer.valueOf(servicePackageDetailInfoId));
         return ServiceResult.success();
+    }
+
+    @Override
+    public ServiceResult getMyPackage(Map<String, Object> params) {
+        return null;
     }
 }
