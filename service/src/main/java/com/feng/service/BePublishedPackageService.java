@@ -2,6 +2,7 @@ package com.feng.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.feng.entity.packageStatusEntity.BePublishedPackage;
+import com.feng.entity.returnClass.ServiceResult;
 
 /**
  * Created with IntelliJ IDEA.
@@ -16,7 +17,7 @@ public interface BePublishedPackageService extends IService<BePublishedPackage> 
 
 
     /**
-     *
+     * 根据ID删除资源包
      * @param id
      * @return
      */
@@ -37,6 +38,13 @@ public interface BePublishedPackageService extends IService<BePublishedPackage> 
      */
     public Integer getPublishedPackageAsideNumber();
 
+
+    /**
+     * 根据Author字段筛选已经上传的资源包
+     * @param author
+     * @return
+     */
+    public ServiceResult selectBePublishedPackageByAuthor(String author);
 
 
 }

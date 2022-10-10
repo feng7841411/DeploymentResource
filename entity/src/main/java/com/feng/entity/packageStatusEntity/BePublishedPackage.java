@@ -65,6 +65,7 @@ public class BePublishedPackage {
      * 关联的详情表ID
      * 这个就是表之间的关联了
      */
+    @TableField(value = "CONNECTED_DETAIL_INFO_ID")
     private Integer connectedDetailInfoId;
 
 

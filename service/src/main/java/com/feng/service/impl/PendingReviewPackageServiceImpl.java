@@ -6,6 +6,7 @@ import com.feng.dao.BePublishedPackageMapper;
 import com.feng.dao.PendingReviewPackageMapper;
 import com.feng.entity.packageStatusEntity.BePublishedPackage;
 import com.feng.entity.packageStatusEntity.PendingReviewPackage;
+import com.feng.entity.returnClass.ServiceResult;
 import com.feng.service.PendingReviewPackageService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -13,6 +14,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -104,6 +106,7 @@ public class PendingReviewPackageServiceImpl extends ServiceImpl<PendingReviewPa
         bePublishedPackage.setBePublishedPackageType(pendingReviewPackage.getPendingReviewPackageType());
         // 记得这个关联的资源包ID也要转过来
         bePublishedPackage.setConnectedPackageUid(pendingReviewPackage.getConnectedPackageUid());
+        bePublishedPackage.setConnectedDetailInfoId(pendingReviewPackage.getConnectedDetailInfoId());
         return bePublishedPackageMapper.insert(bePublishedPackage);
     }
 
@@ -141,5 +144,19 @@ public class PendingReviewPackageServiceImpl extends ServiceImpl<PendingReviewPa
         QueryWrapper<PendingReviewPackage> pendingReviewPackageQueryWrapper = new QueryWrapper<>();
         pendingReviewPackageQueryWrapper.eq("PENDING_REVIEW_PACKAGE_STATUS","待审核");
         return pendingReviewPackageMapper.selectCount(pendingReviewPackageQueryWrapper);
+    }
+
+    @Override
+    public ServiceResult selectPendingReviewPackageByAuthor(String author) {
+        QueryWrapper<PendingReviewPackage> pendingReviewPackageQueryWrapper = new QueryWrapper<>();
+        pendingReviewPackageQueryWrapper.select("PENDING_REVIEW_PACKAGE_NAME",
+                "PENDING_REVIEW_PACKAGE_Type",
+                "PENDING_REVIEW_PACKAGE_AUTHOR",
+                "PENDING_REVIEW_PACKAGE_TIME",
+                "PENDING_REVIEW_PACKAGE_STATUS",
+                "CONNECTED_PACKAGE_UID",
+                "CONNECTED_DETAIL_INFO_ID").eq("PENDING_REVIEW_PACKAGE_AUTHOR",author);
+        List<PendingReviewPackage> pendingReviewPackages = pendingReviewPackageMapper.selectList(pendingReviewPackageQueryWrapper);
+        return ServiceResult.success("200",pendingReviewPackages);
     }
 }

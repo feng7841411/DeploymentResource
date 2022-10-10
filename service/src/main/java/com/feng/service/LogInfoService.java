@@ -5,6 +5,7 @@ import com.feng.entity.LogInfo.LogInfo;
 import com.feng.entity.returnClass.ServiceResult;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created with IntelliJ IDEA.
@@ -28,12 +29,55 @@ public interface LogInfoService extends IService<LogInfo> {
     /**
      * 日志记录插入操作
      * @param logInfo
-     * @return
+     * @return-
      */
     public ServiceResult insertLogInfo(LogInfo logInfo);
 
 
+    /**
+     * 【资源包删除】记录
+     * @param ids
+     * @return
+     */
     public ServiceResult deleteLogInfoByIds(List<Integer> ids);
 
+    /**
+     * 【资源包拒绝】记录
+     * @param params
+     * @return
+     */
+    public ServiceResult insertRefuseLogInfo(Map<String, Object> params);
+
+
+    /**
+     * 【资源包发布】记录
+     * @param params
+     * @return
+     */
+    public ServiceResult insertPublishLogInfo(Map<String, Object> params);
+
+
+    /**
+     * 【资源包下架】记录
+     * @param params
+     * @return
+     */
+    public ServiceResult insertRemoveLogInfo(Map<String, Object> params);
+
+
+    /**
+     * 【资源包安全检查】记录
+     * @param params
+     * @return
+     */
+    public ServiceResult insertCheckLogInfo(Map<String, Object> params);
+
+
+    /**
+     * 【资源包删除】 记录
+     * @param params
+     * @return
+     */
+    public ServiceResult insertDeleteLogInfo(Map<String, Object> params);
 
 }

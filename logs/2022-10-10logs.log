@@ -1,0 +1,1443 @@
+2022-10-10 09:00:06.120 INFO [main][StartupInfoLogger.java:55] - Starting WebApplication using Java 1.8.0_332 on FJH2022 with PID 7532 (D:\IDEAProject\DeploymentResource\web\target\classes started by Administrator in D:\IDEAProject\DeploymentResource)
+2022-10-10 09:00:06.125 INFO [main][SpringApplication.java:660] - No active profile set, falling back to default profiles: default
+2022-10-10 09:00:08.069 INFO [main][RepositoryConfigurationDelegate.java:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-10 09:00:08.089 INFO [main][RepositoryConfigurationDelegate.java:188] - Finished Spring Data repository scanning in 8 ms. Found 0 JPA repository interfaces.
+2022-10-10 09:00:08.890 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 19201 (http)
+2022-10-10 09:00:08.905 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-19201"]
+2022-10-10 09:00:08.905 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+2022-10-10 09:00:08.906 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-10-10 09:00:09.018 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+2022-10-10 09:00:09.019 INFO [main][ServletWebServerApplicationContext.java:289] - Root WebApplicationContext: initialization completed in 2840 ms
+2022-10-10 09:00:09.076 INFO [main][DruidDataSourceAutoConfigure.java:56] - Init DruidDataSource
+2022-10-10 09:00:09.605 INFO [main][DruidDataSource.java:1003] - {dataSource-1} inited
+2022-10-10 09:00:09.636 INFO [main][H2ConsoleAutoConfiguration.java:68] - H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./web/src/main/resources/H2DataBase/h2db'
+2022-10-10 09:00:09.865 INFO [main][LogHelper.java:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-10 09:00:09.966 INFO [main][Version.java:44] - HHH000412: Hibernate ORM core version 5.4.25.Final
+2022-10-10 09:00:10.268 INFO [main][JavaReflectionManager.java:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-10 09:00:10.431 INFO [main][Dialect.java:175] - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-10-10 09:00:11.844 INFO [main][JtaPlatformInitiator.java:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-10 09:00:11.853 INFO [main][AbstractEntityManagerFactoryBean.java:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-10 09:00:13.976 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-10 09:00:14.485 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-19201"]
+2022-10-10 09:00:14.529 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 19201 (http) with context path ''
+2022-10-10 09:00:14.737 INFO [main][StartupInfoLogger.java:61] - Started WebApplication in 9.172 seconds (JVM running for 10.156)
+2022-10-10 09:00:52.041 INFO [http-nio-19201-exec-1][DirectJDKLog.java:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-10 09:00:52.041 INFO [http-nio-19201-exec-1][FrameworkServlet.java:525] - Initializing Servlet 'dispatcherServlet'
+2022-10-10 09:00:52.042 INFO [http-nio-19201-exec-1][FrameworkServlet.java:547] - Completed initialization in 1 ms
+2022-10-10 12:03:38.089 INFO [http-nio-19201-exec-5][PendingReviewPackageController.java:54] - 待审核资源包列表查询
+2022-10-10 12:03:38.213 INFO [http-nio-19201-exec-6][PendingReviewPackageController.java:112] - 待审核记录数目查询被调用
+2022-10-10 12:03:38.219 INFO [http-nio-19201-exec-8][BeRemovedPackageController.java:91] - 已下架记录数目查询被调用
+2022-10-10 12:03:38.219 INFO [http-nio-19201-exec-7][BePublishedPackageController.java:76] - 已发布记录数目查询被调用
+2022-10-10 12:04:56.199 INFO [http-nio-19201-exec-3][PackageServiceImpl.java:174] - 资源包上传确认消息，上传者：admin 对应详情记录的主键：null
+2022-10-10 12:04:56.199 INFO [http-nio-19201-exec-3][PackageServiceImpl.java:176] - 调出资源包详细信息：
+2022-10-10 12:04:56.238 ERROR [http-nio-19201-exec-3][DirectJDKLog.java:175] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at com.feng.service.impl.PackageServiceImpl.confirmUploadPackage(PackageServiceImpl.java:179) ~[classes/:?]
+	at com.feng.web.controller.PackageController.confirmUploadSingle(PackageController.java:139) ~[classes/:?]
+	at com.feng.web.controller.PackageController$$FastClassBySpringCGLIB$$a2cbf4b3.invoke(<generated>) ~[classes/:?]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-5.3.2.jar:5.3.2]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-5.3.2.jar:5.3.2]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691) ~[spring-aop-5.3.2.jar:5.3.2]
+	at com.feng.web.controller.PackageController$$EnhancerBySpringCGLIB$$c4b7407b.confirmUploadSingle(<generated>) ~[classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_332]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_332]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_332]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_332]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1061) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:961) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652) ~[tomcat-embed-core-9.0.41.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.41.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:124) ~[druid-1.1.18.jar:1.1.18]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_332]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_332]
+2022-10-10 12:06:05.998 INFO [http-nio-19201-exec-5][PackageController.java:48] - 
+2022-10-10 12:06:05.998 INFO [http-nio-19201-exec-5][PackageController.java:49] - 扫描接收的文件数组信息：
+2022-10-10 12:06:05.998 INFO [http-nio-19201-exec-5][PackageController.java:50] - [Lorg.springframework.web.multipart.MultipartFile;@5e491fac
+2022-10-10 12:06:05.998 INFO [http-nio-19201-exec-5][PackageController.java:51] - 接收文件数组：files_length = 1
+2022-10-10 12:06:05.998 INFO [http-nio-19201-exec-5][PackageController.java:53] - 文件信息：
+2022-10-10 12:06:05.998 INFO [http-nio-19201-exec-5][PackageController.java:54] - xxfw-xttz-xxfw-java.zip
+2022-10-10 12:06:05.998 INFO [http-nio-19201-exec-5][PackageController.java:55] - 3405138
+2022-10-10 12:06:05.998 INFO [http-nio-19201-exec-5][PackageController.java:57] - 扫描接收的文件数组信息完成：
+2022-10-10 12:06:05.998 INFO [http-nio-19201-exec-5][PackageController.java:58] - 
+2022-10-10 12:06:06.033 INFO [http-nio-19201-exec-5][PackageController.java:66] - 上传的文件类型为：zip
+2022-10-10 12:06:06.033 INFO [http-nio-19201-exec-5][PackageController.java:72] - 
+2022-10-10 12:06:06.034 INFO [http-nio-19201-exec-5][PackageServiceImpl.java:67] - originalFileName: xxfw-xttz-xxfw-java.zip
+2022-10-10 12:06:06.035 INFO [http-nio-19201-exec-5][PackageServiceImpl.java:68] - contentType: zip
+2022-10-10 12:06:06.035 INFO [http-nio-19201-exec-5][PackageServiceImpl.java:69] - fileUid: 8a716c7ec42544409b2232d70fa683fa.zip
+2022-10-10 12:06:06.035 INFO [http-nio-19201-exec-5][PackageServiceImpl.java:70] - uploadFile: web\src\main\resources\files\8a716c7ec42544409b2232d70fa683fa.zip
+2022-10-10 12:06:06.035 INFO [http-nio-19201-exec-5][PackageServiceImpl.java:71] - dest: D:\IDEAProject\DeploymentResource\web\src\main\resources\files\8a716c7ec42544409b2232d70fa683fa.zip
+2022-10-10 12:06:06.035 INFO [http-nio-19201-exec-5][PackageServiceImpl.java:72] - parentFile: web\src\main\resources\files
+2022-10-10 12:06:06.044 INFO [http-nio-19201-exec-5][PackageController.java:74] - 文件：xxfw-xttz-xxfw-java.zip存储成功
+2022-10-10 12:06:06.044 INFO [http-nio-19201-exec-5][PackageController.java:75] - fileUid: 8a716c7ec42544409b2232d70fa683fa.zip
+2022-10-10 12:06:06.054 INFO [http-nio-19201-exec-5][ZipUtils.java:50] - 解压: xxfw-xttz-xxfw-java.json
+2022-10-10 12:06:06.055 INFO [http-nio-19201-exec-5][ZipUtils.java:50] - 解压: image1.tar
+2022-10-10 12:06:06.061 INFO [http-nio-19201-exec-5][ZipUtils.java:50] - 解压: xxfw-xttz-xttzfw-java - 副本.yaml
+2022-10-10 12:06:06.062 INFO [http-nio-19201-exec-5][ZipUtils.java:78] - 解压完成，耗时：12 ms
+2022-10-10 12:06:06.062 INFO [http-nio-19201-exec-5][PackageServiceImpl.java:116] - 文件类型：tar
+2022-10-10 12:06:06.062 INFO [http-nio-19201-exec-5][PackageServiceImpl.java:116] - 文件类型：yaml
+2022-10-10 12:06:06.062 INFO [http-nio-19201-exec-5][PackageServiceImpl.java:116] - 文件类型：json
+2022-10-10 12:06:06.157 INFO [http-nio-19201-exec-5][PackageServiceImpl.java:125] - json描述文件解析结果： 
+2022-10-10 12:06:06.158 INFO [http-nio-19201-exec-5][PackageServiceImpl.java:126] - PackingToolInfo(basicInfoForm=BasicInfoForm(softwareCnName=测试服务, softwareGroupName=, softwareEnvironment=x86, softwareUniqueName=xxfw-xttz-xxfw-java, domainName=xxfw, softwareName=xttz, serviceName=xxfw, languageName=java, softwareVersion=1.24.44, majorVersionNumber=1, minorVersionNumber=24, revisionNumber=44), imageInfoForm=ImageInfoForm(imageFileUidList=[de1cafbb429142c4a8423f9ee98de7e4.tar], imageFileNameList=[image1.tar], isImageFileExist=true, isYamlFileExist=true, yamlFileUid=0382c5aa0bcf49e9a186ad11fd7876e0.yaml, yamlFileName=xxfw-xttz-xttzfw-java - 副本.yaml), developerInfoForm=DeveloperInfoForm(developerName=f, developerGroup=g, developerPhone=e))
+2022-10-10 12:06:06.162 INFO [http-nio-19201-exec-5][PackageController.java:109] - 详细信息：
+2022-10-10 12:06:06.162 INFO [http-nio-19201-exec-5][PackageController.java:110] - ServicePackageDetailInfo(servicePackageDetailInfoId=45, softwareCnName=测试服务, softwareGroupName=, softwareEnvironment=x86, softwareUniqueName=xxfw-xttz-xxfw-java, domainName=xxfw, softwareName=xttz, serviceName=xxfw, languageName=java, softwareVersion=1.24.44, majorVersionNumber=1, minorVersionNumber=24, revisionNumber=44, developerName=f, developerGroup=g, developerPhone=e, connectedPackageUid=8a716c7ec42544409b2232d70fa683fa.zip, connectedPackageOriginalFileName=xxfw-xttz-xxfw-java.zip, connectedPackageSize=3MB, isConfirm=false)
+2022-10-10 12:06:06.162 INFO [http-nio-19201-exec-5][PackageController.java:111] - 主键：
+2022-10-10 12:06:06.162 INFO [http-nio-19201-exec-5][PackageController.java:112] - 45
+2022-10-10 12:06:06.162 INFO [http-nio-19201-exec-5][PackageServiceImpl.java:143] - 存放临时解压文件的目录是： web/src/main/resources/unZip
+2022-10-10 12:06:06.162 INFO [http-nio-19201-exec-5][PackageServiceImpl.java:144] - 准备清空临时解压文件夹
+2022-10-10 12:06:06.162 INFO [http-nio-19201-exec-5][PackageServiceImpl.java:152] - 目前文件夹下有【3】个文件夹或者文件
+2022-10-10 12:06:06.163 INFO [http-nio-19201-exec-5][PackageServiceImpl.java:159] - 临时解压文件夹清理完成
+2022-10-10 12:06:35.876 INFO [http-nio-19201-exec-6][PackageController.java:48] - 
+2022-10-10 12:06:35.876 INFO [http-nio-19201-exec-6][PackageController.java:49] - 扫描接收的文件数组信息：
+2022-10-10 12:06:35.877 INFO [http-nio-19201-exec-6][PackageController.java:50] - [Lorg.springframework.web.multipart.MultipartFile;@5b3e7972
+2022-10-10 12:06:35.877 INFO [http-nio-19201-exec-6][PackageController.java:51] - 接收文件数组：files_length = 1
+2022-10-10 12:06:35.877 INFO [http-nio-19201-exec-6][PackageController.java:53] - 文件信息：
+2022-10-10 12:06:35.877 INFO [http-nio-19201-exec-6][PackageController.java:54] - xxfw-xttz-xxfw-java.zip
+2022-10-10 12:06:35.877 INFO [http-nio-19201-exec-6][PackageController.java:55] - 3405138
+2022-10-10 12:06:35.877 INFO [http-nio-19201-exec-6][PackageController.java:57] - 扫描接收的文件数组信息完成：
+2022-10-10 12:06:35.877 INFO [http-nio-19201-exec-6][PackageController.java:58] - 
+2022-10-10 12:06:35.877 INFO [http-nio-19201-exec-6][PackageController.java:66] - 上传的文件类型为：zip
+2022-10-10 12:06:35.877 INFO [http-nio-19201-exec-6][PackageController.java:72] - 
+2022-10-10 12:06:35.877 INFO [http-nio-19201-exec-6][PackageServiceImpl.java:67] - originalFileName: xxfw-xttz-xxfw-java.zip
+2022-10-10 12:06:35.877 INFO [http-nio-19201-exec-6][PackageServiceImpl.java:68] - contentType: zip
+2022-10-10 12:06:35.877 INFO [http-nio-19201-exec-6][PackageServiceImpl.java:69] - fileUid: 81d603aa3ff947ac9807eca4b84a241a.zip
+2022-10-10 12:06:35.877 INFO [http-nio-19201-exec-6][PackageServiceImpl.java:70] - uploadFile: web\src\main\resources\files\81d603aa3ff947ac9807eca4b84a241a.zip
+2022-10-10 12:06:35.877 INFO [http-nio-19201-exec-6][PackageServiceImpl.java:71] - dest: D:\IDEAProject\DeploymentResource\web\src\main\resources\files\81d603aa3ff947ac9807eca4b84a241a.zip
+2022-10-10 12:06:35.878 INFO [http-nio-19201-exec-6][PackageServiceImpl.java:72] - parentFile: web\src\main\resources\files
+2022-10-10 12:06:35.885 INFO [http-nio-19201-exec-6][PackageController.java:74] - 文件：xxfw-xttz-xxfw-java.zip存储成功
+2022-10-10 12:06:35.885 INFO [http-nio-19201-exec-6][PackageController.java:75] - fileUid: 81d603aa3ff947ac9807eca4b84a241a.zip
+2022-10-10 12:06:35.889 INFO [http-nio-19201-exec-6][ZipUtils.java:50] - 解压: xxfw-xttz-xxfw-java.json
+2022-10-10 12:06:35.890 INFO [http-nio-19201-exec-6][ZipUtils.java:50] - 解压: image1.tar
+2022-10-10 12:06:35.896 INFO [http-nio-19201-exec-6][ZipUtils.java:50] - 解压: xxfw-xttz-xttzfw-java - 副本.yaml
+2022-10-10 12:06:35.897 INFO [http-nio-19201-exec-6][ZipUtils.java:78] - 解压完成，耗时：12 ms
+2022-10-10 12:06:35.897 INFO [http-nio-19201-exec-6][PackageServiceImpl.java:116] - 文件类型：tar
+2022-10-10 12:06:35.897 INFO [http-nio-19201-exec-6][PackageServiceImpl.java:116] - 文件类型：yaml
+2022-10-10 12:06:35.897 INFO [http-nio-19201-exec-6][PackageServiceImpl.java:116] - 文件类型：json
+2022-10-10 12:06:35.899 INFO [http-nio-19201-exec-6][PackageServiceImpl.java:125] - json描述文件解析结果： 
+2022-10-10 12:06:35.899 INFO [http-nio-19201-exec-6][PackageServiceImpl.java:126] - PackingToolInfo(basicInfoForm=BasicInfoForm(softwareCnName=测试服务, softwareGroupName=, softwareEnvironment=x86, softwareUniqueName=xxfw-xttz-xxfw-java, domainName=xxfw, softwareName=xttz, serviceName=xxfw, languageName=java, softwareVersion=1.24.44, majorVersionNumber=1, minorVersionNumber=24, revisionNumber=44), imageInfoForm=ImageInfoForm(imageFileUidList=[de1cafbb429142c4a8423f9ee98de7e4.tar], imageFileNameList=[image1.tar], isImageFileExist=true, isYamlFileExist=true, yamlFileUid=0382c5aa0bcf49e9a186ad11fd7876e0.yaml, yamlFileName=xxfw-xttz-xttzfw-java - 副本.yaml), developerInfoForm=DeveloperInfoForm(developerName=f, developerGroup=g, developerPhone=e))
+2022-10-10 12:06:35.901 INFO [http-nio-19201-exec-6][PackageController.java:109] - 详细信息：
+2022-10-10 12:06:35.901 INFO [http-nio-19201-exec-6][PackageController.java:110] - ServicePackageDetailInfo(servicePackageDetailInfoId=46, softwareCnName=测试服务, softwareGroupName=, softwareEnvironment=x86, softwareUniqueName=xxfw-xttz-xxfw-java, domainName=xxfw, softwareName=xttz, serviceName=xxfw, languageName=java, softwareVersion=1.24.44, majorVersionNumber=1, minorVersionNumber=24, revisionNumber=44, developerName=f, developerGroup=g, developerPhone=e, connectedPackageUid=81d603aa3ff947ac9807eca4b84a241a.zip, connectedPackageOriginalFileName=xxfw-xttz-xxfw-java.zip, connectedPackageSize=3MB, isConfirm=false)
+2022-10-10 12:06:35.901 INFO [http-nio-19201-exec-6][PackageController.java:111] - 主键：
+2022-10-10 12:06:35.901 INFO [http-nio-19201-exec-6][PackageController.java:112] - 46
+2022-10-10 12:06:35.901 INFO [http-nio-19201-exec-6][PackageServiceImpl.java:143] - 存放临时解压文件的目录是： web/src/main/resources/unZip
+2022-10-10 12:06:35.901 INFO [http-nio-19201-exec-6][PackageServiceImpl.java:144] - 准备清空临时解压文件夹
+2022-10-10 12:06:35.901 INFO [http-nio-19201-exec-6][PackageServiceImpl.java:152] - 目前文件夹下有【3】个文件夹或者文件
+2022-10-10 12:06:35.902 INFO [http-nio-19201-exec-6][PackageServiceImpl.java:159] - 临时解压文件夹清理完成
+2022-10-10 12:06:50.335 INFO [http-nio-19201-exec-8][PackageServiceImpl.java:174] - 资源包上传确认消息，上传者：admin 对应详情记录的主键：46
+2022-10-10 12:06:50.335 INFO [http-nio-19201-exec-8][PackageServiceImpl.java:176] - 调出资源包详细信息：
+2022-10-10 12:06:50.341 INFO [http-nio-19201-exec-8][PackageServiceImpl.java:188] - 资源包确认完成
+2022-10-10 12:09:18.453 INFO [http-nio-19201-exec-2][PendingReviewPackageController.java:54] - 待审核资源包列表查询
+2022-10-10 12:09:18.499 INFO [http-nio-19201-exec-5][BeRemovedPackageController.java:91] - 已下架记录数目查询被调用
+2022-10-10 12:09:18.499 INFO [http-nio-19201-exec-3][BePublishedPackageController.java:76] - 已发布记录数目查询被调用
+2022-10-10 12:09:18.499 INFO [http-nio-19201-exec-4][PendingReviewPackageController.java:112] - 待审核记录数目查询被调用
+2022-10-10 12:09:27.195 INFO [http-nio-19201-exec-6][PendingReviewPackageController.java:54] - 待审核资源包列表查询
+2022-10-10 12:09:27.231 INFO [http-nio-19201-exec-9][BeRemovedPackageController.java:91] - 已下架记录数目查询被调用
+2022-10-10 12:09:27.232 INFO [http-nio-19201-exec-8][PendingReviewPackageController.java:112] - 待审核记录数目查询被调用
+2022-10-10 12:09:27.232 INFO [http-nio-19201-exec-7][BePublishedPackageController.java:76] - 已发布记录数目查询被调用
+2022-10-10 12:11:05.979 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-10 12:11:05.980 INFO [SpringContextShutdownHook][AbstractEntityManagerFactoryBean.java:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-10 12:11:06.020 INFO [SpringContextShutdownHook][DruidDataSource.java:1948] - {dataSource-1} closing ...
+2022-10-10 12:11:06.021 INFO [SpringContextShutdownHook][DruidDataSource.java:2020] - {dataSource-1} closed
+2022-10-10 13:22:10.137 INFO [main][StartupInfoLogger.java:55] - Starting WebApplication using Java 1.8.0_332 on FJH2022 with PID 26900 (D:\IDEAProject\DeploymentResource\web\target\classes started by Administrator in D:\IDEAProject\DeploymentResource)
+2022-10-10 13:22:10.141 INFO [main][SpringApplication.java:660] - No active profile set, falling back to default profiles: default
+2022-10-10 13:22:10.711 INFO [main][RepositoryConfigurationDelegate.java:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-10 13:22:10.720 INFO [main][RepositoryConfigurationDelegate.java:188] - Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
+2022-10-10 13:22:11.010 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 19201 (http)
+2022-10-10 13:22:11.015 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-19201"]
+2022-10-10 13:22:11.016 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+2022-10-10 13:22:11.016 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-10-10 13:22:11.056 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+2022-10-10 13:22:11.056 INFO [main][ServletWebServerApplicationContext.java:289] - Root WebApplicationContext: initialization completed in 849 ms
+2022-10-10 13:22:11.101 INFO [main][DruidDataSourceAutoConfigure.java:56] - Init DruidDataSource
+2022-10-10 13:22:11.294 INFO [main][DruidDataSource.java:1003] - {dataSource-1} inited
+2022-10-10 13:22:11.302 INFO [main][H2ConsoleAutoConfiguration.java:68] - H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./web/src/main/resources/H2DataBase/h2db'
+2022-10-10 13:22:11.361 INFO [main][LogHelper.java:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-10 13:22:11.383 INFO [main][Version.java:44] - HHH000412: Hibernate ORM core version 5.4.25.Final
+2022-10-10 13:22:11.438 INFO [main][JavaReflectionManager.java:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-10 13:22:11.488 INFO [main][Dialect.java:175] - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-10-10 13:22:11.789 INFO [main][JtaPlatformInitiator.java:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-10 13:22:11.795 INFO [main][AbstractEntityManagerFactoryBean.java:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-10 13:22:12.398 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-10 13:22:12.492 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-19201"]
+2022-10-10 13:22:12.581 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 19201 (http) with context path ''
+2022-10-10 13:22:12.715 INFO [main][StartupInfoLogger.java:61] - Started WebApplication in 2.753 seconds (JVM running for 3.502)
+2022-10-10 13:25:05.778 INFO [http-nio-19201-exec-1][DirectJDKLog.java:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-10 13:25:05.778 INFO [http-nio-19201-exec-1][FrameworkServlet.java:525] - Initializing Servlet 'dispatcherServlet'
+2022-10-10 13:25:05.780 INFO [http-nio-19201-exec-1][FrameworkServlet.java:547] - Completed initialization in 2 ms
+2022-10-10 13:25:05.853 INFO [http-nio-19201-exec-1][PendingReviewPackageController.java:56] - 待审核资源包列表查询
+2022-10-10 13:25:05.997 INFO [http-nio-19201-exec-2][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 13:25:06.000 INFO [http-nio-19201-exec-4][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 13:25:06.000 INFO [http-nio-19201-exec-3][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 13:25:15.334 INFO [http-nio-19201-exec-7][PackageController.java:48] - 
+2022-10-10 13:25:15.335 INFO [http-nio-19201-exec-7][PackageController.java:49] - 扫描接收的文件数组信息：
+2022-10-10 13:25:15.335 INFO [http-nio-19201-exec-7][PackageController.java:50] - [Lorg.springframework.web.multipart.MultipartFile;@572d42ec
+2022-10-10 13:25:15.335 INFO [http-nio-19201-exec-7][PackageController.java:51] - 接收文件数组：files_length = 1
+2022-10-10 13:25:15.335 INFO [http-nio-19201-exec-7][PackageController.java:53] - 文件信息：
+2022-10-10 13:25:15.335 INFO [http-nio-19201-exec-7][PackageController.java:54] - xxfw-xttz-xxfw-java.zip
+2022-10-10 13:25:15.335 INFO [http-nio-19201-exec-7][PackageController.java:55] - 3405138
+2022-10-10 13:25:15.336 INFO [http-nio-19201-exec-7][PackageController.java:57] - 扫描接收的文件数组信息完成：
+2022-10-10 13:25:15.336 INFO [http-nio-19201-exec-7][PackageController.java:58] - 
+2022-10-10 13:25:15.341 INFO [http-nio-19201-exec-7][PackageController.java:66] - 上传的文件类型为：zip
+2022-10-10 13:25:15.341 INFO [http-nio-19201-exec-7][PackageController.java:72] - 
+2022-10-10 13:25:15.342 INFO [http-nio-19201-exec-7][PackageServiceImpl.java:74] - originalFileName: xxfw-xttz-xxfw-java.zip
+2022-10-10 13:25:15.342 INFO [http-nio-19201-exec-7][PackageServiceImpl.java:75] - contentType: zip
+2022-10-10 13:25:15.342 INFO [http-nio-19201-exec-7][PackageServiceImpl.java:76] - fileUid: 5afdbf8b74a74ec497b02f59c8841d33.zip
+2022-10-10 13:25:15.342 INFO [http-nio-19201-exec-7][PackageServiceImpl.java:77] - uploadFile: web\src\main\resources\files\5afdbf8b74a74ec497b02f59c8841d33.zip
+2022-10-10 13:25:15.342 INFO [http-nio-19201-exec-7][PackageServiceImpl.java:78] - dest: D:\IDEAProject\DeploymentResource\web\src\main\resources\files\5afdbf8b74a74ec497b02f59c8841d33.zip
+2022-10-10 13:25:15.342 INFO [http-nio-19201-exec-7][PackageServiceImpl.java:79] - parentFile: web\src\main\resources\files
+2022-10-10 13:25:15.350 INFO [http-nio-19201-exec-7][PackageController.java:74] - 文件：xxfw-xttz-xxfw-java.zip存储成功
+2022-10-10 13:25:15.351 INFO [http-nio-19201-exec-7][PackageController.java:75] - fileUid: 5afdbf8b74a74ec497b02f59c8841d33.zip
+2022-10-10 13:25:15.356 INFO [http-nio-19201-exec-7][ZipUtils.java:50] - 解压: xxfw-xttz-xxfw-java.json
+2022-10-10 13:25:15.357 INFO [http-nio-19201-exec-7][ZipUtils.java:50] - 解压: image1.tar
+2022-10-10 13:25:15.364 INFO [http-nio-19201-exec-7][ZipUtils.java:50] - 解压: xxfw-xttz-xttzfw-java - 副本.yaml
+2022-10-10 13:25:15.364 INFO [http-nio-19201-exec-7][ZipUtils.java:78] - 解压完成，耗时：13 ms
+2022-10-10 13:25:15.364 INFO [http-nio-19201-exec-7][PackageServiceImpl.java:124] - 文件类型：tar
+2022-10-10 13:25:15.365 INFO [http-nio-19201-exec-7][PackageServiceImpl.java:124] - 文件类型：yaml
+2022-10-10 13:25:15.365 INFO [http-nio-19201-exec-7][PackageServiceImpl.java:124] - 文件类型：json
+2022-10-10 13:25:15.408 INFO [http-nio-19201-exec-7][PackageServiceImpl.java:133] - json描述文件解析结果： 
+2022-10-10 13:25:15.408 INFO [http-nio-19201-exec-7][PackageServiceImpl.java:134] - PackingToolInfo(basicInfoForm=BasicInfoForm(softwareCnName=测试服务, softwareGroupName=, softwareEnvironment=x86, softwareUniqueName=xxfw-xttz-xxfw-java, domainName=xxfw, softwareName=xttz, serviceName=xxfw, languageName=java, softwareVersion=1.24.44, majorVersionNumber=1, minorVersionNumber=24, revisionNumber=44), imageInfoForm=ImageInfoForm(imageFileUidList=[de1cafbb429142c4a8423f9ee98de7e4.tar], imageFileNameList=[image1.tar], isImageFileExist=true, isYamlFileExist=true, yamlFileUid=0382c5aa0bcf49e9a186ad11fd7876e0.yaml, yamlFileName=xxfw-xttz-xttzfw-java - 副本.yaml), developerInfoForm=DeveloperInfoForm(developerName=f, developerGroup=g, developerPhone=e))
+2022-10-10 13:25:15.417 INFO [http-nio-19201-exec-7][PackageController.java:109] - 详细信息：
+2022-10-10 13:25:15.417 INFO [http-nio-19201-exec-7][PackageController.java:110] - ServicePackageDetailInfo(servicePackageDetailInfoId=47, softwareCnName=测试服务, softwareGroupName=, softwareEnvironment=x86, softwareUniqueName=xxfw-xttz-xxfw-java, domainName=xxfw, softwareName=xttz, serviceName=xxfw, languageName=java, softwareVersion=1.24.44, majorVersionNumber=1, minorVersionNumber=24, revisionNumber=44, developerName=f, developerGroup=g, developerPhone=e, connectedPackageUid=5afdbf8b74a74ec497b02f59c8841d33.zip, connectedPackageOriginalFileName=xxfw-xttz-xxfw-java.zip, connectedPackageSize=3MB, isConfirm=false)
+2022-10-10 13:25:15.417 INFO [http-nio-19201-exec-7][PackageController.java:111] - 主键：
+2022-10-10 13:25:15.417 INFO [http-nio-19201-exec-7][PackageController.java:112] - 47
+2022-10-10 13:25:15.417 INFO [http-nio-19201-exec-7][PackageServiceImpl.java:151] - 存放临时解压文件的目录是： web/src/main/resources/unZip
+2022-10-10 13:25:15.417 INFO [http-nio-19201-exec-7][PackageServiceImpl.java:152] - 准备清空临时解压文件夹
+2022-10-10 13:25:15.417 INFO [http-nio-19201-exec-7][PackageServiceImpl.java:160] - 目前文件夹下有【3】个文件夹或者文件
+2022-10-10 13:25:15.419 INFO [http-nio-19201-exec-7][PackageServiceImpl.java:167] - 临时解压文件夹清理完成
+2022-10-10 13:25:21.915 INFO [http-nio-19201-exec-8][PackageServiceImpl.java:182] - 资源包上传确认消息，上传者：admin 对应详情记录的主键：47
+2022-10-10 13:25:21.915 INFO [http-nio-19201-exec-8][PackageServiceImpl.java:184] - 调出资源包详细信息：
+2022-10-10 13:25:21.920 INFO [http-nio-19201-exec-8][PackageServiceImpl.java:196] - 资源包确认完成
+2022-10-10 13:25:21.922 INFO [http-nio-19201-exec-8][LogInfoServiceImpl.java:49] - 接收到一条LogInfo写入请求
+2022-10-10 13:25:21.923 INFO [http-nio-19201-exec-8][LogInfoServiceImpl.java:50] - logInfo内容：LogInfo(logInfoId=null, logInfoTime=Mon Oct 10 13:25:21 CST 2022, operator=admin, Action=上传新资源, Object=xxfw-xttz-xxfw-java.zip)
+2022-10-10 13:25:21.924 INFO [http-nio-19201-exec-8][LogInfoServiceImpl.java:53] - logInfo写入成功
+2022-10-10 13:25:26.975 INFO [http-nio-19201-exec-10][PendingReviewPackageController.java:56] - 待审核资源包列表查询
+2022-10-10 13:25:27.017 INFO [http-nio-19201-exec-2][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 13:25:27.017 INFO [http-nio-19201-exec-4][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 13:25:27.017 INFO [http-nio-19201-exec-1][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 13:25:35.845 INFO [http-nio-19201-exec-5][PendingReviewPackageController.java:87] - 安全扫描55
+2022-10-10 13:25:35.852 ERROR [http-nio-19201-exec-5][DirectJDKLog.java:175] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at com.feng.service.impl.LogInfoServiceImpl.insertCheckLogInfo(LogInfoServiceImpl.java:130) ~[classes/:?]
+	at com.feng.service.impl.LogInfoServiceImpl$$FastClassBySpringCGLIB$$c1b1f08f.invoke(<generated>) ~[classes/:?]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-5.3.2.jar:5.3.2]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-5.3.2.jar:5.3.2]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691) ~[spring-aop-5.3.2.jar:5.3.2]
+	at com.feng.service.impl.LogInfoServiceImpl$$EnhancerBySpringCGLIB$$49a63388.insertCheckLogInfo(<generated>) ~[classes/:?]
+	at com.feng.web.controller.PendingReviewPackageController.checkedById(PendingReviewPackageController.java:88) ~[classes/:?]
+	at com.feng.web.controller.PendingReviewPackageController$$FastClassBySpringCGLIB$$8c6ba3e2.invoke(<generated>) ~[classes/:?]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-5.3.2.jar:5.3.2]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-5.3.2.jar:5.3.2]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691) ~[spring-aop-5.3.2.jar:5.3.2]
+	at com.feng.web.controller.PendingReviewPackageController$$EnhancerBySpringCGLIB$$c1687961.checkedById(<generated>) ~[classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_332]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_332]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_332]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_332]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1061) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:961) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652) ~[tomcat-embed-core-9.0.41.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.41.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:124) ~[druid-1.1.18.jar:1.1.18]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_332]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_332]
+2022-10-10 13:25:39.681 INFO [http-nio-19201-exec-6][PendingReviewPackageController.java:87] - 安全扫描55
+2022-10-10 13:25:39.683 ERROR [http-nio-19201-exec-6][DirectJDKLog.java:175] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at com.feng.service.impl.LogInfoServiceImpl.insertCheckLogInfo(LogInfoServiceImpl.java:130) ~[classes/:?]
+	at com.feng.service.impl.LogInfoServiceImpl$$FastClassBySpringCGLIB$$c1b1f08f.invoke(<generated>) ~[classes/:?]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-5.3.2.jar:5.3.2]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-5.3.2.jar:5.3.2]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691) ~[spring-aop-5.3.2.jar:5.3.2]
+	at com.feng.service.impl.LogInfoServiceImpl$$EnhancerBySpringCGLIB$$49a63388.insertCheckLogInfo(<generated>) ~[classes/:?]
+	at com.feng.web.controller.PendingReviewPackageController.checkedById(PendingReviewPackageController.java:88) ~[classes/:?]
+	at com.feng.web.controller.PendingReviewPackageController$$FastClassBySpringCGLIB$$8c6ba3e2.invoke(<generated>) ~[classes/:?]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-5.3.2.jar:5.3.2]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-5.3.2.jar:5.3.2]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691) ~[spring-aop-5.3.2.jar:5.3.2]
+	at com.feng.web.controller.PendingReviewPackageController$$EnhancerBySpringCGLIB$$c1687961.checkedById(<generated>) ~[classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_332]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_332]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_332]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_332]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1061) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:961) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652) ~[tomcat-embed-core-9.0.41.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.41.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:124) ~[druid-1.1.18.jar:1.1.18]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_332]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_332]
+2022-10-10 13:26:58.657 INFO [http-nio-19201-exec-8][PendingReviewPackageController.java:87] - 安全扫描55
+2022-10-10 13:26:58.659 ERROR [http-nio-19201-exec-8][DirectJDKLog.java:175] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at com.feng.service.impl.LogInfoServiceImpl.insertCheckLogInfo(LogInfoServiceImpl.java:130) ~[classes/:?]
+	at com.feng.service.impl.LogInfoServiceImpl$$FastClassBySpringCGLIB$$c1b1f08f.invoke(<generated>) ~[classes/:?]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-5.3.2.jar:5.3.2]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-5.3.2.jar:5.3.2]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691) ~[spring-aop-5.3.2.jar:5.3.2]
+	at com.feng.service.impl.LogInfoServiceImpl$$EnhancerBySpringCGLIB$$49a63388.insertCheckLogInfo(<generated>) ~[classes/:?]
+	at com.feng.web.controller.PendingReviewPackageController.checkedById(PendingReviewPackageController.java:88) ~[classes/:?]
+	at com.feng.web.controller.PendingReviewPackageController$$FastClassBySpringCGLIB$$8c6ba3e2.invoke(<generated>) ~[classes/:?]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-5.3.2.jar:5.3.2]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-5.3.2.jar:5.3.2]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691) ~[spring-aop-5.3.2.jar:5.3.2]
+	at com.feng.web.controller.PendingReviewPackageController$$EnhancerBySpringCGLIB$$c1687961.checkedById(<generated>) ~[classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_332]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_332]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_332]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_332]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1061) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:961) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652) ~[tomcat-embed-core-9.0.41.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.41.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:124) ~[druid-1.1.18.jar:1.1.18]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_332]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_332]
+2022-10-10 13:27:02.264 INFO [http-nio-19201-exec-9][PendingReviewPackageController.java:87] - 安全扫描55
+2022-10-10 13:27:02.265 ERROR [http-nio-19201-exec-9][DirectJDKLog.java:175] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at com.feng.service.impl.LogInfoServiceImpl.insertCheckLogInfo(LogInfoServiceImpl.java:130) ~[classes/:?]
+	at com.feng.service.impl.LogInfoServiceImpl$$FastClassBySpringCGLIB$$c1b1f08f.invoke(<generated>) ~[classes/:?]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-5.3.2.jar:5.3.2]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-5.3.2.jar:5.3.2]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691) ~[spring-aop-5.3.2.jar:5.3.2]
+	at com.feng.service.impl.LogInfoServiceImpl$$EnhancerBySpringCGLIB$$49a63388.insertCheckLogInfo(<generated>) ~[classes/:?]
+	at com.feng.web.controller.PendingReviewPackageController.checkedById(PendingReviewPackageController.java:88) ~[classes/:?]
+	at com.feng.web.controller.PendingReviewPackageController$$FastClassBySpringCGLIB$$8c6ba3e2.invoke(<generated>) ~[classes/:?]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-5.3.2.jar:5.3.2]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-5.3.2.jar:5.3.2]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691) ~[spring-aop-5.3.2.jar:5.3.2]
+	at com.feng.web.controller.PendingReviewPackageController$$EnhancerBySpringCGLIB$$c1687961.checkedById(<generated>) ~[classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_332]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_332]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_332]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_332]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1061) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:961) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652) ~[tomcat-embed-core-9.0.41.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.41.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:124) ~[druid-1.1.18.jar:1.1.18]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_332]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_332]
+2022-10-10 13:27:20.025 INFO [http-nio-19201-exec-10][PendingReviewPackageController.java:87] - 安全扫描55
+2022-10-10 13:27:20.028 ERROR [http-nio-19201-exec-10][DirectJDKLog.java:175] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at com.feng.service.impl.LogInfoServiceImpl.insertCheckLogInfo(LogInfoServiceImpl.java:130) ~[classes/:?]
+	at com.feng.service.impl.LogInfoServiceImpl$$FastClassBySpringCGLIB$$c1b1f08f.invoke(<generated>) ~[classes/:?]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-5.3.2.jar:5.3.2]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-5.3.2.jar:5.3.2]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691) ~[spring-aop-5.3.2.jar:5.3.2]
+	at com.feng.service.impl.LogInfoServiceImpl$$EnhancerBySpringCGLIB$$49a63388.insertCheckLogInfo(<generated>) ~[classes/:?]
+	at com.feng.web.controller.PendingReviewPackageController.checkedById(PendingReviewPackageController.java:88) ~[classes/:?]
+	at com.feng.web.controller.PendingReviewPackageController$$FastClassBySpringCGLIB$$8c6ba3e2.invoke(<generated>) ~[classes/:?]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-5.3.2.jar:5.3.2]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-5.3.2.jar:5.3.2]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691) ~[spring-aop-5.3.2.jar:5.3.2]
+	at com.feng.web.controller.PendingReviewPackageController$$EnhancerBySpringCGLIB$$c1687961.checkedById(<generated>) ~[classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_332]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_332]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_332]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_332]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1061) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:961) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652) ~[tomcat-embed-core-9.0.41.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.41.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:124) ~[druid-1.1.18.jar:1.1.18]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_332]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_332]
+2022-10-10 13:33:51.593 INFO [http-nio-19201-exec-7][PendingReviewPackageController.java:56] - 待审核资源包列表查询
+2022-10-10 13:33:51.710 INFO [http-nio-19201-exec-3][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 13:33:51.710 INFO [http-nio-19201-exec-8][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 13:33:51.710 INFO [http-nio-19201-exec-6][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 13:39:44.751 INFO [http-nio-19201-exec-9][PendingReviewPackageController.java:56] - 待审核资源包列表查询
+2022-10-10 13:39:44.845 INFO [http-nio-19201-exec-7][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 13:39:44.846 INFO [http-nio-19201-exec-1][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 13:39:44.846 INFO [http-nio-19201-exec-10][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 13:39:47.578 INFO [http-nio-19201-exec-8][PendingReviewPackageController.java:56] - 待审核资源包列表查询
+2022-10-10 13:39:47.629 INFO [http-nio-19201-exec-6][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 13:39:47.629 INFO [http-nio-19201-exec-2][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 13:39:47.629 INFO [http-nio-19201-exec-3][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 13:39:50.476 INFO [http-nio-19201-exec-5][PendingReviewPackageController.java:56] - 待审核资源包列表查询
+2022-10-10 13:39:50.526 INFO [http-nio-19201-exec-9][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 13:39:50.526 INFO [http-nio-19201-exec-4][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 13:39:50.526 INFO [http-nio-19201-exec-10][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 13:39:57.544 INFO [http-nio-19201-exec-7][PendingReviewPackageController.java:87] - 安全扫描55
+2022-10-10 13:39:57.553 INFO [http-nio-19201-exec-1][PendingReviewPackageController.java:56] - 待审核资源包列表查询
+2022-10-10 13:39:57.573 INFO [http-nio-19201-exec-6][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 13:39:57.573 INFO [http-nio-19201-exec-3][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 13:39:57.574 INFO [http-nio-19201-exec-8][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 13:40:25.097 INFO [http-nio-19201-exec-7][PendingReviewPackageController.java:56] - 待审核资源包列表查询
+2022-10-10 13:40:25.141 INFO [http-nio-19201-exec-9][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 13:40:25.142 INFO [http-nio-19201-exec-3][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 13:40:25.142 INFO [http-nio-19201-exec-8][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 13:40:30.378 INFO [http-nio-19201-exec-5][PendingReviewPackageController.java:73] - 拒绝54
+2022-10-10 13:40:30.386 INFO [http-nio-19201-exec-10][PendingReviewPackageController.java:56] - 待审核资源包列表查询
+2022-10-10 13:40:30.408 INFO [http-nio-19201-exec-1][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 13:40:30.408 INFO [http-nio-19201-exec-4][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 13:40:30.408 INFO [http-nio-19201-exec-2][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 13:41:06.590 INFO [http-nio-19201-exec-8][PendingReviewPackageController.java:101] - 安全扫描55
+2022-10-10 13:41:06.598 INFO [http-nio-19201-exec-3][PendingReviewPackageController.java:56] - 待审核资源包列表查询
+2022-10-10 13:41:06.617 INFO [http-nio-19201-exec-5][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 13:41:06.617 INFO [http-nio-19201-exec-6][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 13:41:06.617 INFO [http-nio-19201-exec-9][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 13:41:19.110 INFO [http-nio-19201-exec-5][BePublishedPackageController.java:57] - 已发布资源包列表查询
+2022-10-10 13:41:19.154 INFO [http-nio-19201-exec-10][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 13:41:19.154 INFO [http-nio-19201-exec-9][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 13:41:19.154 INFO [http-nio-19201-exec-6][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 13:41:24.871 INFO [http-nio-19201-exec-2][BePublishedPackageController.java:57] - 已发布资源包列表查询
+2022-10-10 13:41:24.874 INFO [http-nio-19201-exec-3][BePublishedPackageController.java:67] - 下架方法被调用
+2022-10-10 13:41:24.881 INFO [http-nio-19201-exec-3][BePublishedPackageController.java:71] - 下架:101
+2022-10-10 13:41:24.882 ERROR [http-nio-19201-exec-3][DirectJDKLog.java:175] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at com.feng.service.impl.LogInfoServiceImpl.insertRemoveLogInfo(LogInfoServiceImpl.java:114) ~[classes/:?]
+	at com.feng.service.impl.LogInfoServiceImpl$$FastClassBySpringCGLIB$$c1b1f08f.invoke(<generated>) ~[classes/:?]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-5.3.2.jar:5.3.2]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-5.3.2.jar:5.3.2]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691) ~[spring-aop-5.3.2.jar:5.3.2]
+	at com.feng.service.impl.LogInfoServiceImpl$$EnhancerBySpringCGLIB$$49a63388.insertRemoveLogInfo(<generated>) ~[classes/:?]
+	at com.feng.web.controller.BePublishedPackageController.removePackageById(BePublishedPackageController.java:72) ~[classes/:?]
+	at com.feng.web.controller.BePublishedPackageController$$FastClassBySpringCGLIB$$f5365e06.invoke(<generated>) ~[classes/:?]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-5.3.2.jar:5.3.2]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-5.3.2.jar:5.3.2]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691) ~[spring-aop-5.3.2.jar:5.3.2]
+	at com.feng.web.controller.BePublishedPackageController$$EnhancerBySpringCGLIB$$8d2c1e4d.removePackageById(<generated>) ~[classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_332]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_332]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_332]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_332]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1061) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:961) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652) ~[tomcat-embed-core-9.0.41.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.41.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:124) ~[druid-1.1.18.jar:1.1.18]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_332]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_332]
+2022-10-10 13:41:24.891 INFO [http-nio-19201-exec-7][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 13:41:24.891 INFO [http-nio-19201-exec-1][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 13:41:24.892 INFO [http-nio-19201-exec-8][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 15:02:48.941 INFO [http-nio-19201-exec-2][BePublishedPackageController.java:57] - 已发布资源包列表查询
+2022-10-10 15:02:49.020 INFO [http-nio-19201-exec-8][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 15:02:49.020 INFO [http-nio-19201-exec-3][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 15:02:49.020 INFO [http-nio-19201-exec-1][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 15:05:44.455 INFO [http-nio-19201-exec-4][BePublishedPackageController.java:57] - 已发布资源包列表查询
+2022-10-10 15:05:44.519 INFO [http-nio-19201-exec-2][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 15:05:44.519 INFO [http-nio-19201-exec-10][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 15:05:44.520 INFO [http-nio-19201-exec-6][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 15:17:02.712 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-10 15:17:02.713 INFO [SpringContextShutdownHook][AbstractEntityManagerFactoryBean.java:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-10 15:17:02.715 INFO [SpringContextShutdownHook][DruidDataSource.java:1948] - {dataSource-1} closing ...
+2022-10-10 15:17:02.716 INFO [SpringContextShutdownHook][DruidDataSource.java:2020] - {dataSource-1} closed
+2022-10-10 15:17:07.453 INFO [main][StartupInfoLogger.java:55] - Starting WebApplication using Java 1.8.0_332 on FJH2022 with PID 15288 (D:\IDEAProject\DeploymentResource\web\target\classes started by Administrator in D:\IDEAProject\DeploymentResource)
+2022-10-10 15:17:07.460 INFO [main][SpringApplication.java:660] - No active profile set, falling back to default profiles: default
+2022-10-10 15:17:07.971 INFO [main][RepositoryConfigurationDelegate.java:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-10 15:17:07.979 INFO [main][RepositoryConfigurationDelegate.java:188] - Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
+2022-10-10 15:17:08.293 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 19201 (http)
+2022-10-10 15:17:08.298 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-19201"]
+2022-10-10 15:17:08.298 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+2022-10-10 15:17:08.299 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-10-10 15:17:08.353 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+2022-10-10 15:17:08.353 INFO [main][ServletWebServerApplicationContext.java:289] - Root WebApplicationContext: initialization completed in 831 ms
+2022-10-10 15:17:08.371 INFO [main][DruidDataSourceAutoConfigure.java:56] - Init DruidDataSource
+2022-10-10 15:17:08.527 INFO [main][DruidDataSource.java:1003] - {dataSource-1} inited
+2022-10-10 15:17:08.535 INFO [main][H2ConsoleAutoConfiguration.java:68] - H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./web/src/main/resources/H2DataBase/h2db'
+2022-10-10 15:17:08.596 INFO [main][LogHelper.java:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-10 15:17:08.618 INFO [main][Version.java:44] - HHH000412: Hibernate ORM core version 5.4.25.Final
+2022-10-10 15:17:08.676 INFO [main][JavaReflectionManager.java:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-10 15:17:08.728 INFO [main][Dialect.java:175] - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-10-10 15:17:09.047 INFO [main][JtaPlatformInitiator.java:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-10 15:17:09.053 INFO [main][AbstractEntityManagerFactoryBean.java:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-10 15:17:09.709 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-10 15:17:09.811 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-19201"]
+2022-10-10 15:17:09.916 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 19201 (http) with context path ''
+2022-10-10 15:17:10.054 INFO [main][StartupInfoLogger.java:61] - Started WebApplication in 2.92 seconds (JVM running for 3.565)
+2022-10-10 15:17:23.554 INFO [http-nio-19201-exec-1][DirectJDKLog.java:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-10 15:17:23.554 INFO [http-nio-19201-exec-1][FrameworkServlet.java:525] - Initializing Servlet 'dispatcherServlet'
+2022-10-10 15:17:23.556 INFO [http-nio-19201-exec-1][FrameworkServlet.java:547] - Completed initialization in 2 ms
+2022-10-10 15:17:29.308 INFO [http-nio-19201-exec-3][PackageController.java:48] - 
+2022-10-10 15:17:29.309 INFO [http-nio-19201-exec-3][PackageController.java:49] - 扫描接收的文件数组信息：
+2022-10-10 15:17:29.309 INFO [http-nio-19201-exec-3][PackageController.java:50] - [Lorg.springframework.web.multipart.MultipartFile;@14d64f2
+2022-10-10 15:17:29.309 INFO [http-nio-19201-exec-3][PackageController.java:51] - 接收文件数组：files_length = 1
+2022-10-10 15:17:29.309 INFO [http-nio-19201-exec-3][PackageController.java:53] - 文件信息：
+2022-10-10 15:17:29.309 INFO [http-nio-19201-exec-3][PackageController.java:54] - xxfw-xtks-xtks-java.zip
+2022-10-10 15:17:29.309 INFO [http-nio-19201-exec-3][PackageController.java:55] - 3304
+2022-10-10 15:17:29.310 INFO [http-nio-19201-exec-3][PackageController.java:57] - 扫描接收的文件数组信息完成：
+2022-10-10 15:17:29.310 INFO [http-nio-19201-exec-3][PackageController.java:58] - 
+2022-10-10 15:17:29.317 INFO [http-nio-19201-exec-3][PackageController.java:66] - 上传的文件类型为：zip
+2022-10-10 15:17:29.317 INFO [http-nio-19201-exec-3][PackageController.java:72] - 
+2022-10-10 15:17:29.319 INFO [http-nio-19201-exec-3][PackageServiceImpl.java:74] - originalFileName: xxfw-xtks-xtks-java.zip
+2022-10-10 15:17:29.319 INFO [http-nio-19201-exec-3][PackageServiceImpl.java:75] - contentType: zip
+2022-10-10 15:17:29.319 INFO [http-nio-19201-exec-3][PackageServiceImpl.java:76] - fileUid: e767991f80df4b7d9d63a4de83a5f7bd.zip
+2022-10-10 15:17:29.319 INFO [http-nio-19201-exec-3][PackageServiceImpl.java:77] - uploadFile: web\src\main\resources\files\e767991f80df4b7d9d63a4de83a5f7bd.zip
+2022-10-10 15:17:29.320 INFO [http-nio-19201-exec-3][PackageServiceImpl.java:78] - dest: D:\IDEAProject\DeploymentResource\web\src\main\resources\files\e767991f80df4b7d9d63a4de83a5f7bd.zip
+2022-10-10 15:17:29.320 INFO [http-nio-19201-exec-3][PackageServiceImpl.java:79] - parentFile: web\src\main\resources\files
+2022-10-10 15:17:29.326 INFO [http-nio-19201-exec-3][PackageController.java:74] - 文件：xxfw-xtks-xtks-java.zip存储成功
+2022-10-10 15:17:29.326 INFO [http-nio-19201-exec-3][PackageController.java:75] - fileUid: e767991f80df4b7d9d63a4de83a5f7bd.zip
+2022-10-10 15:17:29.328 INFO [http-nio-19201-exec-3][ZipUtils.java:50] - 解压: homeVue左侧多级菜单.tar
+2022-10-10 15:17:29.328 INFO [http-nio-19201-exec-3][ZipUtils.java:50] - 解压: xxfw-xtks-xtks-java.json
+2022-10-10 15:17:29.329 INFO [http-nio-19201-exec-3][ZipUtils.java:50] - 解压: xxfw-xttz-xttzfw-java - 副本.yaml
+2022-10-10 15:17:29.329 INFO [http-nio-19201-exec-3][ZipUtils.java:78] - 解压完成，耗时：2 ms
+2022-10-10 15:17:29.330 INFO [http-nio-19201-exec-3][PackageServiceImpl.java:124] - 文件类型：tar
+2022-10-10 15:17:29.330 INFO [http-nio-19201-exec-3][PackageServiceImpl.java:124] - 文件类型：json
+2022-10-10 15:17:29.330 INFO [http-nio-19201-exec-3][PackageServiceImpl.java:124] - 文件类型：yaml
+2022-10-10 15:17:29.395 INFO [http-nio-19201-exec-3][PackageServiceImpl.java:133] - json描述文件解析结果： 
+2022-10-10 15:17:29.395 INFO [http-nio-19201-exec-3][PackageServiceImpl.java:134] - PackingToolInfo(basicInfoForm=BasicInfoForm(softwareCnName=测试, softwareGroupName=xxfs, softwareEnvironment=x86, softwareUniqueName=xxfw-xtks-xtks-java, domainName=xxfw, softwareName=xtks, serviceName=xtks, languageName=java, softwareVersion=1.00.01, majorVersionNumber=1, minorVersionNumber=00, revisionNumber=01), imageInfoForm=ImageInfoForm(imageFileUidList=[d21ca57ad2f84d3b83f0963c26634ef4.tar], imageFileNameList=[homeVue左侧多级菜单.tar], isImageFileExist=true, isYamlFileExist=true, yamlFileUid=a027d4a3c1064f9e9566a202847a9a82.yaml, yamlFileName=xxfw-xttz-xttzfw-java - 副本.yaml), developerInfoForm=DeveloperInfoForm(developerName=fengjinhe, developerGroup=528, developerPhone=3123123))
+2022-10-10 15:17:29.412 INFO [http-nio-19201-exec-3][PackageController.java:109] - 详细信息：
+2022-10-10 15:17:29.412 INFO [http-nio-19201-exec-3][PackageController.java:110] - ServicePackageDetailInfo(servicePackageDetailInfoId=48, softwareCnName=测试, softwareGroupName=xxfs, softwareEnvironment=x86, softwareUniqueName=xxfw-xtks-xtks-java, domainName=xxfw, softwareName=xtks, serviceName=xtks, languageName=java, softwareVersion=1.00.01, majorVersionNumber=1, minorVersionNumber=00, revisionNumber=01, developerName=fengjinhe, developerGroup=528, developerPhone=3123123, connectedPackageUid=e767991f80df4b7d9d63a4de83a5f7bd.zip, connectedPackageOriginalFileName=xxfw-xtks-xtks-java.zip, connectedPackageSize=0MB, isConfirm=false)
+2022-10-10 15:17:29.412 INFO [http-nio-19201-exec-3][PackageController.java:111] - 主键：
+2022-10-10 15:17:29.413 INFO [http-nio-19201-exec-3][PackageController.java:112] - 48
+2022-10-10 15:17:29.413 INFO [http-nio-19201-exec-3][PackageServiceImpl.java:151] - 存放临时解压文件的目录是： web/src/main/resources/unZip
+2022-10-10 15:17:29.413 INFO [http-nio-19201-exec-3][PackageServiceImpl.java:152] - 准备清空临时解压文件夹
+2022-10-10 15:17:29.413 INFO [http-nio-19201-exec-3][PackageServiceImpl.java:160] - 目前文件夹下有【3】个文件夹或者文件
+2022-10-10 15:17:29.414 INFO [http-nio-19201-exec-3][PackageServiceImpl.java:167] - 临时解压文件夹清理完成
+2022-10-10 15:17:36.099 INFO [http-nio-19201-exec-5][PackageServiceImpl.java:182] - 资源包上传确认消息，上传者：abc 对应详情记录的主键：48
+2022-10-10 15:17:36.099 INFO [http-nio-19201-exec-5][PackageServiceImpl.java:184] - 调出资源包详细信息：
+2022-10-10 15:17:36.111 INFO [http-nio-19201-exec-5][PackageServiceImpl.java:196] - 资源包确认完成
+2022-10-10 15:17:36.115 INFO [http-nio-19201-exec-5][LogInfoServiceImpl.java:49] - 接收到一条LogInfo写入请求
+2022-10-10 15:17:36.115 INFO [http-nio-19201-exec-5][LogInfoServiceImpl.java:50] - logInfo内容：LogInfo(logInfoId=null, logInfoTime=Mon Oct 10 15:17:36 CST 2022, operator=abc, Action=上传新资源, Object=xxfw-xtks-xtks-java.zip)
+2022-10-10 15:17:36.118 INFO [http-nio-19201-exec-5][LogInfoServiceImpl.java:53] - logInfo写入成功
+2022-10-10 15:18:06.816 INFO [http-nio-19201-exec-7][PendingReviewPackageController.java:56] - 待审核资源包列表查询
+2022-10-10 15:18:06.894 INFO [http-nio-19201-exec-6][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 15:18:06.898 INFO [http-nio-19201-exec-10][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 15:18:06.898 INFO [http-nio-19201-exec-9][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 15:18:15.509 INFO [http-nio-19201-exec-2][PendingReviewPackageController.java:56] - 待审核资源包列表查询
+2022-10-10 15:18:15.549 INFO [http-nio-19201-exec-5][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 15:18:15.550 INFO [http-nio-19201-exec-3][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 15:18:15.551 INFO [http-nio-19201-exec-4][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 15:18:19.313 INFO [http-nio-19201-exec-8][PendingReviewPackageController.java:56] - 待审核资源包列表查询
+2022-10-10 15:18:19.337 INFO [http-nio-19201-exec-6][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 15:18:19.337 INFO [http-nio-19201-exec-9][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 15:18:19.337 INFO [http-nio-19201-exec-7][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 15:18:20.787 INFO [http-nio-19201-exec-10][PendingReviewPackageController.java:56] - 待审核资源包列表查询
+2022-10-10 15:18:20.820 INFO [http-nio-19201-exec-2][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 15:18:20.820 INFO [http-nio-19201-exec-1][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 15:18:20.820 INFO [http-nio-19201-exec-3][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 15:19:47.982 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-10 15:19:47.983 INFO [SpringContextShutdownHook][AbstractEntityManagerFactoryBean.java:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-10 15:19:47.985 INFO [SpringContextShutdownHook][DruidDataSource.java:1948] - {dataSource-1} closing ...
+2022-10-10 15:19:47.985 INFO [SpringContextShutdownHook][DruidDataSource.java:2020] - {dataSource-1} closed
+2022-10-10 15:53:19.603 INFO [main][StartupInfoLogger.java:55] - Starting WebApplication using Java 1.8.0_332 on FJH2022 with PID 5884 (D:\IDEAProject\DeploymentResource\web\target\classes started by Administrator in D:\IDEAProject\DeploymentResource)
+2022-10-10 15:53:19.608 INFO [main][SpringApplication.java:660] - No active profile set, falling back to default profiles: default
+2022-10-10 15:53:20.094 INFO [main][RepositoryConfigurationDelegate.java:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-10 15:53:20.104 INFO [main][RepositoryConfigurationDelegate.java:188] - Finished Spring Data repository scanning in 5 ms. Found 0 JPA repository interfaces.
+2022-10-10 15:53:20.392 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 19201 (http)
+2022-10-10 15:53:20.397 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-19201"]
+2022-10-10 15:53:20.397 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+2022-10-10 15:53:20.397 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-10-10 15:53:20.436 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+2022-10-10 15:53:20.437 INFO [main][ServletWebServerApplicationContext.java:289] - Root WebApplicationContext: initialization completed in 780 ms
+2022-10-10 15:53:20.474 INFO [main][DruidDataSourceAutoConfigure.java:56] - Init DruidDataSource
+2022-10-10 15:53:20.694 INFO [main][DruidDataSource.java:1003] - {dataSource-1} inited
+2022-10-10 15:53:20.703 INFO [main][H2ConsoleAutoConfiguration.java:68] - H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./web/src/main/resources/H2DataBase/h2db'
+2022-10-10 15:53:20.777 INFO [main][LogHelper.java:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-10 15:53:20.803 INFO [main][Version.java:44] - HHH000412: Hibernate ORM core version 5.4.25.Final
+2022-10-10 15:53:20.898 INFO [main][JavaReflectionManager.java:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-10 15:53:21.003 INFO [main][Dialect.java:175] - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-10-10 15:53:21.364 INFO [main][JtaPlatformInitiator.java:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-10 15:53:21.370 INFO [main][AbstractEntityManagerFactoryBean.java:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-10 15:53:21.985 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-10 15:53:22.102 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-19201"]
+2022-10-10 15:53:22.206 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 19201 (http) with context path ''
+2022-10-10 15:53:22.338 INFO [main][StartupInfoLogger.java:61] - Started WebApplication in 2.916 seconds (JVM running for 3.533)
+2022-10-10 15:53:31.329 INFO [http-nio-19201-exec-1][DirectJDKLog.java:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-10 15:53:31.329 INFO [http-nio-19201-exec-1][FrameworkServlet.java:525] - Initializing Servlet 'dispatcherServlet'
+2022-10-10 15:53:31.330 INFO [http-nio-19201-exec-1][FrameworkServlet.java:547] - Completed initialization in 0 ms
+2022-10-10 15:53:31.396 INFO [http-nio-19201-exec-1][LogInfoController.java:61] - 日志分页查询被调用。
+2022-10-10 15:54:02.587 INFO [http-nio-19201-exec-2][LogInfoController.java:61] - 日志分页查询被调用。
+2022-10-10 15:54:23.587 INFO [http-nio-19201-exec-4][LogInfoController.java:61] - 日志分页查询被调用。
+2022-10-10 15:55:04.271 INFO [http-nio-19201-exec-6][LogInfoController.java:61] - 日志分页查询被调用。
+2022-10-10 15:55:12.183 INFO [http-nio-19201-exec-8][LogInfoController.java:61] - 日志分页查询被调用。
+2022-10-10 15:55:28.503 INFO [http-nio-19201-exec-3][LogInfoController.java:61] - 日志分页查询被调用。
+2022-10-10 15:55:37.105 INFO [http-nio-19201-exec-7][LogInfoController.java:61] - 日志分页查询被调用。
+2022-10-10 15:55:40.211 INFO [http-nio-19201-exec-5][LogInfoController.java:61] - 日志分页查询被调用。
+2022-10-10 15:56:16.185 INFO [http-nio-19201-exec-9][LogInfoController.java:61] - 日志分页查询被调用。
+2022-10-10 15:56:19.365 INFO [http-nio-19201-exec-10][LogInfoController.java:61] - 日志分页查询被调用。
+2022-10-10 15:56:19.671 INFO [http-nio-19201-exec-1][LogInfoController.java:61] - 日志分页查询被调用。
+2022-10-10 15:56:20.246 INFO [http-nio-19201-exec-2][LogInfoController.java:61] - 日志分页查询被调用。
+2022-10-10 15:56:53.959 INFO [http-nio-19201-exec-4][LogInfoController.java:61] - 日志分页查询被调用。
+2022-10-10 15:56:55.802 INFO [http-nio-19201-exec-6][PendingReviewPackageController.java:56] - 待审核资源包列表查询
+2022-10-10 15:56:55.837 INFO [http-nio-19201-exec-8][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 15:56:55.843 INFO [http-nio-19201-exec-7][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 15:56:55.844 INFO [http-nio-19201-exec-3][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 15:56:56.143 INFO [http-nio-19201-exec-5][BePublishedPackageController.java:57] - 已发布资源包列表查询
+2022-10-10 15:56:56.172 INFO [http-nio-19201-exec-1][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 15:56:56.172 INFO [http-nio-19201-exec-10][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 15:56:56.172 INFO [http-nio-19201-exec-9][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 15:56:56.769 INFO [http-nio-19201-exec-8][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 15:56:56.769 INFO [http-nio-19201-exec-6][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 15:56:56.770 INFO [http-nio-19201-exec-4][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 15:56:56.784 INFO [http-nio-19201-exec-7][PendingReviewPackageController.java:56] - 待审核资源包列表查询
+2022-10-10 15:56:56.811 INFO [http-nio-19201-exec-5][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 15:56:56.811 INFO [http-nio-19201-exec-3][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 15:56:56.811 INFO [http-nio-19201-exec-9][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 15:56:58.356 INFO [http-nio-19201-exec-1][BePublishedPackageController.java:57] - 已发布资源包列表查询
+2022-10-10 15:56:58.384 INFO [http-nio-19201-exec-8][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 15:56:58.385 INFO [http-nio-19201-exec-2][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 15:56:58.385 INFO [http-nio-19201-exec-10][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 15:56:59.859 INFO [http-nio-19201-exec-4][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 15:56:59.859 INFO [http-nio-19201-exec-9][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 15:56:59.859 INFO [http-nio-19201-exec-7][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 15:57:00.214 INFO [http-nio-19201-exec-3][PendingReviewPackageController.java:56] - 待审核资源包列表查询
+2022-10-10 15:57:00.241 INFO [http-nio-19201-exec-2][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 15:57:00.241 INFO [http-nio-19201-exec-5][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 15:57:00.241 INFO [http-nio-19201-exec-1][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 15:57:00.692 INFO [http-nio-19201-exec-6][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 15:57:00.692 INFO [http-nio-19201-exec-9][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 15:57:00.692 INFO [http-nio-19201-exec-10][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 15:57:01.208 INFO [http-nio-19201-exec-4][BePublishedPackageController.java:57] - 已发布资源包列表查询
+2022-10-10 15:57:01.236 INFO [http-nio-19201-exec-2][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 15:57:01.236 INFO [http-nio-19201-exec-7][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 15:57:01.236 INFO [http-nio-19201-exec-3][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 15:57:01.770 INFO [http-nio-19201-exec-9][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 15:57:01.770 INFO [http-nio-19201-exec-1][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 15:57:01.770 INFO [http-nio-19201-exec-8][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 15:57:02.167 INFO [http-nio-19201-exec-6][BePublishedPackageController.java:57] - 已发布资源包列表查询
+2022-10-10 15:57:02.194 INFO [http-nio-19201-exec-2][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 15:57:02.194 INFO [http-nio-19201-exec-10][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 15:57:02.194 INFO [http-nio-19201-exec-4][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 15:57:02.482 INFO [http-nio-19201-exec-3][PendingReviewPackageController.java:56] - 待审核资源包列表查询
+2022-10-10 15:57:02.511 INFO [http-nio-19201-exec-9][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 15:57:02.511 INFO [http-nio-19201-exec-5][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 15:57:02.511 INFO [http-nio-19201-exec-7][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 15:57:03.570 INFO [http-nio-19201-exec-8][PendingReviewPackageController.java:56] - 待审核资源包列表查询
+2022-10-10 15:57:03.597 INFO [http-nio-19201-exec-1][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 15:57:03.597 INFO [http-nio-19201-exec-6][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 15:57:03.597 INFO [http-nio-19201-exec-4][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 15:57:04.276 INFO [http-nio-19201-exec-2][BePublishedPackageController.java:57] - 已发布资源包列表查询
+2022-10-10 15:57:04.309 INFO [http-nio-19201-exec-5][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 15:57:04.309 INFO [http-nio-19201-exec-10][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 15:57:04.309 INFO [http-nio-19201-exec-3][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 15:57:04.556 INFO [http-nio-19201-exec-9][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 15:57:04.556 INFO [http-nio-19201-exec-1][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 15:57:04.556 INFO [http-nio-19201-exec-8][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 15:57:04.861 INFO [http-nio-19201-exec-4][PendingReviewPackageController.java:56] - 待审核资源包列表查询
+2022-10-10 15:57:04.905 INFO [http-nio-19201-exec-6][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 15:57:04.905 INFO [http-nio-19201-exec-2][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 15:57:04.905 INFO [http-nio-19201-exec-3][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 15:57:06.149 INFO [http-nio-19201-exec-10][LogInfoController.java:61] - 日志分页查询被调用。
+2022-10-10 15:57:07.085 INFO [http-nio-19201-exec-5][LogInfoController.java:61] - 日志分页查询被调用。
+2022-10-10 15:57:08.472 INFO [http-nio-19201-exec-7][LogInfoController.java:61] - 日志分页查询被调用。
+2022-10-10 16:03:14.262 INFO [http-nio-19201-exec-4][PendingReviewPackageController.java:56] - 待审核资源包列表查询
+2022-10-10 16:03:14.293 INFO [http-nio-19201-exec-6][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 16:03:14.293 INFO [http-nio-19201-exec-3][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 16:03:14.293 INFO [http-nio-19201-exec-2][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 16:03:14.642 INFO [http-nio-19201-exec-10][BePublishedPackageController.java:57] - 已发布资源包列表查询
+2022-10-10 16:03:14.668 INFO [http-nio-19201-exec-8][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 16:03:14.668 INFO [http-nio-19201-exec-5][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 16:03:14.668 INFO [http-nio-19201-exec-7][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 16:03:16.691 INFO [http-nio-19201-exec-9][BePublishedPackageController.java:57] - 已发布资源包列表查询
+2022-10-10 16:03:16.710 INFO [http-nio-19201-exec-2][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 16:03:16.710 INFO [http-nio-19201-exec-3][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 16:03:16.710 INFO [http-nio-19201-exec-6][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 16:03:16.719 INFO [http-nio-19201-exec-4][BePublishedPackageController.java:67] - 下架方法被调用
+2022-10-10 16:03:16.732 INFO [http-nio-19201-exec-4][BePublishedPackageController.java:71] - 下架:135
+2022-10-10 16:03:16.748 ERROR [http-nio-19201-exec-4][DirectJDKLog.java:175] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at com.feng.service.impl.LogInfoServiceImpl.insertRemoveLogInfo(LogInfoServiceImpl.java:114) ~[classes/:?]
+	at com.feng.service.impl.LogInfoServiceImpl$$FastClassBySpringCGLIB$$c1b1f08f.invoke(<generated>) ~[classes/:?]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-5.3.2.jar:5.3.2]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-5.3.2.jar:5.3.2]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691) ~[spring-aop-5.3.2.jar:5.3.2]
+	at com.feng.service.impl.LogInfoServiceImpl$$EnhancerBySpringCGLIB$$86680d23.insertRemoveLogInfo(<generated>) ~[classes/:?]
+	at com.feng.web.controller.BePublishedPackageController.removePackageById(BePublishedPackageController.java:72) ~[classes/:?]
+	at com.feng.web.controller.BePublishedPackageController$$FastClassBySpringCGLIB$$f5365e06.invoke(<generated>) ~[classes/:?]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-5.3.2.jar:5.3.2]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-5.3.2.jar:5.3.2]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691) ~[spring-aop-5.3.2.jar:5.3.2]
+	at com.feng.web.controller.BePublishedPackageController$$EnhancerBySpringCGLIB$$c9edf7e8.removePackageById(<generated>) ~[classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_332]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_332]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_332]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_332]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1061) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:961) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652) ~[tomcat-embed-core-9.0.41.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.41.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:124) ~[druid-1.1.18.jar:1.1.18]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_332]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_332]
+2022-10-10 16:05:39.389 INFO [http-nio-19201-exec-1][BePublishedPackageController.java:57] - 已发布资源包列表查询
+2022-10-10 16:05:39.390 INFO [http-nio-19201-exec-7][BePublishedPackageController.java:67] - 下架方法被调用
+2022-10-10 16:05:39.393 INFO [http-nio-19201-exec-7][BePublishedPackageController.java:71] - 下架:167
+2022-10-10 16:05:39.396 ERROR [http-nio-19201-exec-7][DirectJDKLog.java:175] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at com.feng.service.impl.LogInfoServiceImpl.insertRemoveLogInfo(LogInfoServiceImpl.java:114) ~[classes/:?]
+	at com.feng.service.impl.LogInfoServiceImpl$$FastClassBySpringCGLIB$$c1b1f08f.invoke(<generated>) ~[classes/:?]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-5.3.2.jar:5.3.2]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-5.3.2.jar:5.3.2]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691) ~[spring-aop-5.3.2.jar:5.3.2]
+	at com.feng.service.impl.LogInfoServiceImpl$$EnhancerBySpringCGLIB$$86680d23.insertRemoveLogInfo(<generated>) ~[classes/:?]
+	at com.feng.web.controller.BePublishedPackageController.removePackageById(BePublishedPackageController.java:72) ~[classes/:?]
+	at com.feng.web.controller.BePublishedPackageController$$FastClassBySpringCGLIB$$f5365e06.invoke(<generated>) ~[classes/:?]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-5.3.2.jar:5.3.2]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-5.3.2.jar:5.3.2]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691) ~[spring-aop-5.3.2.jar:5.3.2]
+	at com.feng.web.controller.BePublishedPackageController$$EnhancerBySpringCGLIB$$c9edf7e8.removePackageById(<generated>) ~[classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_332]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_332]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_332]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_332]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1061) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:961) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652) ~[tomcat-embed-core-9.0.41.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.2.jar:5.3.2]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.41.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:124) ~[druid-1.1.18.jar:1.1.18]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_332]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_332]
+2022-10-10 16:05:39.409 INFO [http-nio-19201-exec-2][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 16:05:39.410 INFO [http-nio-19201-exec-6][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 16:05:39.410 INFO [http-nio-19201-exec-9][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 16:05:56.202 INFO [http-nio-19201-exec-3][PendingReviewPackageController.java:56] - 待审核资源包列表查询
+2022-10-10 16:05:56.235 INFO [http-nio-19201-exec-4][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 16:05:56.235 INFO [http-nio-19201-exec-5][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 16:05:56.235 INFO [http-nio-19201-exec-8][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 16:06:05.415 INFO [http-nio-19201-exec-1][PendingReviewPackageController.java:87] - 安全扫描56
+2022-10-10 16:06:05.424 INFO [http-nio-19201-exec-7][PendingReviewPackageController.java:56] - 待审核资源包列表查询
+2022-10-10 16:06:05.440 INFO [http-nio-19201-exec-9][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 16:06:05.440 INFO [http-nio-19201-exec-6][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 16:06:05.440 INFO [http-nio-19201-exec-2][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 16:06:07.249 INFO [http-nio-19201-exec-3][LogInfoController.java:61] - 日志分页查询被调用。
+2022-10-10 16:06:11.661 INFO [http-nio-19201-exec-5][PendingReviewPackageController.java:56] - 待审核资源包列表查询
+2022-10-10 16:06:11.692 INFO [http-nio-19201-exec-4][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 16:06:11.692 INFO [http-nio-19201-exec-10][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 16:06:11.692 INFO [http-nio-19201-exec-8][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 16:06:14.434 INFO [http-nio-19201-exec-7][PendingReviewPackageController.java:101] - 安全扫描56
+2022-10-10 16:06:14.440 INFO [http-nio-19201-exec-2][PendingReviewPackageController.java:56] - 待审核资源包列表查询
+2022-10-10 16:06:14.467 INFO [http-nio-19201-exec-6][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 16:06:14.467 INFO [http-nio-19201-exec-3][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 16:06:14.467 INFO [http-nio-19201-exec-9][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 16:06:16.373 INFO [http-nio-19201-exec-5][BePublishedPackageController.java:57] - 已发布资源包列表查询
+2022-10-10 16:06:16.403 INFO [http-nio-19201-exec-8][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 16:06:16.403 INFO [http-nio-19201-exec-4][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 16:06:16.404 INFO [http-nio-19201-exec-10][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 16:06:22.110 INFO [http-nio-19201-exec-7][BePublishedPackageController.java:57] - 已发布资源包列表查询
+2022-10-10 16:06:22.110 INFO [http-nio-19201-exec-1][BePublishedPackageController.java:67] - 下架方法被调用
+2022-10-10 16:06:22.113 INFO [http-nio-19201-exec-1][BePublishedPackageController.java:71] - 下架:169
+2022-10-10 16:06:22.128 INFO [http-nio-19201-exec-3][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 16:06:22.128 INFO [http-nio-19201-exec-2][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 16:06:22.128 INFO [http-nio-19201-exec-9][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 16:06:24.172 INFO [http-nio-19201-exec-6][LogInfoController.java:61] - 日志分页查询被调用。
+2022-10-10 16:06:25.812 INFO [http-nio-19201-exec-5][PendingReviewPackageController.java:56] - 待审核资源包列表查询
+2022-10-10 16:06:25.841 INFO [http-nio-19201-exec-10][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 16:06:25.841 INFO [http-nio-19201-exec-8][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 16:06:25.841 INFO [http-nio-19201-exec-4][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 16:06:26.110 INFO [http-nio-19201-exec-7][BePublishedPackageController.java:57] - 已发布资源包列表查询
+2022-10-10 16:06:26.142 INFO [http-nio-19201-exec-9][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 16:06:26.142 INFO [http-nio-19201-exec-1][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 16:06:26.142 INFO [http-nio-19201-exec-3][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 16:06:26.500 INFO [http-nio-19201-exec-6][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 16:06:26.500 INFO [http-nio-19201-exec-4][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 16:06:26.500 INFO [http-nio-19201-exec-5][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 16:06:33.994 INFO [http-nio-19201-exec-7][BeRemovedPackageController.java:82] - 重新上架方法被调用
+2022-10-10 16:06:33.997 INFO [http-nio-19201-exec-7][BeRemovedPackageController.java:86] - 下架:102
+2022-10-10 16:06:34.010 INFO [http-nio-19201-exec-1][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 16:06:34.010 INFO [http-nio-19201-exec-3][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 16:06:34.010 INFO [http-nio-19201-exec-9][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 16:06:36.974 INFO [http-nio-19201-exec-2][LogInfoController.java:61] - 日志分页查询被调用。
+2022-10-10 16:06:46.745 INFO [http-nio-19201-exec-6][PendingReviewPackageController.java:56] - 待审核资源包列表查询
+2022-10-10 16:06:46.776 INFO [http-nio-19201-exec-10][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 16:06:46.776 INFO [http-nio-19201-exec-5][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 16:06:46.776 INFO [http-nio-19201-exec-4][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 16:06:49.258 INFO [http-nio-19201-exec-8][PendingReviewPackageController.java:56] - 待审核资源包列表查询
+2022-10-10 16:06:49.285 INFO [http-nio-19201-exec-3][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 16:06:49.285 INFO [http-nio-19201-exec-7][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 16:06:49.285 INFO [http-nio-19201-exec-9][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 16:06:51.954 INFO [http-nio-19201-exec-1][BePublishedPackageController.java:57] - 已发布资源包列表查询
+2022-10-10 16:06:51.980 INFO [http-nio-19201-exec-6][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 16:06:51.980 INFO [http-nio-19201-exec-10][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 16:06:51.980 INFO [http-nio-19201-exec-2][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 16:06:58.502 INFO [http-nio-19201-exec-5][BePublishedPackageController.java:67] - 下架方法被调用
+2022-10-10 16:06:58.502 INFO [http-nio-19201-exec-4][BePublishedPackageController.java:57] - 已发布资源包列表查询
+2022-10-10 16:06:58.505 INFO [http-nio-19201-exec-5][BePublishedPackageController.java:71] - 下架:170
+2022-10-10 16:06:58.519 INFO [http-nio-19201-exec-3][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 16:06:58.519 INFO [http-nio-19201-exec-8][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 16:06:58.519 INFO [http-nio-19201-exec-9][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 16:06:59.642 INFO [http-nio-19201-exec-1][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 16:06:59.642 INFO [http-nio-19201-exec-6][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 16:06:59.642 INFO [http-nio-19201-exec-2][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 16:07:02.952 INFO [http-nio-19201-exec-4][BeRemovedPackageController.java:64] - 下架方法被调用
+2022-10-10 16:07:02.953 INFO [http-nio-19201-exec-4][BeRemovedPackageController.java:68] - 下架:103
+2022-10-10 16:07:02.974 INFO [http-nio-19201-exec-9][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 16:07:02.974 INFO [http-nio-19201-exec-3][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 16:07:02.975 INFO [http-nio-19201-exec-8][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 16:07:04.852 INFO [http-nio-19201-exec-7][LogInfoController.java:61] - 日志分页查询被调用。
+2022-10-10 16:18:04.409 INFO [http-nio-19201-exec-10][LogInfoController.java:61] - 日志分页查询被调用。
+2022-10-10 16:18:05.494 INFO [http-nio-19201-exec-4][LogInfoController.java:61] - 日志分页查询被调用。
+2022-10-10 16:18:07.342 INFO [http-nio-19201-exec-5][LogInfoController.java:61] - 日志分页查询被调用。
+2022-10-10 16:18:08.798 INFO [http-nio-19201-exec-8][LogInfoController.java:61] - 日志分页查询被调用。
+2022-10-10 16:18:09.719 INFO [http-nio-19201-exec-3][LogInfoController.java:61] - 日志分页查询被调用。
+2022-10-10 16:18:10.925 INFO [http-nio-19201-exec-9][LogInfoController.java:61] - 日志分页查询被调用。
+2022-10-10 16:18:13.357 INFO [http-nio-19201-exec-7][LogInfoController.java:61] - 日志分页查询被调用。
+2022-10-10 16:18:13.365 INFO [http-nio-19201-exec-1][LogInfoController.java:61] - 日志分页查询被调用。
+2022-10-10 16:18:55.245 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-10 16:18:55.246 INFO [SpringContextShutdownHook][AbstractEntityManagerFactoryBean.java:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-10 16:18:55.247 INFO [SpringContextShutdownHook][DruidDataSource.java:1948] - {dataSource-1} closing ...
+2022-10-10 16:18:55.248 INFO [SpringContextShutdownHook][DruidDataSource.java:2020] - {dataSource-1} closed
+2022-10-10 18:10:53.841 INFO [main][StartupInfoLogger.java:55] - Starting WebApplication using Java 1.8.0_332 on FJH2022 with PID 21556 (D:\IDEAProject\DeploymentResource\web\target\classes started by Administrator in D:\IDEAProject\DeploymentResource)
+2022-10-10 18:10:53.845 INFO [main][SpringApplication.java:660] - No active profile set, falling back to default profiles: default
+2022-10-10 18:10:54.511 INFO [main][RepositoryConfigurationDelegate.java:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-10 18:10:54.519 INFO [main][RepositoryConfigurationDelegate.java:188] - Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
+2022-10-10 18:10:54.778 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 19201 (http)
+2022-10-10 18:10:54.783 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-19201"]
+2022-10-10 18:10:54.783 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+2022-10-10 18:10:54.783 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-10-10 18:10:54.819 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+2022-10-10 18:10:54.819 INFO [main][ServletWebServerApplicationContext.java:289] - Root WebApplicationContext: initialization completed in 915 ms
+2022-10-10 18:10:54.846 INFO [main][DruidDataSourceAutoConfigure.java:56] - Init DruidDataSource
+2022-10-10 18:10:55.029 INFO [main][DruidDataSource.java:1003] - {dataSource-1} inited
+2022-10-10 18:10:55.037 INFO [main][H2ConsoleAutoConfiguration.java:68] - H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./web/src/main/resources/H2DataBase/h2db'
+2022-10-10 18:10:55.101 INFO [main][LogHelper.java:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-10 18:10:55.123 INFO [main][Version.java:44] - HHH000412: Hibernate ORM core version 5.4.25.Final
+2022-10-10 18:10:55.180 INFO [main][JavaReflectionManager.java:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-10 18:10:55.231 INFO [main][Dialect.java:175] - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-10-10 18:10:55.557 INFO [main][JtaPlatformInitiator.java:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-10 18:10:55.563 INFO [main][AbstractEntityManagerFactoryBean.java:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-10 18:10:56.196 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-10 18:10:56.293 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-19201"]
+2022-10-10 18:10:56.387 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 19201 (http) with context path ''
+2022-10-10 18:10:56.527 INFO [main][StartupInfoLogger.java:61] - Started WebApplication in 2.859 seconds (JVM running for 3.468)
+2022-10-10 18:29:15.661 INFO [http-nio-19201-exec-1][DirectJDKLog.java:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-10 18:29:15.661 INFO [http-nio-19201-exec-1][FrameworkServlet.java:525] - Initializing Servlet 'dispatcherServlet'
+2022-10-10 18:29:15.662 INFO [http-nio-19201-exec-1][FrameworkServlet.java:547] - Completed initialization in 1 ms
+2022-10-10 18:34:25.205 INFO [http-nio-19201-exec-5][PendingReviewPackageController.java:56] - 待审核资源包列表查询
+2022-10-10 18:34:25.288 INFO [http-nio-19201-exec-6][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 18:34:25.290 INFO [http-nio-19201-exec-8][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 18:34:25.290 INFO [http-nio-19201-exec-7][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 18:34:27.035 INFO [http-nio-19201-exec-9][LogInfoController.java:61] - 日志分页查询被调用。
+2022-10-10 18:38:29.330 INFO [http-nio-19201-exec-6][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 18:38:29.331 INFO [http-nio-19201-exec-5][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 18:38:29.331 INFO [http-nio-19201-exec-4][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 18:38:52.420 INFO [http-nio-19201-exec-9][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 18:38:52.423 INFO [http-nio-19201-exec-7][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 18:38:52.423 INFO [http-nio-19201-exec-10][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 22:44:45.477 INFO [http-nio-19201-exec-1][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 22:44:45.477 INFO [http-nio-19201-exec-3][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 22:44:45.477 INFO [http-nio-19201-exec-2][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 22:44:59.961 INFO [http-nio-19201-exec-4][LogInfoController.java:61] - 日志分页查询被调用。
+2022-10-10 22:45:01.277 INFO [http-nio-19201-exec-9][PendingReviewPackageController.java:56] - 待审核资源包列表查询
+2022-10-10 22:45:01.316 INFO [http-nio-19201-exec-8][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 22:45:01.317 INFO [http-nio-19201-exec-7][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 22:45:01.317 INFO [http-nio-19201-exec-5][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 22:45:45.529 INFO [http-nio-19201-exec-10][BePublishedPackageController.java:57] - 已发布资源包列表查询
+2022-10-10 22:45:45.559 INFO [http-nio-19201-exec-2][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 22:45:45.559 INFO [http-nio-19201-exec-1][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 22:45:45.559 INFO [http-nio-19201-exec-6][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 22:45:45.800 INFO [http-nio-19201-exec-3][PendingReviewPackageController.java:56] - 待审核资源包列表查询
+2022-10-10 22:45:45.833 INFO [http-nio-19201-exec-7][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 22:45:45.834 INFO [http-nio-19201-exec-9][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 22:45:45.834 INFO [http-nio-19201-exec-4][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 22:45:49.953 INFO [http-nio-19201-exec-5][BePublishedPackageController.java:57] - 已发布资源包列表查询
+2022-10-10 22:45:49.983 INFO [http-nio-19201-exec-1][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 22:45:49.983 INFO [http-nio-19201-exec-10][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 22:45:49.983 INFO [http-nio-19201-exec-8][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 22:45:51.874 INFO [http-nio-19201-exec-3][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 22:45:51.875 INFO [http-nio-19201-exec-4][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 22:45:51.875 INFO [http-nio-19201-exec-6][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 22:47:20.721 INFO [http-nio-19201-exec-2][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 22:47:20.722 INFO [http-nio-19201-exec-1][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 22:47:20.722 INFO [http-nio-19201-exec-8][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 22:47:23.286 INFO [http-nio-19201-exec-5][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 22:47:23.286 INFO [http-nio-19201-exec-6][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 22:47:23.286 INFO [http-nio-19201-exec-4][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 22:57:57.667 INFO [http-nio-19201-exec-8][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 22:57:57.667 INFO [http-nio-19201-exec-3][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 22:57:57.667 INFO [http-nio-19201-exec-1][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 22:57:57.920 INFO [http-nio-19201-exec-6][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 22:57:57.920 INFO [http-nio-19201-exec-7][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 22:57:57.920 INFO [http-nio-19201-exec-5][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 22:58:05.333 INFO [http-nio-19201-exec-1][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 22:58:05.334 INFO [http-nio-19201-exec-10][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 22:58:05.334 INFO [http-nio-19201-exec-2][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 22:58:20.557 INFO [http-nio-19201-exec-6][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 22:58:20.557 INFO [http-nio-19201-exec-4][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 22:58:20.557 INFO [http-nio-19201-exec-3][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 22:58:24.349 INFO [http-nio-19201-exec-7][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 22:58:24.349 INFO [http-nio-19201-exec-1][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 22:58:24.349 INFO [http-nio-19201-exec-9][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 22:59:40.400 INFO [http-nio-19201-exec-4][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 22:59:40.401 INFO [http-nio-19201-exec-3][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 22:59:40.401 INFO [http-nio-19201-exec-5][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 22:59:48.790 INFO [http-nio-19201-exec-7][PendingReviewPackageController.java:56] - 待审核资源包列表查询
+2022-10-10 22:59:48.831 INFO [http-nio-19201-exec-9][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 22:59:48.831 INFO [http-nio-19201-exec-8][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 22:59:48.831 INFO [http-nio-19201-exec-1][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 22:59:49.221 INFO [http-nio-19201-exec-10][BePublishedPackageController.java:57] - 已发布资源包列表查询
+2022-10-10 22:59:49.253 INFO [http-nio-19201-exec-3][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 22:59:49.253 INFO [http-nio-19201-exec-2][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 22:59:49.253 INFO [http-nio-19201-exec-6][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 22:59:49.612 INFO [http-nio-19201-exec-1][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 22:59:49.612 INFO [http-nio-19201-exec-5][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 22:59:49.612 INFO [http-nio-19201-exec-7][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 23:00:13.579 INFO [http-nio-19201-exec-10][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 23:00:13.579 INFO [http-nio-19201-exec-3][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 23:00:13.579 INFO [http-nio-19201-exec-9][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 23:00:17.900 INFO [http-nio-19201-exec-2][LogInfoController.java:61] - 日志分页查询被调用。
+2022-10-10 23:00:25.330 INFO [http-nio-19201-exec-6][PendingReviewPackageController.java:56] - 待审核资源包列表查询
+2022-10-10 23:00:25.373 INFO [http-nio-19201-exec-7][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 23:00:25.373 INFO [http-nio-19201-exec-4][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 23:00:25.373 INFO [http-nio-19201-exec-1][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 23:00:26.710 INFO [http-nio-19201-exec-3][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
+2022-10-10 23:00:26.710 INFO [http-nio-19201-exec-8][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
+2022-10-10 23:00:26.710 INFO [http-nio-19201-exec-9][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
+2022-10-10 23:00:27.650 INFO [http-nio-19201-exec-10][LogInfoController.java:61] - 日志分页查询被调用。
+2022-10-10 23:04:56.018 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-10 23:04:56.019 INFO [SpringContextShutdownHook][AbstractEntityManagerFactoryBean.java:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-10 23:04:56.021 INFO [SpringContextShutdownHook][DruidDataSource.java:1948] - {dataSource-1} closing ...
+2022-10-10 23:04:56.022 INFO [SpringContextShutdownHook][DruidDataSource.java:2020] - {dataSource-1} closed
+2022-10-10 23:07:20.464 INFO [main][StartupInfoLogger.java:55] - Starting WebApplication using Java 1.8.0_332 on FJH2022 with PID 22808 (D:\IDEAProject\DeploymentResource\web\target\classes started by Administrator in D:\IDEAProject\DeploymentResource)
+2022-10-10 23:07:20.470 INFO [main][SpringApplication.java:660] - No active profile set, falling back to default profiles: default
+2022-10-10 23:07:20.926 INFO [main][RepositoryConfigurationDelegate.java:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-10 23:07:20.934 INFO [main][RepositoryConfigurationDelegate.java:188] - Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2022-10-10 23:07:21.188 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 19201 (http)
+2022-10-10 23:07:21.193 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-19201"]
+2022-10-10 23:07:21.193 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+2022-10-10 23:07:21.194 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-10-10 23:07:21.229 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+2022-10-10 23:07:21.229 INFO [main][ServletWebServerApplicationContext.java:289] - Root WebApplicationContext: initialization completed in 707 ms
+2022-10-10 23:07:21.257 INFO [main][DruidDataSourceAutoConfigure.java:56] - Init DruidDataSource
+2022-10-10 23:07:21.416 INFO [main][DruidDataSource.java:1003] - {dataSource-1} inited
+2022-10-10 23:07:21.424 INFO [main][H2ConsoleAutoConfiguration.java:68] - H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./web/src/main/resources/H2DataBase/h2db'
+2022-10-10 23:07:21.484 INFO [main][LogHelper.java:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-10 23:07:21.509 INFO [main][Version.java:44] - HHH000412: Hibernate ORM core version 5.4.25.Final
+2022-10-10 23:07:21.566 INFO [main][JavaReflectionManager.java:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-10 23:07:21.619 INFO [main][Dialect.java:175] - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-10-10 23:07:21.919 INFO [main][JtaPlatformInitiator.java:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-10 23:07:21.925 INFO [main][AbstractEntityManagerFactoryBean.java:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-10 23:07:22.541 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-10 23:07:22.639 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-19201"]
+2022-10-10 23:07:22.743 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 19201 (http) with context path ''
+2022-10-10 23:07:22.876 INFO [main][StartupInfoLogger.java:61] - Started WebApplication in 2.602 seconds (JVM running for 3.114)
+2022-10-10 23:07:26.433 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-10 23:07:26.434 INFO [SpringContextShutdownHook][AbstractEntityManagerFactoryBean.java:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-10 23:07:26.436 INFO [SpringContextShutdownHook][DruidDataSource.java:1948] - {dataSource-1} closing ...
+2022-10-10 23:07:26.437 INFO [SpringContextShutdownHook][DruidDataSource.java:2020] - {dataSource-1} closed

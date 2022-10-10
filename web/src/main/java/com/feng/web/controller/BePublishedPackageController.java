@@ -6,8 +6,10 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.feng.entity.packageStatusEntity.BePublishedPackage;
 import com.feng.entity.returnClass.Result;
 import com.feng.service.impl.BePublishedPackageServiceImpl;
+import com.feng.service.impl.LogInfoServiceImpl;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
@@ -32,10 +34,13 @@ public class BePublishedPackageController {
 
     private final BePublishedPackageServiceImpl bePublishedPackageService;
 
+    private final LogInfoServiceImpl logInfoService;
+
     private static final Logger logger = LogManager.getLogger(BePublishedPackageController.class);
 
-    public BePublishedPackageController(BePublishedPackageServiceImpl bePublishedPackageService) {
+    public BePublishedPackageController(BePublishedPackageServiceImpl bePublishedPackageService, LogInfoServiceImpl logInfoService) {
         this.bePublishedPackageService = bePublishedPackageService;
+        this.logInfoService = logInfoService;
     }
 
 
@@ -64,6 +69,7 @@ public class BePublishedPackageController {
         Integer integer = bePublishedPackageService.removePackageById(packageId);
         if (integer != 0) {
             logger.info("下架:" + packageId);
+            logInfoService.insertRemoveLogInfo(params);
             return Result.success("下架操作成功","");
         }else {
             return Result.error("400","修改失败，可能包不存在");

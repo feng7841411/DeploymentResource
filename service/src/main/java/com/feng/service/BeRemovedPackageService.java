@@ -2,6 +2,7 @@ package com.feng.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.feng.entity.packageStatusEntity.BeRemovedPackage;
+import com.feng.entity.returnClass.ServiceResult;
 
 /**
  * Created with IntelliJ IDEA.
@@ -18,6 +19,7 @@ public interface BeRemovedPackageService extends IService<BeRemovedPackage> {
 
     /**
      * 把下架的服务彻底删除
+     * @param id
      * @return
      */
     public Integer deleteRemovedPackageById(Integer id);
@@ -29,6 +31,11 @@ public interface BeRemovedPackageService extends IService<BeRemovedPackage> {
     public Integer deleteAllRemovedPackage();
 
 
+    /**
+     * 重新上架
+     * @param id
+     * @return
+     */
     public Integer publishPackageAgainst(Integer id);
 
 
@@ -38,5 +45,12 @@ public interface BeRemovedPackageService extends IService<BeRemovedPackage> {
      */
     public Integer getRemovedPackageAsideNumber();
 
+
+    /**
+     * 根据Author筛选已下架的服务
+     * @param author
+     * @return
+     */
+    public ServiceResult selectBeRemovedPackageByAuthor(String author);
 
 }

@@ -6,11 +6,13 @@ import com.feng.dao.BePublishedPackageMapper;
 import com.feng.dao.BeRemovedPackageMapper;
 import com.feng.entity.packageStatusEntity.BePublishedPackage;
 import com.feng.entity.packageStatusEntity.BeRemovedPackage;
+import com.feng.entity.returnClass.ServiceResult;
 import com.feng.service.BePublishedPackageService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -49,6 +51,7 @@ public class BePublishedPackageServiceImpl extends ServiceImpl<BePublishedPackag
         beRemovedPackage.setBeRemovedPackageStatus("已下架");
         beRemovedPackage.setBeRemovedPackageType(bePublishedPackage.getBePublishedPackageType());
         beRemovedPackage.setConnectedPackageUid(bePublishedPackage.getConnectedPackageUid());
+        beRemovedPackage.setConnectedDetailInfoId(bePublishedPackage.getConnectedDetailInfoId());
         int insert = removedPackageMapper.insert(beRemovedPackage);
         return insert;
     }
@@ -73,6 +76,20 @@ public class BePublishedPackageServiceImpl extends ServiceImpl<BePublishedPackag
         bePublishedPackageQueryWrapper.eq("BE_PUBLISHED_PACKAGE_STATUS","正常");
         Integer integer = bePublishedPackageMapper.selectCount(bePublishedPackageQueryWrapper);
         return integer;
+    }
+
+    @Override
+    public ServiceResult selectBePublishedPackageByAuthor(String author) {
+        QueryWrapper<BePublishedPackage> bePublishedPackageQueryWrapper = new QueryWrapper<>();
+        bePublishedPackageQueryWrapper.select("BE_PUBLISHED_PACKAGE_NAME",
+                "BE_PUBLISHED_PACKAGE_Type",
+                "BE_PUBLISHED_PACKAGE_AUTHOR",
+                "BE_PUBLISHED_PACKAGE_TIME",
+                "BE_PUBLISHED_PACKAGE_STATUS",
+                "CONNECTED_PACKAGE_UID",
+                "CONNECTED_DETAIL_INFO_ID").eq("BE_PUBLISHED_PACKAGE_AUTHOR",author);
+        List<BePublishedPackage> bePublishedPackages = bePublishedPackageMapper.selectList(bePublishedPackageQueryWrapper);
+        return ServiceResult.success("200",bePublishedPackages);
     }
 
 

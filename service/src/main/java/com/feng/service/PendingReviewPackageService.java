@@ -2,6 +2,7 @@ package com.feng.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.feng.entity.packageStatusEntity.PendingReviewPackage;
+import com.feng.entity.returnClass.ServiceResult;
 
 /**
  * Created with IntelliJ IDEA.
@@ -87,5 +88,11 @@ public interface PendingReviewPackageService extends IService<PendingReviewPacka
      */
     public Integer getPendingReviewAsideNumber();
 
+    /**
+     * 根据Author字段筛选PendingReviewPackage表
+     * @param author
+     * @return
+     */
+    public ServiceResult selectPendingReviewPackageByAuthor(String author);
 
 }
