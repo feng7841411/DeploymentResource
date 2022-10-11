@@ -88,7 +88,24 @@ public class MyResourcesServiceImpl implements MyResourcesService {
             myResources1.setConnectedDetailInfoId(beRemovedPackage.getConnectedDetailInfoId());
             myResources.add(myResources1);
         }
-        return ServiceResult.success("200",myResources);
+
+        // 模拟一个分页查询和条件筛选
+        Integer pageNum = (Integer) map.get("pageNum");
+        Integer pageSize = (Integer) map.get("pageSize");
+        Integer startIndex = (pageNum-1) * pageSize;
+        Integer endIndex = (pageNum) * pageSize;
+
+        // 字段属性筛选
+
+
+        // 时间排序，sort方法，lambda表达式
+
+        // 返回需要一个list, 一个总数，考虑用map
+        HashMap<String, Object> resultMap = new HashMap<>();
+        resultMap.put("records", myResources);
+        resultMap.put("total",myResources.size());
+
+        return ServiceResult.success("200",resultMap);
     }
 
 

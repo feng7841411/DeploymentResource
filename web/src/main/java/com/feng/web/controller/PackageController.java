@@ -77,6 +77,7 @@ public class PackageController {
 
         // 3.2 解压，获得JSON文件名 (解压放到一个路径，拿到JSON信息，然后考虑再删掉临时文件吧）
         ServiceResult unZipResult = packageService.unZipPackage((String) storeResult.getData());
+
         if (!"200".equals(unZipResult.getCode())) {
             logger.error("调用unZip()失败");
             return Result.error("400","系统无法正确解压资源包");

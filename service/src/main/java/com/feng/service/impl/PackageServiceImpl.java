@@ -3,7 +3,6 @@ package com.feng.service.impl;
 import cn.hutool.core.io.FileUtil;
 import cn.hutool.core.util.IdUtil;
 import cn.hutool.core.util.StrUtil;
-import com.feng.entity.LogInfo.LogInfo;
 import com.feng.entity.packageStatusEntity.PendingReviewPackage;
 import com.feng.entity.packageToolEntity.PackingToolInfo;
 import com.feng.entity.packageToolEntity.ServicePackageDetailInfo;
@@ -44,18 +43,12 @@ public class PackageServiceImpl implements PackageService {
     private static final Logger logger = LogManager.getLogger(PackageServiceImpl.class);
 
 
-    final ServicePackageDetailInfoServiceImpl servicePackageDetailInfoService;
+    @Autowired
+    ServicePackageDetailInfoServiceImpl servicePackageDetailInfoService;
 
 
-    final PendingReviewPackageServiceImpl pendingReviewPackageService;
-
-    final LogInfoServiceImpl logInfoService;
-
-    public PackageServiceImpl(ServicePackageDetailInfoServiceImpl servicePackageDetailInfoService, PendingReviewPackageServiceImpl pendingReviewPackageService, LogInfoServiceImpl logInfoService) {
-        this.servicePackageDetailInfoService = servicePackageDetailInfoService;
-        this.pendingReviewPackageService = pendingReviewPackageService;
-        this.logInfoService = logInfoService;
-    }
+    @Autowired
+    PendingReviewPackageServiceImpl pendingReviewPackageService;
 
 
     @Override
@@ -83,18 +76,17 @@ public class PackageServiceImpl implements PackageService {
         }
         try {
             file.transferTo(dest);
-            return ServiceResult.success("文件：" + originalFilename + "存储成功", fileUid);
+            return ServiceResult.success("文件：" + originalFilename + "存储成功",fileUid);
         } catch (IOException e) {
 
             e.printStackTrace();
-            return ServiceResult.error("zip文件往存储位置写入失败", null);
+            return ServiceResult.error("zip文件往存储位置写入失败",null);
         }
 
     }
 
     /**
      * 文件的起始地址和目标输出地址都是确定的，只需要把想解压的zip文件的Uid传过来即可
-     *
      * @param fileUid
      * @return
      */
@@ -107,10 +99,10 @@ public class PackageServiceImpl implements PackageService {
             logger.info("临时解压文件夹不存在，已经新建");
         }
         try {
-            ZipUtils.unZip(srcFile, fileUnZipPath);
+            ZipUtils.unZip(srcFile,fileUnZipPath);
             return ServiceResult.success();
-        } catch (Exception e) {
-            return ServiceResult.error("解压失败", e.toString());
+        }catch (Exception e){
+            return ServiceResult.error("解压失败",e.toString());
         }
     }
 
@@ -119,23 +111,23 @@ public class PackageServiceImpl implements PackageService {
         File unZip = new File(fileUnZipPath);
         File[] files = unZip.listFiles();
         File jsonFile = null;
-        for (File file : files) {
+        for (File file: files) {
             String fileType = FileUtil.extName(file);
             logger.info("文件类型：" + fileType);
-            if (fileType.equals("json")) {
+            if (fileType.equals("json")){
                 jsonFile = file;
             }
         }
         if (jsonFile == null) {
-            return ServiceResult.error("解析失败，不存在json描述文件", null);
+            return ServiceResult.error("解析失败，不存在json描述文件",null);
         } else {
             PackingToolInfo packingToolInfo = JsonUtils.jsonFile2Object(jsonFile.toString(), PackingToolInfo.class);
             logger.info("json描述文件解析结果： ");
             logger.info(packingToolInfo.toString());
-            if (packingToolInfo != null) {
+            if (packingToolInfo!=null) {
                 return ServiceResult.success("读取json文件成功", packingToolInfo);
-            } else {
-                return ServiceResult.error("解析失败，资源包描述文件解读失败", null);
+            }else {
+                return ServiceResult.error("解析失败，资源包描述文件解读失败",null);
             }
         }
 
@@ -154,7 +146,7 @@ public class PackageServiceImpl implements PackageService {
         if (!file.isDirectory()) {
             String error = "无法删除，因为目标路径不是一个文件夹";
             logger.error(error);
-            return ServiceResult.error(error, "");
+            return ServiceResult.error(error,"");
         } else {
             Integer fileNumber = file.listFiles().length;
             logger.info("目前文件夹下有【" + fileNumber + "】个文件夹或者文件");
@@ -165,10 +157,10 @@ public class PackageServiceImpl implements PackageService {
                 boolean clean = FileUtil.clean(file);
                 if (clean) {
                     logger.info("临时解压文件夹清理完成");
-                    return ServiceResult.success("临时解压文件夹清理完成", "");
+                    return ServiceResult.success("临时解压文件夹清理完成","");
                 } else {
                     logger.info("清理临时解压文件夹失败，可能存在IO错误，导致文件删除不完全，已终止");
-                    return ServiceResult.error("清理临时解压文件夹失败，可能存在IO错误，导致文件删除不完全，已终止", "");
+                    return ServiceResult.error("清理临时解压文件夹失败，可能存在IO错误，导致文件删除不完全，已终止","");
                 }
             }
         }
@@ -192,16 +184,8 @@ public class PackageServiceImpl implements PackageService {
         pendingReviewPackage.setConnectedPackageUid(servicePackageDetailInfo.getConnectedPackageUid());
         pendingReviewPackage.setConnectedDetailInfoId(servicePackageDetailInfoId);
         Integer integer = pendingReviewPackageService.insertPendingReviewPackage(pendingReviewPackage);
-        if (integer == 1) {
+        if (integer == 1){
             logger.info("资源包确认完成");
-            // 调用日志组件，写入数据库
-            LogInfo logInfo = new LogInfo();
-            // Operator 在 LogInfoTime 做了 Action, 目标是Object
-            logInfo.setOperator(uploader);
-            logInfo.setAction("上传新资源");
-            logInfo.setObject(servicePackageDetailInfo.getConnectedPackageOriginalFileName());
-            logInfo.setLogInfoTime(new Date());
-            logInfoService.insertLogInfo(logInfo);
             return ServiceResult.success();
         } else {
             logger.info("资源包确认出错，pendingReview记录写入失败");
