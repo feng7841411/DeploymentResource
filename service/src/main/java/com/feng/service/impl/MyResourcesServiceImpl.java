@@ -6,7 +6,10 @@ import com.feng.entity.packageStatusEntity.BeRemovedPackage;
 import com.feng.entity.packageStatusEntity.PendingReviewPackage;
 import com.feng.entity.returnClass.ServiceResult;
 import com.feng.service.MyResourcesService;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -23,6 +26,11 @@ import java.util.Map;
 @Service
 public class MyResourcesServiceImpl implements MyResourcesService {
 
+
+    @Value("${files.upload.path}")
+    private String fileUploadPath;
+
+    private static final Logger logger = LogManager.getLogger(MyResourcesServiceImpl.class);
 
     private final PendingReviewPackageServiceImpl pendingReviewPackageService;
 
@@ -49,6 +57,8 @@ public class MyResourcesServiceImpl implements MyResourcesService {
         HashMap<String, Object> map = (HashMap<String, Object>) params.get("params");
         String author = (String) map.get("author");
         LinkedList<MyResources> myResources = new LinkedList<>();
+
+        logger.info("传入的author是： " + author);
 
         // pending
         ArrayList<PendingReviewPackage> pendingReviewPackages = (ArrayList<PendingReviewPackage>) pendingReviewPackageService.selectPendingReviewPackageByAuthor(author).getData();

@@ -1,5 +1,6 @@
 package com.feng.service.impl;
 
+import cn.hutool.core.io.FileUtil;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.feng.dao.ServicePackageDetailInfoMapper;
 import com.feng.entity.packageToolEntity.BasicInfoForm;
@@ -8,8 +9,13 @@ import com.feng.entity.packageToolEntity.PackingToolInfo;
 import com.feng.entity.packageToolEntity.ServicePackageDetailInfo;
 import com.feng.entity.returnClass.ServiceResult;
 import com.feng.service.ServicePackageDetailInfoService;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.io.File;
 
 /**
  * @author feng
@@ -22,7 +28,15 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional(rollbackFor = Exception.class)
 public class ServicePackageDetailInfoServiceImpl extends ServiceImpl<ServicePackageDetailInfoMapper, ServicePackageDetailInfo> implements ServicePackageDetailInfoService {
 
+
+
+    @Value("${files.upload.path}")
+    private String fileUploadPath;
+
     private final ServicePackageDetailInfoMapper servicePackageDetailInfoMapper;
+
+    private static final Logger logger = LogManager.getLogger(ServicePackageDetailInfoServiceImpl.class);
+
 
     public ServicePackageDetailInfoServiceImpl(ServicePackageDetailInfoMapper servicePackageDetailInfoMapper) {
         this.servicePackageDetailInfoMapper = servicePackageDetailInfoMapper;
@@ -89,5 +103,28 @@ public class ServicePackageDetailInfoServiceImpl extends ServiceImpl<ServicePack
     public ServiceResult cancelServicePackageDetailInfoById(Integer id) {
         servicePackageDetailInfoMapper.deleteById(id);
         return ServiceResult.success();
+    }
+
+    @Override
+    public ServiceResult deletePackageZipByServicePackageDetailInfoId(Integer id) {
+        ServicePackageDetailInfo servicePackageDetailInfo = servicePackageDetailInfoMapper.selectById(id);
+        String connectedPackageUid = servicePackageDetailInfo.getConnectedPackageUid();
+        logger.info("资源包取消了，尝试删除zip： " + connectedPackageUid);
+        //File uploadFile = new File(fileUploadPath + '/' + fileUid);
+        File file = new File(fileUploadPath + '/' + connectedPackageUid);
+        if ( !file.exists()) {
+            logger.info("没有找到目标文件： " + file.getPath());
+            return ServiceResult.error("尝试删除zip失败，没有对应文件","");
+        } else {
+            boolean del = FileUtil.del(file);
+            if (del) {
+                logger.info("目标zip已经被删除");
+                return ServiceResult.success();
+            } else {
+                logger.warn("尝试删除zip，文件存在，但是删除失败了");
+                return ServiceResult.error("尝试删除zip，文件存在，但是删除失败了","");
+            }
+        }
+
     }
 }

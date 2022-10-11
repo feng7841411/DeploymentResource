@@ -53,5 +53,15 @@ public interface ServicePackageDetailInfoService extends IService<ServicePackage
     public ServiceResult cancelServicePackageDetailInfoById(Integer id);
 
 
+    /**
+     * 取消资源包的时候，另外一个要调用的方法，把已经上传的zip删了
+     * @param id
+     * @return
+     */
+    public ServiceResult deletePackageZipByServicePackageDetailInfoId(Integer id);
+
+
+
+
 
 }

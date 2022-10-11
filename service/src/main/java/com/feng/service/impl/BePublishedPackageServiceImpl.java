@@ -46,7 +46,7 @@ public class BePublishedPackageServiceImpl extends ServiceImpl<BePublishedPackag
         // 写入新表
         BeRemovedPackage beRemovedPackage = new BeRemovedPackage();
         beRemovedPackage.setBeRemovedPackageName(bePublishedPackage.getBePublishedPackageName());
-        beRemovedPackage.setBeRemovedPackageAuthor(bePublishedPackage.getBePublishedPackageName());
+        beRemovedPackage.setBeRemovedPackageAuthor(bePublishedPackage.getBePublishedPackageAuthor());
         beRemovedPackage.setBeRemovedPackageTime(new Date());
         beRemovedPackage.setBeRemovedPackageStatus("已下架");
         beRemovedPackage.setBeRemovedPackageType(bePublishedPackage.getBePublishedPackageType());

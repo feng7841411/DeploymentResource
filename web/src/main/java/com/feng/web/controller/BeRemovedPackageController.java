@@ -84,7 +84,7 @@ public class BeRemovedPackageController {
         Integer integer = beRemovedPackageService.publishPackageAgainst(packageId);
         if (integer != 0) {
             logger.info("下架:" + packageId);
-            logInfoService.insertPublishLogInfo(params);
+            //logInfoService.insertPublishLogInfo(params);
             return Result.success("重新上架操作成功","");
         }else {
             return Result.error("400","修改失败，可能包不存在");

@@ -196,8 +196,9 @@ public class PackageServiceImpl implements PackageService {
     @Override
     public ServiceResult cancelUploadPackage(Map<String, Object> params) {
         HashMap<String, Object> map = (HashMap<String, Object>) params.get("params");
-        String servicePackageDetailInfoId = (String) map.get("servicePackageDetailInfoId");
-        servicePackageDetailInfoService.cancelServicePackageDetailInfoById(Integer.valueOf(servicePackageDetailInfoId));
+        Integer servicePackageDetailInfoId = (Integer) map.get("servicePackageDetailInfoId");
+        servicePackageDetailInfoService.deletePackageZipByServicePackageDetailInfoId(servicePackageDetailInfoId);
+        servicePackageDetailInfoService.cancelServicePackageDetailInfoById(servicePackageDetailInfoId);
         return ServiceResult.success();
     }
 

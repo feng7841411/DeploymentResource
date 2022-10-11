@@ -28,7 +28,7 @@ public class MyResourcesController {
     }
 
 
-    @GetMapping("/getMyResources")
+    @PostMapping("/getMyResources")
     public Result getMyResources(@RequestBody Map<String, Object> params) {
         ServiceResult myResources = myResourcesService.getMyResources(params);
         return Result.success("200",myResources.getData());
