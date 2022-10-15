@@ -11,11 +11,10 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+import springfox.documentation.service.ApiListing;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.Map;
+import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * @author feng
@@ -102,19 +101,34 @@ public class MyResourcesServiceImpl implements MyResourcesService {
         // 模拟一个分页查询和条件筛选
         Integer pageNum = (Integer) map.get("pageNum");
         Integer pageSize = (Integer) map.get("pageSize");
-        Integer startIndex = (pageNum-1) * pageSize;
-        Integer endIndex = (pageNum) * pageSize;
+        String packageName = (String) map.get("packageName");
+
+
+
+        logger.info("我的资源模拟分页查询：");
+        logger.info("pageNum: " + pageNum);
+        logger.info("pageSize: " + pageSize);
+        logger.info("packageName: " + packageName);
+        // 时间排序，sort方法，降序，就是说时间最新的在前面
+        myResources.sort(Comparator.comparing(MyResources::getPackageTime).reversed());
 
         // 字段属性筛选
-
-
-        // 时间排序，sort方法，lambda表达式
+        // 筛选packageName, 注意是contains包含关系，而不是equip
+        List<MyResources> collect = myResources.stream().
+                filter(MyResources -> MyResources.getPackageName().contains(packageName)).collect(Collectors.toList());
+        // 还没有分页查询之前，collect的大小是符合条件的记录数目
+        // 前端拿到了这个total，传过来的pageNum和pageSize就会有范围,只有endIndex有可能超过
+        Integer startIndex = (pageNum-1) * pageSize;
+        Integer endIndex = (pageNum) * pageSize;
+        if (endIndex>collect.size()) {
+            endIndex = collect.size();
+        }
+        // 下标截取的方法是 [startIndex, endIndex), 所以endIndex最大就是List.size
 
         // 返回需要一个list, 一个总数，考虑用map
         HashMap<String, Object> resultMap = new HashMap<>();
-        resultMap.put("records", myResources);
-        resultMap.put("total",myResources.size());
-
+        resultMap.put("records",collect.subList(startIndex,endIndex));
+        resultMap.put("total",collect.size());
         return ServiceResult.success("200",resultMap);
     }
 

@@ -43,12 +43,17 @@ public class PackageServiceImpl implements PackageService {
     private static final Logger logger = LogManager.getLogger(PackageServiceImpl.class);
 
 
-    @Autowired
+    final
     ServicePackageDetailInfoServiceImpl servicePackageDetailInfoService;
 
 
-    @Autowired
+    final
     PendingReviewPackageServiceImpl pendingReviewPackageService;
+
+    public PackageServiceImpl(ServicePackageDetailInfoServiceImpl servicePackageDetailInfoService, PendingReviewPackageServiceImpl pendingReviewPackageService) {
+        this.servicePackageDetailInfoService = servicePackageDetailInfoService;
+        this.pendingReviewPackageService = pendingReviewPackageService;
+    }
 
 
     @Override
@@ -169,7 +174,7 @@ public class PackageServiceImpl implements PackageService {
     @Override
     public ServiceResult confirmUploadPackage(Map<String, Object> params) {
         HashMap<String, Object> map = (HashMap<String, Object>) params.get("params");
-        String uploader = (String) map.get("uploader");
+        String uploader = (String) map.get("operator");
         Integer servicePackageDetailInfoId = (Integer) map.get("servicePackageDetailInfoId");
         logger.info("资源包上传确认消息，上传者：" + uploader + " 对应详情记录的主键：" + servicePackageDetailInfoId);
         PendingReviewPackage pendingReviewPackage = new PendingReviewPackage();
@@ -184,6 +189,8 @@ public class PackageServiceImpl implements PackageService {
         pendingReviewPackage.setConnectedPackageUid(servicePackageDetailInfo.getConnectedPackageUid());
         pendingReviewPackage.setConnectedDetailInfoId(servicePackageDetailInfoId);
         Integer integer = pendingReviewPackageService.insertPendingReviewPackage(pendingReviewPackage);
+        // 2022年10月12日15点16分，确认之后，详情表的isCheck属性要置为true了
+        servicePackageDetailInfoService.confirmServicePackageDetailInfoById(servicePackageDetailInfoId);
         if (integer == 1){
             logger.info("资源包确认完成");
             return ServiceResult.success();

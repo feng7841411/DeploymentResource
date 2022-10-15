@@ -68,84 +68,87 @@ public class LogInfoServiceImpl extends ServiceImpl<LogInfoMapper, LogInfo> impl
     }
 
     @Override
+    public ServiceResult insertUploaderConfirmLogInfo(Map<String, Object> params) {
+        ServiceResult serviceResult = makeLogInfoBasic(params);
+        LogInfo logInfo = (LogInfo) serviceResult.getData();
+        logInfo.setAction("上传资源包");
+        logInfoMapper.insert(logInfo);
+        return ServiceResult.success();
+    }
+
+    @Override
+    public ServiceResult insertUploaderCancelLogInfo(Map<String, Object> params) {
+        ServiceResult serviceResult = makeLogInfoBasic(params);
+        LogInfo logInfo = (LogInfo) serviceResult.getData();
+        logInfo.setAction("上传资源包取消");
+        logInfoMapper.insert(logInfo);
+        return ServiceResult.success();
+    }
+
+    @Override
     public ServiceResult insertRefuseLogInfo(Map<String, Object> params) {
-        HashMap<String, Object> map = (HashMap<String, Object>) params.get("params");
-        // 拆出操作者名字
-        String operator = (String) map.get("operator");
-        // 根据主键，调出详情记录，拿到对应的资源包名字
-        Integer servicePackageDetailInfoId = (Integer) map.get("servicePackageDetailInfoId");
-        ServiceResult serviceResult = servicePackageDetailInfoService.selectServicePackageDetailInfoById(servicePackageDetailInfoId);
-        ServicePackageDetailInfo servicePackageDetailInfo = (ServicePackageDetailInfo) serviceResult.getData();
-        LogInfo logInfo = new LogInfo();
-        logInfo.setOperator(operator);
+        ServiceResult serviceResult = makeLogInfoBasic(params);
+        LogInfo logInfo = (LogInfo) serviceResult.getData();
         logInfo.setAction("拒绝资源包上架");
-        logInfo.setObject(servicePackageDetailInfo.getConnectedPackageOriginalFileName());
-        logInfo.setLogInfoTime(new Date());
         logInfoMapper.insert(logInfo);
         return ServiceResult.success();
     }
 
     @Override
     public ServiceResult insertPublishLogInfo(Map<String, Object> params) {
-        HashMap<String, Object> map = (HashMap<String, Object>) params.get("params");
-        String operator = (String) map.get("operator");
-        Integer servicePackageDetailInfoId = (Integer) map.get("servicePackageDetailInfoId");
-        ServiceResult serviceResult = servicePackageDetailInfoService.selectServicePackageDetailInfoById(servicePackageDetailInfoId);
-        ServicePackageDetailInfo servicePackageDetailInfo = (ServicePackageDetailInfo) serviceResult.getData();
-        LogInfo logInfo = new LogInfo();
-        logInfo.setOperator(operator);
+        ServiceResult serviceResult = makeLogInfoBasic(params);
+        LogInfo logInfo = (LogInfo) serviceResult.getData();
         logInfo.setAction("资源包上架");
-        logInfo.setObject(servicePackageDetailInfo.getConnectedPackageOriginalFileName());
-        logInfo.setLogInfoTime(new Date());
         logInfoMapper.insert(logInfo);
         return ServiceResult.success();
     }
 
     @Override
     public ServiceResult insertRemoveLogInfo(Map<String, Object> params) {
-        HashMap<String, Object> map = (HashMap<String, Object>) params.get("params");
-        String operator = (String) map.get("operator");
-        Integer servicePackageDetailInfoId = (Integer) map.get("servicePackageDetailInfoId");
-        ServiceResult serviceResult = servicePackageDetailInfoService.selectServicePackageDetailInfoById(servicePackageDetailInfoId);
-        ServicePackageDetailInfo servicePackageDetailInfo = (ServicePackageDetailInfo) serviceResult.getData();
-        LogInfo logInfo = new LogInfo();
-        logInfo.setOperator(operator);
+        ServiceResult serviceResult = makeLogInfoBasic(params);
+        LogInfo logInfo = (LogInfo) serviceResult.getData();
         logInfo.setAction("资源包下架");
-        logInfo.setObject(servicePackageDetailInfo.getConnectedPackageOriginalFileName());
-        logInfo.setLogInfoTime(new Date());
         logInfoMapper.insert(logInfo);
         return ServiceResult.success();
     }
 
     @Override
     public ServiceResult insertCheckLogInfo(Map<String, Object> params) {
-        HashMap<String, Object> map = (HashMap<String, Object>) params.get("params");
-        String operator = (String) map.get("operator");
-        Integer servicePackageDetailInfoId = (Integer) map.get("servicePackageDetailInfoId");
-        ServiceResult serviceResult = servicePackageDetailInfoService.selectServicePackageDetailInfoById(servicePackageDetailInfoId);
-        ServicePackageDetailInfo servicePackageDetailInfo = (ServicePackageDetailInfo) serviceResult.getData();
-        LogInfo logInfo = new LogInfo();
-        logInfo.setOperator(operator);
-        logInfo.setAction("资源包扫描");
-        logInfo.setObject(servicePackageDetailInfo.getConnectedPackageOriginalFileName());
-        logInfo.setLogInfoTime(new Date());
+        ServiceResult serviceResult = makeLogInfoBasic(params);
+        LogInfo logInfo = (LogInfo) serviceResult.getData();
+        logInfo.setAction("资源包扫描完成");
         logInfoMapper.insert(logInfo);
         return ServiceResult.success();
     }
 
     @Override
     public ServiceResult insertDeleteLogInfo(Map<String, Object> params) {
-        HashMap<String, Object> map = (HashMap<String, Object>) params.get("params");
-        String operator = (String) map.get("operator");
-        Integer servicePackageDetailInfoId = (Integer) map.get("servicePackageDetailInfoId");
-        ServiceResult serviceResult = servicePackageDetailInfoService.selectServicePackageDetailInfoById(servicePackageDetailInfoId);
-        ServicePackageDetailInfo servicePackageDetailInfo = (ServicePackageDetailInfo) serviceResult.getData();
-        LogInfo logInfo = new LogInfo();
-        logInfo.setOperator(operator);
+        ServiceResult serviceResult = makeLogInfoBasic(params);
+        LogInfo logInfo = (LogInfo) serviceResult.getData();
         logInfo.setAction("资源包删除");
-        logInfo.setObject(servicePackageDetailInfo.getConnectedPackageOriginalFileName());
-        logInfo.setLogInfoTime(new Date());
         logInfoMapper.insert(logInfo);
         return ServiceResult.success();
     }
+
+    @Override
+    public ServiceResult makeLogInfoBasic(Map<String, Object> params) {
+        HashMap<String, Object> map = (HashMap<String, Object>) params.get("params");
+        String operator = (String) map.get("operator");
+        Integer servicePackageDetailInfoId = (Integer) map.get("servicePackageDetailInfoId");
+        ServicePackageDetailInfo servicePackageDetailInfo = null;
+        if (servicePackageDetailInfoId != null) {
+            ServiceResult serviceResult = servicePackageDetailInfoService.selectServicePackageDetailInfoById(servicePackageDetailInfoId);
+            servicePackageDetailInfo = (ServicePackageDetailInfo) serviceResult.getData();
+        }
+        LogInfo logInfo = new LogInfo();
+        if (operator!=null) {
+            logInfo.setOperator(operator);
+        }
+        // action不填，让其他方法来填
+        logInfo.setObject(servicePackageDetailInfo.getConnectedPackageOriginalFileName());
+        logInfo.setLogInfoTime(new Date());
+        return ServiceResult.success("200",logInfo);
+    }
+
+
 }

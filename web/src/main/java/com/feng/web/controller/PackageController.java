@@ -5,10 +5,12 @@ import com.feng.entity.packageToolEntity.PackingToolInfo;
 import com.feng.entity.packageToolEntity.ServicePackageDetailInfo;
 import com.feng.entity.returnClass.Result;
 import com.feng.entity.returnClass.ServiceResult;
+import com.feng.service.impl.LogInfoServiceImpl;
 import com.feng.service.impl.PackageServiceImpl;
 import com.feng.service.impl.ServicePackageDetailInfoServiceImpl;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -33,14 +35,17 @@ public class PackageController {
 
     private static final Logger logger = LogManager.getLogger(PackageController.class);
 
+    private final LogInfoServiceImpl logInfoService;
+
 
     private final ServicePackageDetailInfoServiceImpl servicePackageDetailInfoService;
 
     private final PackageServiceImpl packageService;
 
-    public PackageController(PackageServiceImpl packageService, ServicePackageDetailInfoServiceImpl servicePackageDetailInfoService) {
+    public PackageController(PackageServiceImpl packageService, ServicePackageDetailInfoServiceImpl servicePackageDetailInfoService, LogInfoServiceImpl logInfoService) {
         this.packageService = packageService;
         this.servicePackageDetailInfoService = servicePackageDetailInfoService;
+        this.logInfoService = logInfoService;
     }
 
     @PostMapping("/uploadSingle")
@@ -139,6 +144,8 @@ public class PackageController {
     public Result confirmUploadSingle(@RequestBody Map<String, Object> params) {
         ServiceResult serviceResult = packageService.confirmUploadPackage(params);
         if ("200".equals(serviceResult.getCode())) {
+            // 2022年10月12日 09点14分，这边确认文件，进入待审核队列之后，写个日志记录
+            logInfoService.insertUploaderConfirmLogInfo(params);
             return Result.success();
         } else {
             return Result.error();
@@ -152,6 +159,8 @@ public class PackageController {
      */
     @PostMapping("/cancelUploadSingle")
     public Result cancelUploadSingle(@RequestBody Map<String, Object> params) {
+        logInfoService.insertUploaderCancelLogInfo(params);
+        // 这里因为packageService会删掉detailInfo, 如果等删完了，在下面的if里，会导致想写日志，详情记录已经消失了，会nullPointer
         ServiceResult serviceResult = packageService.cancelUploadPackage(params);
         if ("200".equals(serviceResult.getCode())) {
             return Result.success();

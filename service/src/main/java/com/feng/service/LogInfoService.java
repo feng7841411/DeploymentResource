@@ -34,12 +34,33 @@ public interface LogInfoService extends IService<LogInfo> {
     public ServiceResult insertLogInfo(LogInfo logInfo);
 
 
+
     /**
      * 【资源包删除】记录
      * @param ids
      * @return
+     *
      */
     public ServiceResult deleteLogInfoByIds(List<Integer> ids);
+
+
+    /**
+     * 2022年10月12日10点09分
+     * @param params
+     * @return
+     *
+     * 上传者的包自己确定以后，进如待审核队列，这时应该写入一条日志
+     * XX 上传了一个 XX包
+     */
+    public ServiceResult insertUploaderConfirmLogInfo(Map<String, Object> params);
+
+
+    /**
+     * 资源包取消记录，和上面那个是对偶方法
+     * @param params
+     * @return
+     */
+    public ServiceResult insertUploaderCancelLogInfo(Map<String, Object> params);
 
     /**
      * 【资源包拒绝】记录
@@ -79,5 +100,13 @@ public interface LogInfoService extends IService<LogInfo> {
      * @return
      */
     public ServiceResult insertDeleteLogInfo(Map<String, Object> params);
+
+
+    /**
+     * 这些日志写入方法，重复性太大了，大段的冗余代码，实际上只有Action字段不一样，抽象一个Basic方法出来
+     * @param params
+     * @return
+     */
+    public ServiceResult makeLogInfoBasic(Map<String, Object> params);
 
 }
