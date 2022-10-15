@@ -13,6 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Date;
 import java.util.List;
+import java.util.logging.Logger;
 
 /**
  * Created with IntelliJ IDEA.
@@ -88,6 +89,17 @@ public class BePublishedPackageServiceImpl extends ServiceImpl<BePublishedPackag
                 "BE_PUBLISHED_PACKAGE_STATUS",
                 "CONNECTED_PACKAGE_UID",
                 "CONNECTED_DETAIL_INFO_ID").eq("BE_PUBLISHED_PACKAGE_AUTHOR",author);
+        List<BePublishedPackage> bePublishedPackages = bePublishedPackageMapper.selectList(bePublishedPackageQueryWrapper);
+        return ServiceResult.success("200",bePublishedPackages);
+    }
+
+    /**
+     * 全查询
+     * @return
+     */
+    @Override
+    public ServiceResult getAllBePublishedPackageInfo() {
+        QueryWrapper<BePublishedPackage> bePublishedPackageQueryWrapper = new QueryWrapper<>();
         List<BePublishedPackage> bePublishedPackages = bePublishedPackageMapper.selectList(bePublishedPackageQueryWrapper);
         return ServiceResult.success("200",bePublishedPackages);
     }

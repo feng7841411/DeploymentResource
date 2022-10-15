@@ -5,14 +5,21 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.feng.entity.packageStatusEntity.BePublishedPackage;
 import com.feng.entity.returnClass.Result;
+import com.feng.entity.returnClass.ServiceResult;
 import com.feng.service.impl.BePublishedPackageServiceImpl;
 import com.feng.service.impl.LogInfoServiceImpl;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletResponse;
+import java.io.BufferedInputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.OutputStream;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -30,6 +37,7 @@ import java.util.Map;
 @RestController
 @RequestMapping("/v1/publishedPackage")
 public class BePublishedPackageController {
+
 
 
     private final BePublishedPackageServiceImpl bePublishedPackageService;
@@ -82,6 +90,43 @@ public class BePublishedPackageController {
         logger.info("已发布记录数目查询被调用");
         return Result.success(publishedPackageAsideNumber);
     }
+
+
+    @GetMapping("/getAllPublishedPackage")
+    public Result getAllPublishedPackageInfo() {
+        // 给开设部署用查询，把已发布的包信息全部给出去
+        ServiceResult allBePublishedPackageInfo = bePublishedPackageService.getAllBePublishedPackageInfo();
+        return Result.success("已发布资源信息全查询",allBePublishedPackageInfo.getData());
+    }
+
+    //@GetMapping("/getZipFile")
+    //public void download(@RequestParam("zipFileKey") String zipFileName,
+    //                     HttpServletResponse response) throws Exception {
+    //    File file = new File(filesZipPath+"/" + zipFileName).getAbsoluteFile();
+    //    System.out.println(file.toString());
+    //    if (!file.exists()) {
+    //
+    //    } else {
+    //        response.reset();
+    //        response.setContentType("application/octet-stream");
+    //        response.setCharacterEncoding("utf-8");
+    //        response.setContentLength((int) file.length());
+    //        response.setHeader("Content-Disposition", "attachment;filename=" + zipFileName);
+    //
+    //        BufferedInputStream bis = new BufferedInputStream(new FileInputStream(file));
+    //        byte[] buff = new byte[1024];
+    //        OutputStream os = response.getOutputStream();
+    //        int i = 0;
+    //        while ((i = bis.read(buff)) != -1) {
+    //            os.write(buff, 0, i);
+    //            os.flush();
+    //        }
+    //    }
+    //
+    //
+    //}
+
+
 
 
 }

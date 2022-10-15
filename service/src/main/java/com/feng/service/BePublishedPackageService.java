@@ -47,4 +47,6 @@ public interface BePublishedPackageService extends IService<BePublishedPackage> 
     public ServiceResult selectBePublishedPackageByAuthor(String author);
 
 
+    public ServiceResult getAllBePublishedPackageInfo();
+
 }

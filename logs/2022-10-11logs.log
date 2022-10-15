@@ -1,38 +1,4 @@
-2022-10-11 20:49:20.131 INFO [main][StartupInfoLogger.java:55] - Starting WebApplication using Java 1.8.0_345 on fengjinhe with PID 7524 (C:\Users\冯金河\IdeaProjects\DeploymentResource\web\target\classes started by 冯金河 in C:\Users\冯金河\IdeaProjects\DeploymentResource)
-2022-10-11 20:49:20.144 INFO [main][SpringApplication.java:660] - No active profile set, falling back to default profiles: default
-2022-10-11 20:49:20.930 INFO [main][RepositoryConfigurationDelegate.java:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-10-11 20:49:20.946 INFO [main][RepositoryConfigurationDelegate.java:188] - Finished Spring Data repository scanning in 6 ms. Found 0 JPA repository interfaces.
-2022-10-11 20:49:21.428 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 19201 (http)
-2022-10-11 20:49:21.428 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-19201"]
-2022-10-11 20:49:21.428 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
-2022-10-11 20:49:21.428 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.41]
-2022-10-11 20:49:21.491 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
-2022-10-11 20:49:21.491 INFO [main][ServletWebServerApplicationContext.java:289] - Root WebApplicationContext: initialization completed in 1287 ms
-2022-10-11 20:49:21.508 INFO [main][DruidDataSourceAutoConfigure.java:56] - Init DruidDataSource
-2022-10-11 20:49:21.724 INFO [main][DruidDataSource.java:1003] - {dataSource-1} inited
-2022-10-11 20:49:21.724 INFO [main][H2ConsoleAutoConfiguration.java:68] - H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./web/src/main/resources/H2DataBase/h2db'
-2022-10-11 20:49:21.812 INFO [main][LogHelper.java:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-10-11 20:49:21.844 INFO [main][Version.java:44] - HHH000412: Hibernate ORM core version 5.4.25.Final
-2022-10-11 20:49:21.938 INFO [main][JavaReflectionManager.java:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-10-11 20:49:22.014 INFO [main][Dialect.java:175] - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2022-10-11 20:49:22.423 INFO [main][JtaPlatformInitiator.java:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-10-11 20:49:22.438 INFO [main][AbstractEntityManagerFactoryBean.java:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-10-11 20:49:23.205 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService 'applicationTaskExecutor'
-2022-10-11 20:49:23.314 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-19201"]
-2022-10-11 20:49:23.330 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 19201 (http) with context path ''
-2022-10-11 20:49:23.616 INFO [main][StartupInfoLogger.java:61] - Started WebApplication in 3.982 seconds (JVM running for 5.077)
-2022-10-11 20:50:16.176 INFO [http-nio-19201-exec-1][DirectJDKLog.java:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-10-11 20:50:16.176 INFO [http-nio-19201-exec-1][FrameworkServlet.java:525] - Initializing Servlet 'dispatcherServlet'
-2022-10-11 20:50:16.176 INFO [http-nio-19201-exec-1][FrameworkServlet.java:547] - Completed initialization in 0 ms
-2022-10-11 20:50:16.656 INFO [http-nio-19201-exec-2][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
-2022-10-11 20:50:16.660 INFO [http-nio-19201-exec-5][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
-2022-10-11 20:50:16.660 INFO [http-nio-19201-exec-3][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
-2022-10-11 20:50:18.396 INFO [http-nio-19201-exec-6][LogInfoController.java:61] - 日志分页查询被调用。
-2022-10-11 20:50:19.961 INFO [http-nio-19201-exec-8][PendingReviewPackageController.java:56] - 待审核资源包列表查询
-2022-10-11 20:50:20.002 INFO [http-nio-19201-exec-10][BePublishedPackageController.java:82] - 已发布记录数目查询被调用
-2022-10-11 20:50:20.002 INFO [http-nio-19201-exec-7][BeRemovedPackageController.java:99] - 已下架记录数目查询被调用
-2022-10-11 20:50:20.002 INFO [http-nio-19201-exec-9][PendingReviewPackageController.java:118] - 待审核记录数目查询被调用
-2022-10-11 20:51:38.970 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'applicationTaskExecutor'
-2022-10-11 20:51:38.970 INFO [SpringContextShutdownHook][AbstractEntityManagerFactoryBean.java:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-10-11 20:51:38.973 INFO [SpringContextShutdownHook][DruidDataSource.java:1948] - {dataSource-1} closing ...
-2022-10-11 20:51:38.973 INFO [SpringContextShutdownHook][DruidDataSource.java:2020] - {dataSource-1} closed
+2022-10-12 00:06:33.817 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-12 00:06:33.821 INFO [SpringContextShutdownHook][AbstractEntityManagerFactoryBean.java:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-12 00:06:33.823 INFO [SpringContextShutdownHook][DruidDataSource.java:1948] - {dataSource-1} closing ...
+2022-10-12 00:06:33.824 INFO [SpringContextShutdownHook][DruidDataSource.java:2020] - {dataSource-1} closed
