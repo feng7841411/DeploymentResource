@@ -99,32 +99,34 @@ public class BePublishedPackageController {
         return Result.success("已发布资源信息全查询",allBePublishedPackageInfo.getData());
     }
 
-    //@GetMapping("/getZipFile")
-    //public void download(@RequestParam("zipFileKey") String zipFileName,
-    //                     HttpServletResponse response) throws Exception {
-    //    File file = new File(filesZipPath+"/" + zipFileName).getAbsoluteFile();
-    //    System.out.println(file.toString());
-    //    if (!file.exists()) {
-    //
-    //    } else {
-    //        response.reset();
-    //        response.setContentType("application/octet-stream");
-    //        response.setCharacterEncoding("utf-8");
-    //        response.setContentLength((int) file.length());
-    //        response.setHeader("Content-Disposition", "attachment;filename=" + zipFileName);
-    //
-    //        BufferedInputStream bis = new BufferedInputStream(new FileInputStream(file));
-    //        byte[] buff = new byte[1024];
-    //        OutputStream os = response.getOutputStream();
-    //        int i = 0;
-    //        while ((i = bis.read(buff)) != -1) {
-    //            os.write(buff, 0, i);
-    //            os.flush();
-    //        }
-    //    }
-    //
-    //
-    //}
+    @Value("${files.upload.path}")
+    private String fileUploadPath;
+
+    @GetMapping("/getZipFile")
+    public void download(@RequestParam("zipFileKey") String zipFileName,
+                         HttpServletResponse response) throws Exception {
+        File file = new File(fileUploadPath +"/" + zipFileName).getAbsoluteFile();
+        System.out.println(file.toString());
+        if (!file.exists()) {
+        } else {
+            response.reset();
+            response.setContentType("application/octet-stream");
+            response.setCharacterEncoding("utf-8");
+            response.setContentLength((int) file.length());
+            response.setHeader("Content-Disposition", "attachment;filename=" + zipFileName);
+
+            BufferedInputStream bis = new BufferedInputStream(new FileInputStream(file));
+            byte[] buff = new byte[1024];
+            OutputStream os = response.getOutputStream();
+            int i = 0;
+            while ((i = bis.read(buff)) != -1) {
+                os.write(buff, 0, i);
+                os.flush();
+            }
+        }
+
+
+    }
 
 
 
