@@ -80,6 +80,20 @@ public class PendingReviewPackage {
     private String uploader;
 
 
+    // 2022年10月16日 11点39分 因为3种状态的name,都是上传的zip名字，是那个4段标识.zip，感觉查看效果不是很好
+    // 之前的设计是中文名在“查看详情”里才能看到，考虑了一下Deployment里展示也需要中文名比较好，所以这里3种状态都加一下package里包资源的中文服务名
+    // 需要改的地方：
+    // 1、这个字段一开始进入PendingReview是从JSON里找值
+    // 2、包的三种状态切换，这个值要跟着走
+    // 3、商店的3张表，也全部加这个字段的展示
+    // 4、deployment那边是给了全部的信息，然后deployment挑选的时候，从name改成CnName，这样应该就可以了
+
+    // 这边后面补充的字段，我都命名成了一样的，主要也是感觉看的多眼花了
+
+
+
+    private String packageCnName;
+
 
 
 }

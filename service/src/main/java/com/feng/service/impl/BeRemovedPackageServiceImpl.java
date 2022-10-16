@@ -80,6 +80,8 @@ public class BeRemovedPackageServiceImpl extends ServiceImpl<BeRemovedPackageMap
         bePublishedPackage.setBePublishedPackageType(beRemovedPackage.getBeRemovedPackageType());
         bePublishedPackage.setBePublishedPackageStatus("正常");
         bePublishedPackage.setConnectedDetailInfoId(beRemovedPackage.getConnectedDetailInfoId());
+        // 2022年10月16日 14点19分，package 3种状态增加CnName字段
+        bePublishedPackage.setPackageCnName(beRemovedPackage.getPackageCnName());
         int insert = bePublishedPackageMapper.insert(bePublishedPackage);
         return insert;
     }

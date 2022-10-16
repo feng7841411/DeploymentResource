@@ -8,6 +8,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -52,6 +53,17 @@ public class ServicePackageDetailInfoController {
     }
 
 
-
+    /**
+     * 这个接口给开设部署用，开设部署需要查看详情的时候，来deploymentResources查
+     * @param packageConnectedDetailId
+     * @return
+     */
+    @PostMapping("/getServicePackageDetailInfoById1")
+    public Result getServicePackageDetailInfoById1(Integer packageConnectedDetailId) {
+        logger.info("请求来自开设部署，根据ID查询资源服务包方法被调用, 传入的ID： " + packageConnectedDetailId);
+        ServiceResult serviceResult = servicePackageDetailInfoService.selectServicePackageDetailInfoById(packageConnectedDetailId);
+        ServicePackageDetailInfo servicePackageDetailInfo = (ServicePackageDetailInfo) serviceResult.getData();
+        return Result.success("",servicePackageDetailInfo);
+    }
 
 }

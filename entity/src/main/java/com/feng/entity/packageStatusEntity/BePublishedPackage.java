@@ -69,5 +69,6 @@ public class BePublishedPackage {
     private Integer connectedDetailInfoId;
 
 
+    private String packageCnName;
 
 }

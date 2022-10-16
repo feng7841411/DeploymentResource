@@ -188,6 +188,9 @@ public class PackageServiceImpl implements PackageService {
         pendingReviewPackage.setPendingReviewPackageStatus("待审核");
         pendingReviewPackage.setConnectedPackageUid(servicePackageDetailInfo.getConnectedPackageUid());
         pendingReviewPackage.setConnectedDetailInfoId(servicePackageDetailInfoId);
+        // 2022年10月16日 14点14分，3种包状态增加CnName字段
+        pendingReviewPackage.setPackageCnName(servicePackageDetailInfo.getSoftwareCnName());
+
         Integer integer = pendingReviewPackageService.insertPendingReviewPackage(pendingReviewPackage);
         // 2022年10月12日15点16分，确认之后，详情表的isCheck属性要置为true了
         servicePackageDetailInfoService.confirmServicePackageDetailInfoById(servicePackageDetailInfoId);

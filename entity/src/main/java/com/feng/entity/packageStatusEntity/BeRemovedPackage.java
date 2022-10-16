@@ -69,4 +69,8 @@ public class BeRemovedPackage {
     @TableField(value = "CONNECTED_DETAIL_INFO_ID")
     private Integer connectedDetailInfoId;
 
+
+    private String packageCnName;
+
+
 }

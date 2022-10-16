@@ -107,6 +107,8 @@ public class PendingReviewPackageServiceImpl extends ServiceImpl<PendingReviewPa
         // 记得这个关联的资源包ID也要转过来
         bePublishedPackage.setConnectedPackageUid(pendingReviewPackage.getConnectedPackageUid());
         bePublishedPackage.setConnectedDetailInfoId(pendingReviewPackage.getConnectedDetailInfoId());
+        // 2022年10月16日 14点16分 3种包状态增加CnName字段
+        bePublishedPackage.setPackageCnName(pendingReviewPackage.getPackageCnName());
         return bePublishedPackageMapper.insert(bePublishedPackage);
     }
 
