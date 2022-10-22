@@ -122,6 +122,7 @@ public class PackageServiceImpl implements PackageService {
             if (fileType.equals("json")){
                 jsonFile = file;
             }
+
         }
         if (jsonFile == null) {
             return ServiceResult.error("解析失败，不存在json描述文件",null);
@@ -190,6 +191,12 @@ public class PackageServiceImpl implements PackageService {
         pendingReviewPackage.setConnectedDetailInfoId(servicePackageDetailInfoId);
         // 2022年10月16日 14点14分，3种包状态增加CnName字段
         pendingReviewPackage.setPackageCnName(servicePackageDetailInfo.getSoftwareCnName());
+
+        // 2022年10月19日 18点46分 三种包状态 增加     private String cpuRequests;private String memoryRequests
+        pendingReviewPackage.setCpuRequests(servicePackageDetailInfo.getCpuRequests());
+        pendingReviewPackage.setMemoryRequests(servicePackageDetailInfo.getMemoryRequests());
+
+
 
         Integer integer = pendingReviewPackageService.insertPendingReviewPackage(pendingReviewPackage);
         // 2022年10月12日15点16分，确认之后，详情表的isCheck属性要置为true了

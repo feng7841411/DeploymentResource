@@ -109,6 +109,10 @@ public class PendingReviewPackageServiceImpl extends ServiceImpl<PendingReviewPa
         bePublishedPackage.setConnectedDetailInfoId(pendingReviewPackage.getConnectedDetailInfoId());
         // 2022年10月16日 14点16分 3种包状态增加CnName字段
         bePublishedPackage.setPackageCnName(pendingReviewPackage.getPackageCnName());
+        // 2022年10月19日 18点51分 增加容器服务的cpu memory 的字段
+        bePublishedPackage.setCpuRequests(pendingReviewPackage.getCpuRequests());
+        bePublishedPackage.setMemoryRequests(pendingReviewPackage.getMemoryRequests());
+
         return bePublishedPackageMapper.insert(bePublishedPackage);
     }
 

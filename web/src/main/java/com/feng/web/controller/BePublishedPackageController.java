@@ -114,7 +114,6 @@ public class BePublishedPackageController {
             response.setCharacterEncoding("utf-8");
             response.setContentLength((int) file.length());
             response.setHeader("Content-Disposition", "attachment;filename=" + zipFileName);
-
             BufferedInputStream bis = new BufferedInputStream(new FileInputStream(file));
             byte[] buff = new byte[1024];
             OutputStream os = response.getOutputStream();

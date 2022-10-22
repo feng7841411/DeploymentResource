@@ -52,4 +52,8 @@ public class BasicInfoForm {
     private String minorVersionNumber;
     private String revisionNumber;
 
+    private String cpuRequests;
+    private String memoryRequests;
+
+
 }

@@ -82,6 +82,11 @@ public class ServicePackageDetailInfoServiceImpl extends ServiceImpl<ServicePack
         servicePackageDetailInfo.setDeveloperGroup(developerInfoForm.getDeveloperGroup());
         servicePackageDetailInfo.setDeveloperPhone(developerInfoForm.getDeveloperPhone());
 
+        // 2022年10月19日 18点27分 增加容器服务的cpu和memory信息
+        servicePackageDetailInfo.setCpuRequests(basicInfoForm.getCpuRequests());
+        servicePackageDetailInfo.setMemoryRequests(basicInfoForm.getMemoryRequests());
+
+
         return ServiceResult.success("",servicePackageDetailInfo);
     }
 

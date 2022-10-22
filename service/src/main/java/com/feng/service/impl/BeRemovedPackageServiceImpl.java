@@ -82,6 +82,9 @@ public class BeRemovedPackageServiceImpl extends ServiceImpl<BeRemovedPackageMap
         bePublishedPackage.setConnectedDetailInfoId(beRemovedPackage.getConnectedDetailInfoId());
         // 2022年10月16日 14点19分，package 3种状态增加CnName字段
         bePublishedPackage.setPackageCnName(beRemovedPackage.getPackageCnName());
+        // 2022年10月19日 18点51分 增加容器服务的cpu memory 的字段
+        bePublishedPackage.setCpuRequests(beRemovedPackage.getCpuRequests());
+        bePublishedPackage.setMemoryRequests(beRemovedPackage.getMemoryRequests());
         int insert = bePublishedPackageMapper.insert(bePublishedPackage);
         return insert;
     }

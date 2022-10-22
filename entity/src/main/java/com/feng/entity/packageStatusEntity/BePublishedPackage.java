@@ -71,4 +71,15 @@ public class BePublishedPackage {
 
     private String packageCnName;
 
+
+    /**
+     * 2022年10月19日 18点44分
+     * 容器服务的CPU和内存需求在详情了，但是为了部署那边能拿到这两个值，并发到边缘上，这里也加字段吧，但是感觉这样很不优雅
+     */
+
+    private String cpuRequests;
+    private String memoryRequests;
+
+
+
 }

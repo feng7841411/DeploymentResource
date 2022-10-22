@@ -118,4 +118,15 @@ public class ServicePackageDetailInfo {
      * 这个字段就是两种状态；true、false
      */
     private String isConfirm;
+
+
+    /**
+     * 打包增加cpu和memory
+     *
+     */
+
+    private String cpuRequests;
+    private String memoryRequests;
+
+
 }

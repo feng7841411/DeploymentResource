@@ -95,5 +95,7 @@ public class PendingReviewPackage {
     private String packageCnName;
 
 
+    private String cpuRequests;
+    private String memoryRequests;
 
 }

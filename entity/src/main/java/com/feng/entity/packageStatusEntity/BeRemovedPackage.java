@@ -73,4 +73,9 @@ public class BeRemovedPackage {
     private String packageCnName;
 
 
+    private String cpuRequests;
+    private String memoryRequests;
+
+
+
 }
