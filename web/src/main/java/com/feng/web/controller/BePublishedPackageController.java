@@ -99,6 +99,7 @@ public class BePublishedPackageController {
         return Result.success("已发布资源信息全查询",allBePublishedPackageInfo.getData());
     }
 
+
     @Value("${files.upload.path}")
     private String fileUploadPath;
 
@@ -123,8 +124,6 @@ public class BePublishedPackageController {
                 os.flush();
             }
         }
-
-
     }
 
 

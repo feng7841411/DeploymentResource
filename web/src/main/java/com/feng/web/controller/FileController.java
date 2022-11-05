@@ -2,7 +2,10 @@ package com.feng.web.controller;
 
 import com.feng.entity.desertedEntity.FileInfo;
 import com.feng.entity.returnClass.Result;
+import com.feng.entity.returnClass.ServiceResult;
 import com.feng.service.impl.FileInfoServiceImpl;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -28,7 +31,7 @@ public class FileController {
 
     private final FileInfoServiceImpl fileInfoService;
 
-
+    private static final Logger logger = LogManager.getLogger(FileController.class);
 
     public FileController(FileInfoServiceImpl fileInfoService) {
         this.fileInfoService = fileInfoService;
@@ -38,26 +41,9 @@ public class FileController {
      *
      */
 
-    @PostMapping("/uploadImage")
-    public Result uploadImage(@RequestParam MultipartFile file) {
-        // 读取File 基本信息
-        FileInfo fileInfo = fileInfoService.storeAndGetFileInfo(file);
-        if (fileInfo == null){
-            return Result.error("500","上传文件失败");
-        }
-
-        // 解压读取里面的JSON，写入数据库
 
 
-        // 存入JSON的PackageInfo以后，需要把ID，附在File的最后一个字段；然后FileInfo写入数据库
 
-
-        // 文件编码转入静态文件夹
-
-
-        // 返回结果
-        return Result.success("接收镜像文件成功","");
-    }
     @PostMapping("/uploadPackageTest")
     public Result uploadPackageTest(@RequestParam MultipartFile file) {
         // 读取File 基本信息

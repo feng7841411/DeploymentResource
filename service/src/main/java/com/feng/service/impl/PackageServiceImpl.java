@@ -119,10 +119,14 @@ public class PackageServiceImpl implements PackageService {
         for (File file: files) {
             String fileType = FileUtil.extName(file);
             logger.info("文件类型：" + fileType);
-            if (fileType.equals("json")){
-                jsonFile = file;
+            // 2022年10月27日 10点44分 因为多了一个挂载文件夹，挂载文件夹的type是null，然后判断type是否是json的时候报了一个错
+            // 其实如果有且只有一个json,也可以直接跳出循环
+            if (fileType != null) {
+                if (fileType.equals("json")){
+                    jsonFile = file;
+                    break;
+                }
             }
-
         }
         if (jsonFile == null) {
             return ServiceResult.error("解析失败，不存在json描述文件",null);

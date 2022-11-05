@@ -8,6 +8,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.feng.dao.FileInfoMapper;
 import com.feng.entity.desertedEntity.FileInfo;
+import com.feng.entity.returnClass.ServiceResult;
 import com.feng.service.FileInfoService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -172,5 +173,117 @@ public class FileInfoServiceImpl extends ServiceImpl<FileInfoMapper, FileInfo> i
         return null;
     }
 
+
+    @Override
+    public ServiceResult storeFile(MultipartFile[] files) {
+        logger.info("");
+        logger.info("扫描接收的文件数组信息：");
+        logger.info(files);
+        logger.info("接收文件数组：files_length = " + files.length);
+        for (MultipartFile file: files) {
+            logger.info("文件信息：");
+            logger.info(file.getOriginalFilename());
+            logger.info(file.getSize());
+        }
+        logger.info("扫描接收的文件数组信息完成：");
+        logger.info("");
+        // 1、拿到文件对象
+        MultipartFile file = files[0];
+        // file = "xxfw-xttz-xttz-java.zip"
+        String originalFilename = file.getOriginalFilename();
+        String contentType = FileUtil.extName(originalFilename);
+        // 定义文件唯一标识码
+        // fileUid = "xxxxxx.zip"
+        String fileUid = IdUtil.fastSimpleUUID() + StrUtil.DOT + contentType;
+        File uploadFile = new File(fileUploadPath + '/' + fileUid);
+        // 需要转绝对路径
+        File dest = uploadFile.getAbsoluteFile();
+        // 判断文件存储路径是否存在，若无则新建路径
+        File parentFile = uploadFile.getParentFile();
+        logger.info("originalFileName: " + originalFilename);
+        logger.info("contentType: " + contentType);
+        logger.info("fileUid: " + fileUid);
+        logger.info("uploadFile: " + uploadFile);
+        logger.info("dest: " + dest);
+        logger.info("parentFile: " + parentFile);
+        if (!parentFile.exists()) {
+            parentFile.mkdir();
+            logger.info("当前文件存储路径：" + parentFile + "不存在，已经新建");
+        }
+        try {
+            file.transferTo(dest);
+            // 写一条数据库记录吧
+            logger.info("写入一条文件记录，只记录oriName和Uid");
+            FileInfo fileInfo = new FileInfo();
+            // 	fastjson-1.2.58.tar
+            fileInfo.setFileName(originalFilename);
+            // 	a8a0402c03ba420f8d160f99ab14fd80.tar，返回给前端暂存和最后提交的是Uid
+            fileInfo.setFileUid(fileUid);
+            fileInfoMapper.insert(fileInfo);
+            return ServiceResult.success("文件：" + originalFilename + "存储成功",fileInfo);
+        } catch (IOException e) {
+            e.printStackTrace();
+            return ServiceResult.error("zip文件往存储位置写入失败",null);
+        }
+
+
+
+    }
+
+    @Override
+    public ServiceResult storePublicDataFile(MultipartFile[] files) {
+        logger.info("");
+        logger.info("扫描接收的文件数组信息：");
+        logger.info(files);
+        logger.info("接收文件数组：files_length = " + files.length);
+        for (MultipartFile file: files) {
+            logger.info("文件信息：");
+            logger.info(file.getOriginalFilename());
+            logger.info(file.getSize());
+        }
+        logger.info("扫描接收的文件数组信息完成：");
+        logger.info("");
+        // 1、拿到文件对象
+        MultipartFile file = files[0];
+        // file = "xxfw-xttz-xttz-java.zip"
+        String originalFilename = file.getOriginalFilename();
+        String contentType = FileUtil.extName(originalFilename);
+        // 定义文件唯一标识码
+        // fileUid = "xxxxxx.zip"
+        String fileUid = IdUtil.fastSimpleUUID() + StrUtil.DOT + contentType;
+        File uploadFile = new File(fileUploadPath + '/' + fileUid);
+        // 需要转绝对路径
+        File dest = uploadFile.getAbsoluteFile();
+        // 判断文件存储路径是否存在，若无则新建路径
+        File parentFile = uploadFile.getParentFile();
+        logger.info("originalFileName: " + originalFilename);
+        logger.info("contentType: " + contentType);
+        logger.info("fileUid: " + fileUid);
+        logger.info("uploadFile: " + uploadFile);
+        logger.info("dest: " + dest);
+        logger.info("parentFile: " + parentFile);
+        if (!parentFile.exists()) {
+            parentFile.mkdir();
+            logger.info("当前文件存储路径：" + parentFile + "不存在，已经新建");
+        }
+        try {
+            file.transferTo(dest);
+            // 写一条数据库记录吧
+            logger.info("写入一条文件记录，只记录oriName和Uid");
+            FileInfo fileInfo = new FileInfo();
+            // 	fastjson-1.2.58.tar
+            fileInfo.setFileName(originalFilename);
+            // 	a8a0402c03ba420f8d160f99ab14fd80.tar，返回给前端暂存和最后提交的是Uid
+            fileInfo.setFileUid(fileUid);
+            fileInfo.setFileType("publicData");
+            fileInfoMapper.insert(fileInfo);
+            return ServiceResult.success("文件：" + originalFilename + "存储成功",fileInfo);
+        } catch (IOException e) {
+            e.printStackTrace();
+            return ServiceResult.error("zip文件往存储位置写入失败",null);
+        }
+
+
+    }
 
 }

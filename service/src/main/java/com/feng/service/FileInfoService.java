@@ -2,6 +2,7 @@ package com.feng.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.feng.entity.desertedEntity.FileInfo;
+import com.feng.entity.returnClass.ServiceResult;
 import org.springframework.web.multipart.MultipartFile;
 
 /**
@@ -81,5 +82,11 @@ public interface FileInfoService extends IService<FileInfo> {
      * @return
      */
     public Boolean setFileBeRemoved(Integer fileInfoId);
+
+
+    public ServiceResult storeFile(MultipartFile[] files);
+
+
+    public ServiceResult storePublicDataFile(MultipartFile[] files);
 
 }

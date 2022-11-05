@@ -1,0 +1,30 @@
+2022-10-23 15:32:23.899 INFO [main][StartupInfoLogger.java:55] - Starting WebApplication using Java 1.8.0_345 on fengjinhe with PID 39852 (C:\Users\冯金河\IdeaProjects\DeploymentResource\web\target\classes started by 冯金河 in C:\Users\冯金河\IdeaProjects\DeploymentResource)
+2022-10-23 15:32:23.909 INFO [main][SpringApplication.java:660] - No active profile set, falling back to default profiles: default
+2022-10-23 15:32:24.866 INFO [main][RepositoryConfigurationDelegate.java:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-23 15:32:24.895 INFO [main][RepositoryConfigurationDelegate.java:188] - Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
+2022-10-23 15:32:25.861 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 19201 (http)
+2022-10-23 15:32:25.873 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-19201"]
+2022-10-23 15:32:25.873 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+2022-10-23 15:32:25.873 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-10-23 15:32:25.962 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+2022-10-23 15:32:25.962 INFO [main][ServletWebServerApplicationContext.java:289] - Root WebApplicationContext: initialization completed in 1989 ms
+2022-10-23 15:32:25.982 INFO [main][DruidDataSourceAutoConfigure.java:56] - Init DruidDataSource
+2022-10-23 15:32:26.232 INFO [main][DruidDataSource.java:1003] - {dataSource-1} inited
+2022-10-23 15:32:26.242 INFO [main][H2ConsoleAutoConfiguration.java:68] - H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./web/src/main/resources/H2DataBase/h2db'
+2022-10-23 15:32:26.316 INFO [main][LogHelper.java:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-23 15:32:26.344 INFO [main][Version.java:44] - HHH000412: Hibernate ORM core version 5.4.25.Final
+2022-10-23 15:32:26.431 INFO [main][JavaReflectionManager.java:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-23 15:32:26.512 INFO [main][Dialect.java:175] - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-10-23 15:32:26.963 INFO [main][JtaPlatformInitiator.java:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-23 15:32:26.971 INFO [main][AbstractEntityManagerFactoryBean.java:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-23 15:32:27.815 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-23 15:32:28.061 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-19201"]
+2022-10-23 15:32:28.074 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 19201 (http) with context path ''
+2022-10-23 15:32:28.247 INFO [main][StartupInfoLogger.java:61] - Started WebApplication in 4.697 seconds (JVM running for 5.535)
+2022-10-23 15:32:33.673 INFO [http-nio-19201-exec-1][DirectJDKLog.java:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-23 15:32:33.673 INFO [http-nio-19201-exec-1][FrameworkServlet.java:525] - Initializing Servlet 'dispatcherServlet'
+2022-10-23 15:32:33.679 INFO [http-nio-19201-exec-1][FrameworkServlet.java:547] - Completed initialization in 6 ms
+2022-10-23 16:17:34.703 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-23 16:17:34.703 INFO [SpringContextShutdownHook][AbstractEntityManagerFactoryBean.java:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-23 16:17:34.703 INFO [SpringContextShutdownHook][DruidDataSource.java:1948] - {dataSource-1} closing ...
+2022-10-23 16:17:34.703 INFO [SpringContextShutdownHook][DruidDataSource.java:2020] - {dataSource-1} closed
