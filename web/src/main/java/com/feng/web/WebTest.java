@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @apiNote
  */
 @RestController
-@RequestMapping("/v1/deploymentResource/test")
+@RequestMapping("/v1/test")
 public class WebTest {
 
     /**
