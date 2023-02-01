@@ -48,6 +48,11 @@ public class ServicePackageDetailInfo {
     private String softwareCnName;
 
     /**
+     * 2023年1月12日 英文名，实际上是打包中的serviceName
+     */
+    private String softwareEnName;
+
+    /**
      * 服务组名，前端传入，这个值目前不是必填项
      */
     private String softwareGroupName;

@@ -71,6 +71,8 @@ public class BePublishedPackage {
 
     private String packageCnName;
 
+    private String packageEnName;
+
 
     /**
      * 2022年10月19日 18点44分

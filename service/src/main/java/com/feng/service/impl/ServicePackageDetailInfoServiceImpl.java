@@ -61,6 +61,8 @@ public class ServicePackageDetailInfoServiceImpl extends ServiceImpl<ServicePack
         // BasicInfo
         // 中文名
         servicePackageDetailInfo.setSoftwareCnName(basicInfoForm.getSoftwareCnName());
+        // 英文名
+        servicePackageDetailInfo.setSoftwareEnName(basicInfoForm.getServiceName());
         // 服务组名
         servicePackageDetailInfo.setSoftwareGroupName(basicInfoForm.getSoftwareGroupName());
         // 服务运行环境

@@ -79,8 +79,9 @@ public class PublicDataController {
      */
     @GetMapping("/getAllPublicData")
     public Result getAllPublicData() {
+        logger.info("公共服务包全查询接口被调用");
         ServiceResult allPublicData = publicDataService.getAllPublicData();
-
+        logger.info(allPublicData.getMsg());
         return Result.success("公共数据包全查询",allPublicData.getData());
 
     }

@@ -195,8 +195,8 @@ public class PackageServiceImpl implements PackageService {
         pendingReviewPackage.setConnectedDetailInfoId(servicePackageDetailInfoId);
         // 2022年10月16日 14点14分，3种包状态增加CnName字段
         pendingReviewPackage.setPackageCnName(servicePackageDetailInfo.getSoftwareCnName());
-
-        // 2022年10月19日 18点46分 三种包状态 增加     private String cpuRequests;private String memoryRequests
+        pendingReviewPackage.setPackageEnName(servicePackageDetailInfo.getSoftwareEnName());
+        // 2022年10月19日 18点46分 三种包状态 增加 private String cpuRequests;private String memoryRequests
         pendingReviewPackage.setCpuRequests(servicePackageDetailInfo.getCpuRequests());
         pendingReviewPackage.setMemoryRequests(servicePackageDetailInfo.getMemoryRequests());
 
