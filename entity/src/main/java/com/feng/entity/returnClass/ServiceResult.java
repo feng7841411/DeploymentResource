@@ -63,5 +63,8 @@ public class ServiceResult {
         return new ServiceResult(Constants.CODE_500,msg,data);
     }
 
+    public Boolean isSuccess() {
+        return this.code.equals(Constants.CODE_200);
+    }
 
 }

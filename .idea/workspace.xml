@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="92898f3a-5d93-4cb6-86e9-af7bd4b76f48" name="Changes" comment="1117同步">
+    <list default="true" id="92898f3a-5d93-4cb6-86e9-af7bd4b76f48" name="Changes" comment="0216 增加单点登录的处理逻辑">
+      <change afterPath="$PROJECT_DIR$/dao/src/main/java/com/feng/dao/ConfigurationParameterMapper.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/data/H2DataBase/h2db.mv.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/files/9688805d12b74ba6a91c114f4cc6c3e0.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/files/f901ebaa582f49b4b13c92d6228a90f3.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/H2DataBase/h2db.trace.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entity/src/main/java/com/feng/serviceRegistration/ConfigurationParameter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entity/src/main/java/com/feng/serviceRegistration/ServiceAddress.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/logs/2022-11-09logs.log" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/logs/2022-11-10logs.log" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/logs/2022-11-11logs.log" afterDir="false" />
@@ -21,6 +23,15 @@
       <change afterPath="$PROJECT_DIR$/logs/2022-12-15logs.log" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/logs/2022-12-16logs.log" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/logs/2023-01-07logs.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2023-02-01logs.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2023-02-11logs.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2023-02-16logs.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/feng/serviceRegistration/ConfigurationParameterService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/feng/serviceRegistration/impl/ConfigurationParameterServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/feng/utils/RestTemplateService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/feng/utils/impl/RestTemplateServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/java/com/feng/web/serviceRegistrationController/ConfigurationParameterController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/java/com/feng/web/unifiedUserLogin/UnifiedUserController.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/config.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/css/262.ffc84dc6.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/css/294.ffc84dc6.css" afterDir="false" />
@@ -31,7 +42,7 @@
       <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/css/812.e2a0cc40.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/css/889.ffc84dc6.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/css/96.ffc84dc6.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/css/app.5627e8b0.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/css/app.ecba9d3e.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/css/chunk-vendors.81fd676f.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/favicon.ico" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/fonts/element-icons.f1a45d74.ttf" afterDir="false" />
@@ -65,34 +76,72 @@
       <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/js/96.4cc76901.js.map" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/js/about.635cc00f.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/js/about.635cc00f.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/js/app.75b69df1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/js/app.75b69df1.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/js/app.a81f370e.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/js/app.a81f370e.js.map" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/js/chunk-vendors.505472ca.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/js/chunk-vendors.505472ca.js.map" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/logo32.ico" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entity/src/main/java/com/feng/entity/packageStatusEntity/BePublishedPackage.java" beforeDir="false" afterPath="$PROJECT_DIR$/entity/src/main/java/com/feng/entity/packageStatusEntity/BePublishedPackage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entity/src/main/java/com/feng/entity/packageStatusEntity/BeRemovedPackage.java" beforeDir="false" afterPath="$PROJECT_DIR$/entity/src/main/java/com/feng/entity/packageStatusEntity/BeRemovedPackage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entity/src/main/java/com/feng/entity/packageStatusEntity/PendingReviewPackage.java" beforeDir="false" afterPath="$PROJECT_DIR$/entity/src/main/java/com/feng/entity/packageStatusEntity/PendingReviewPackage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entity/src/main/java/com/feng/entity/packageToolEntity/ServicePackageDetailInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/entity/src/main/java/com/feng/entity/packageToolEntity/ServicePackageDetailInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entity/target/classes/com/feng/entity/packageStatusEntity/BePublishedPackage.class" beforeDir="false" afterPath="$PROJECT_DIR$/entity/target/classes/com/feng/entity/packageStatusEntity/BePublishedPackage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entity/target/classes/com/feng/entity/packageStatusEntity/BeRemovedPackage.class" beforeDir="false" afterPath="$PROJECT_DIR$/entity/target/classes/com/feng/entity/packageStatusEntity/BeRemovedPackage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entity/target/classes/com/feng/entity/packageStatusEntity/PendingReviewPackage.class" beforeDir="false" afterPath="$PROJECT_DIR$/entity/target/classes/com/feng/entity/packageStatusEntity/PendingReviewPackage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/feng/service/impl/BePublishedPackageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/feng/service/impl/BePublishedPackageServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/feng/service/impl/BeRemovedPackageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/feng/service/impl/BeRemovedPackageServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/target/classes/com/feng/dao/BePublishedPackageMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/target/classes/com/feng/dao/BeRemovedPackageMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/target/classes/com/feng/dao/DaoTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/target/classes/com/feng/dao/FileInfoMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/target/classes/com/feng/dao/PackageInfoMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/target/classes/com/feng/dao/PendingReviewPackageMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/target/classes/com/feng/dao/UserInfoMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity/src/main/java/com/feng/entity/returnClass/ServiceResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/entity/src/main/java/com/feng/entity/returnClass/ServiceResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity/target/classes/com/feng/config/MyBatisPlusConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity/target/classes/com/feng/config/MyMetaObjectHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity/target/classes/com/feng/entity/EntityTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity/target/classes/com/feng/entity/User/UserInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity/target/classes/com/feng/entity/desertedEntity/FileInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity/target/classes/com/feng/entity/desertedEntity/PackageInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity/target/classes/com/feng/entity/packageStatusEntity/BePublishedPackage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity/target/classes/com/feng/entity/packageStatusEntity/BeRemovedPackage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity/target/classes/com/feng/entity/packageStatusEntity/PendingReviewPackage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity/target/classes/com/feng/entity/packageToolEntity/BasicInfoForm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity/target/classes/com/feng/entity/packageToolEntity/DeveloperInfoForm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity/target/classes/com/feng/entity/packageToolEntity/ImageInfoForm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity/target/classes/com/feng/entity/packageToolEntity/PackingToolInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity/target/classes/com/feng/entity/returnClass/Constants.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity/target/classes/com/feng/entity/returnClass/Result.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity/target/classes/com/feng/entity/returnClass/ServiceResult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity/target/classes/com/feng/utils/JsonUtils.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/service/src/main/java/com/feng/service/impl/PackageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/feng/service/impl/PackageServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/feng/service/impl/PendingReviewPackageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/feng/service/impl/PendingReviewPackageServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/feng/service/impl/ServicePackageDetailInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/feng/service/impl/ServicePackageDetailInfoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/target/classes/com/feng/service/impl/BePublishedPackageServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/target/classes/com/feng/service/impl/BePublishedPackageServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/target/classes/com/feng/service/impl/BeRemovedPackageServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/target/classes/com/feng/service/impl/BeRemovedPackageServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/target/classes/com/feng/service/impl/PendingReviewPackageServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/target/classes/com/feng/service/impl/PendingReviewPackageServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/feng/web/publicDataController/PublicDataController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/feng/web/publicDataController/PublicDataController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/feng/utils/ZipUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/feng/utils/ZipUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/target/classes/com/feng/service/BePublishedPackageService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/target/classes/com/feng/service/BeRemovedPackageService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/target/classes/com/feng/service/FileInfoService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/target/classes/com/feng/service/PackageService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/target/classes/com/feng/service/PendingReviewPackageService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/target/classes/com/feng/service/ServiceTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/target/classes/com/feng/service/UserInfoService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/target/classes/com/feng/service/impl/BePublishedPackageServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/target/classes/com/feng/service/impl/BeRemovedPackageServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/target/classes/com/feng/service/impl/FileInfoServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/target/classes/com/feng/service/impl/PendingReviewPackageServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/target/classes/com/feng/service/impl/UserInfoServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/target/classes/com/feng/utils/ZipUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/feng/web/WebApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/feng/web/WebApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/feng/web/controller/PackageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/feng/web/controller/PackageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/target/classes/H2DataBase/h2db.mv.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/target/classes/com/feng/web/WebTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/classes/com/feng/web/WebTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/target/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/target/classes/com/feng/web/WebApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/target/classes/com/feng/web/WebTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/target/classes/com/feng/web/config/CorsConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/target/classes/com/feng/web/config/RestTemplateConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/target/classes/com/feng/web/config/SwaggerConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/target/classes/com/feng/web/controller/BePublishedPackageController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/target/classes/com/feng/web/controller/BeRemovedPackageController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/target/classes/com/feng/web/controller/FileController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/target/classes/com/feng/web/controller/PackageController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/target/classes/com/feng/web/controller/PendingReviewPackageController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/target/classes/com/feng/web/controller/UserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/target/classes/log4j2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/target/test-classes/com/feng/web/WebApplicationTests.class" beforeDir="false" />
     </list>
+    <list id="b3fafbf8-f931-450f-8fe2-f159b60be56c" name="2月1日版本同步" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -176,7 +225,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/src/main/resources/static" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/src/main/java/com/feng/web" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -191,10 +240,16 @@
       <recent name="com.feng.service" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\冯金河\IdeaProjects\DeploymentResource\web\src\main\java\com\feng\web" />
+      <recent name="C:\Users\冯金河\IdeaProjects\DeploymentResource\service\src\main\java\com\feng" />
       <recent name="C:\Users\冯金河\IdeaProjects\DeploymentResource\web\src\main\resources\static" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.feng.entity.packageToolEntity" />
+      <recent name="com.feng.serviceRegistration" />
+      <recent name="com.feng.web.unifiedUserLogin" />
+      <recent name="com.feng.dao" />
+      <recent name="com.feng.utils.impl" />
+      <recent name="com.feng.utils" />
     </key>
   </component>
   <component name="RunManager">
@@ -224,6 +279,7 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="92898f3a-5d93-4cb6-86e9-af7bd4b76f48" name="Changes" comment="" />
+      <changelist id="b3fafbf8-f931-450f-8fe2-f159b60be56c" name="2月1日版本同步" comment="" />
       <created>1662796062668</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -343,6 +399,13 @@
       <workItem from="1673491283220" duration="933000" />
       <workItem from="1673493923019" duration="2015000" />
       <workItem from="1673574541468" duration="648000" />
+      <workItem from="1675213346156" duration="260000" />
+      <workItem from="1675237428625" duration="614000" />
+      <workItem from="1675647736706" duration="2894000" />
+      <workItem from="1675858889936" duration="6908000" />
+      <workItem from="1676083052047" duration="3848000" />
+      <workItem from="1676108396699" duration="3815000" />
+      <workItem from="1676531631853" duration="3313000" />
     </task>
     <task id="LOCAL-00001" summary="0913">
       <created>1663025654424</created>
@@ -449,7 +512,21 @@
       <option name="project" value="LOCAL" />
       <updated>1668654963943</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="2月1日版本同步">
+      <created>1675213469675</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1675213469675</updated>
+    </task>
+    <task id="LOCAL-00017" summary="2月1日版本同步">
+      <created>1675213576883</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1675213576883</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -480,7 +557,9 @@
     <MESSAGE value="1022 周六笔记本提交" />
     <MESSAGE value="1105" />
     <MESSAGE value="1117同步" />
-    <option name="LAST_COMMIT_MESSAGE" value="1117同步" />
+    <MESSAGE value="2月1日版本同步" />
+    <MESSAGE value="0216 增加单点登录的处理逻辑" />
+    <option name="LAST_COMMIT_MESSAGE" value="0216 增加单点登录的处理逻辑" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -498,6 +577,11 @@
           <url>file://$PROJECT_DIR$/web/src/main/java/com/feng/web/controller/BePublishedPackageController.java</url>
           <line>97</line>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/service/src/main/java/com/feng/service/impl/PackageServiceImpl.java</url>
+          <line>62</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

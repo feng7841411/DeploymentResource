@@ -97,8 +97,12 @@ public class PackageServiceImpl implements PackageService {
      */
     @Override
     public ServiceResult unZipPackage(String fileUid) {
+
         File srcFile = new File(fileUploadPath + '/' + fileUid);
         File file = new File(fileUnZipPath);
+        logger.info("解压方法unZipPackage被调用");
+        logger.info("待解压文件路径：" + srcFile);
+        logger.info("目标路径：" + fileUid);
         if (!file.exists()) {
             file.mkdir();
             logger.info("临时解压文件夹不存在，已经新建");

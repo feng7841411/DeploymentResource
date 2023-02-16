@@ -21,7 +21,9 @@ spring:
   # 数据源设置
   datasource:
     driver-class-name: org.h2.Driver
-    url: jdbc:h2:file:./web/src/main/resources/H2DataBase/h2db
+#    url: jdbc:h2:file:../DeploymentResource/web/src/main/resources/H2DataBase/h2db
+#    url: jdbc:h2:file:../DeploymentResource/data/DeploymentResourceH2DataBase/h2db
+    url: jdbc:h2:file:./data/H2DataBase/h2db
     username: san
     password:
     type: com.alibaba.druid.pool.DruidDataSource
@@ -66,8 +68,8 @@ spring:
 
   servlet:
     multipart:
-      max-file-size: 3000MB
-      max-request-size: 3000MB
+      max-file-size: 10000MB
+      max-request-size: 10000MB
 
 
 
@@ -76,7 +78,7 @@ server:
   port: 19201
   ip: 0.0.0.0
   tomcat:
-    max-swallow-size: 1000MB
+    max-swallow-size: 10000MB
 
 
 # MP设置
@@ -93,14 +95,14 @@ logging:
 #文件存储路径
 files:
   upload:
-    path: web/src/main/resources/files
+    path: ./data/files
   temp:
-    path: web/src/main/resources/fileTemp
+    path: ./data/fileTemp
   zip:
-    path: web/src/main/resources/zips
+    path: ./data/zips
   scheme:
-    path: web/src/main/resources/scheme
+    path: ./data/scheme
   image:
-    path: web/src/main/resources/image
+    path: ./data/image
   unZip:
-    path: web/src/main/resources/unZip
+    path: ./data/unZip

@@ -12,7 +12,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  */
 @SpringBootApplication
 @ComponentScan(basePackages = "com.feng")
-@EntityScan(basePackages = "com.feng.entity")
+@EntityScan(basePackages = "com.feng")
 @EnableTransactionManagement
 public class WebApplication {
 

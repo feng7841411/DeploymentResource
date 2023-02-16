@@ -4,6 +4,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.io.*;
+import java.nio.charset.Charset;
 import java.util.Enumeration;
 import java.util.List;
 import java.util.zip.ZipEntry;
@@ -34,7 +35,7 @@ public class ZipUtils {
      * @param destDirPath     解压后的目标文件夹
      * @throws RuntimeException 解压失败会抛出运行时异常
      */
-    public static void unZip(File srcFile, String destDirPath) throws RuntimeException {
+    public static void unZip(File srcFile, String destDirPath) throws Exception {
         long start = System.currentTimeMillis();
         // 判断源文件是否存在
         if (!srcFile.exists()) {
@@ -77,7 +78,10 @@ public class ZipUtils {
             long end = System.currentTimeMillis();
             logger.info("解压完成，耗时：" + (end - start) +" ms");
         } catch (Exception e) {
-            throw new RuntimeException("unzip error from ZipUtils", e);
+            logger.info("unzip执行到Exception?");
+            logger.info(e.getMessage());
+            logger.info(e.getStackTrace());
+//            throw new RuntimeException("unzip error from ZipUtils", e);
         } finally {
             if(zipFile != null){
                 try {
