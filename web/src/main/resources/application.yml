@@ -70,7 +70,9 @@ spring:
     multipart:
       max-file-size: 10000MB
       max-request-size: 10000MB
-
+# 与发布有关，如果还是混合部署，不要开启这个
+  resources:
+    static-locations: file:../static
 
 
 # 应用服务 WEB 访问端口

@@ -5,11 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92898f3a-5d93-4cb6-86e9-af7bd4b76f48" name="Changes" comment="0216 增加单点登录的处理逻辑">
-      <change afterPath="$PROJECT_DIR$/dao/src/main/java/com/feng/dao/ConfigurationParameterMapper.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/data/H2DataBase/h2db.mv.db" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/data/H2DataBase/h2db.trace.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/entity/src/main/java/com/feng/serviceRegistration/ConfigurationParameter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/entity/src/main/java/com/feng/serviceRegistration/ServiceAddress.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/files/1ffd1a3d6b6e4ac08fda580ecc2df4dc.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/files/6d5be3d6634a422a87ba7ab9283bf2b7.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/files/72f5d6576c9941d7b8eb4a6f9458164b.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/files/8825a9c354ca405896ceaf4dcd0ef9b5.rar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/files/a916df2c5bb34f439c15887827078e71.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/files/c39e32bea5024a76be70c3d719c0fb34.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/files/c43e4c1120d94f0e9ad348849a15ae34.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/files/d0370202e2454f0b9ecafa29c42d4047.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/files/e0ae23e22c9f4cbbb5063aa5b0b2e454.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entity/src/main/java/com/feng/entity/User/User.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/logs/2022-11-09logs.log" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/logs/2022-11-10logs.log" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/logs/2022-11-11logs.log" afterDir="false" />
@@ -26,120 +33,91 @@
       <change afterPath="$PROJECT_DIR$/logs/2023-02-01logs.log" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/logs/2023-02-11logs.log" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/logs/2023-02-16logs.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/feng/serviceRegistration/ConfigurationParameterService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/feng/serviceRegistration/impl/ConfigurationParameterServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/feng/utils/RestTemplateService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/feng/utils/impl/RestTemplateServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/java/com/feng/web/serviceRegistrationController/ConfigurationParameterController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/java/com/feng/web/unifiedUserLogin/UnifiedUserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/css/262.ffc84dc6.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/css/294.ffc84dc6.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/css/346.7d7d2d04.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/css/381.bbdd4329.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/css/493.6fb4a48a.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/css/80.ffc84dc6.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/css/812.e2a0cc40.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/css/889.ffc84dc6.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/css/96.ffc84dc6.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/css/app.ecba9d3e.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/css/chunk-vendors.81fd676f.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/fonts/element-icons.f1a45d74.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/fonts/element-icons.ff18efd1.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/img/1.e516bdbc.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/img/404.458c248a.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/img/blueBack.a339fe41.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/img/loginPic.282c67b4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/img/logo200.f8807b06.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/ipConfig.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/js/20.9051bcb3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/js/20.9051bcb3.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/js/262.0b0e655c.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/js/262.0b0e655c.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/js/294.40ffaab9.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/js/294.40ffaab9.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/js/346.47343b34.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/js/346.47343b34.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/js/381.74081ca9.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/js/381.74081ca9.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/js/493.89917bd8.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/js/493.89917bd8.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/js/80.8bfa5dc3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/js/80.8bfa5dc3.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/js/812.adda7e7d.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/js/812.adda7e7d.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/js/889.7e02a9bd.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/js/889.7e02a9bd.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/js/96.4cc76901.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/js/96.4cc76901.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/js/about.635cc00f.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/js/about.635cc00f.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/js/app.a81f370e.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/js/app.a81f370e.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/js/chunk-vendors.505472ca.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/js/chunk-vendors.505472ca.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/logo32.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2023-02-17logs.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2023-02-18logs.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2023-02-21logs.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2023-02-22logs.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2023-03-14logs.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/css/224.c034e40f.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/css/421.21eba0c5.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/css/434.32a8978f.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/css/460.081eca5c.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/css/551.982ff7ff.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/css/565.fbc0de3d.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/css/587.c06fdec3.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/css/611.4d9e231f.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/css/app.01f27afd.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/img/backgroud.e3647d8b.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/js/209.99e3e58a.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/js/209.99e3e58a.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/js/224.708f3c87.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/js/224.708f3c87.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/js/421.d58f1132.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/js/421.d58f1132.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/js/434.ce365231.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/js/434.ce365231.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/js/460.fc36221a.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/js/460.fc36221a.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/js/551.1b37bad3.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/js/551.1b37bad3.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/js/565.61dff988.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/js/565.61dff988.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/js/587.b408df0a.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/js/587.b408df0a.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/js/611.a6027170.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/js/611.a6027170.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/js/868.80f2c82b.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/js/868.80f2c82b.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/js/app.30fef19d.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/resources/static/js/app.30fef19d.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/target/classes/com/feng/dao/BePublishedPackageMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/target/classes/com/feng/dao/BeRemovedPackageMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/target/classes/com/feng/dao/DaoTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/target/classes/com/feng/dao/FileInfoMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/target/classes/com/feng/dao/PackageInfoMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/target/classes/com/feng/dao/PendingReviewPackageMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/target/classes/com/feng/dao/UserInfoMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entity/src/main/java/com/feng/entity/returnClass/ServiceResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/entity/src/main/java/com/feng/entity/returnClass/ServiceResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entity/target/classes/com/feng/config/MyBatisPlusConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entity/target/classes/com/feng/config/MyMetaObjectHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entity/target/classes/com/feng/entity/EntityTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entity/target/classes/com/feng/entity/User/UserInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entity/target/classes/com/feng/entity/desertedEntity/FileInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entity/target/classes/com/feng/entity/desertedEntity/PackageInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entity/target/classes/com/feng/entity/packageStatusEntity/BePublishedPackage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entity/target/classes/com/feng/entity/packageStatusEntity/BeRemovedPackage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entity/target/classes/com/feng/entity/packageStatusEntity/PendingReviewPackage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entity/target/classes/com/feng/entity/packageToolEntity/BasicInfoForm.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entity/target/classes/com/feng/entity/packageToolEntity/DeveloperInfoForm.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entity/target/classes/com/feng/entity/packageToolEntity/ImageInfoForm.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entity/target/classes/com/feng/entity/packageToolEntity/PackingToolInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entity/target/classes/com/feng/entity/returnClass/Constants.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entity/target/classes/com/feng/entity/returnClass/Result.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entity/target/classes/com/feng/entity/returnClass/ServiceResult.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entity/target/classes/com/feng/utils/JsonUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/feng/service/impl/PackageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/feng/service/impl/PackageServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/feng/utils/ZipUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/feng/utils/ZipUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/target/classes/com/feng/service/BePublishedPackageService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/target/classes/com/feng/service/BeRemovedPackageService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/target/classes/com/feng/service/FileInfoService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/target/classes/com/feng/service/PackageService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/target/classes/com/feng/service/PendingReviewPackageService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/target/classes/com/feng/service/ServiceTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/target/classes/com/feng/service/UserInfoService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/target/classes/com/feng/service/impl/BePublishedPackageServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/target/classes/com/feng/service/impl/BeRemovedPackageServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/target/classes/com/feng/service/impl/FileInfoServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/target/classes/com/feng/service/impl/PendingReviewPackageServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/target/classes/com/feng/service/impl/UserInfoServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/target/classes/com/feng/utils/ZipUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/feng/web/WebApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/feng/web/WebApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/feng/web/controller/PackageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/feng/web/controller/PackageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity/target/classes/com/feng/entity/packageStatusEntity/BePublishedPackage.class" beforeDir="false" afterPath="$PROJECT_DIR$/entity/target/classes/com/feng/entity/packageStatusEntity/BePublishedPackage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity/target/classes/com/feng/entity/packageStatusEntity/BeRemovedPackage.class" beforeDir="false" afterPath="$PROJECT_DIR$/entity/target/classes/com/feng/entity/packageStatusEntity/BeRemovedPackage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity/target/classes/com/feng/entity/packageStatusEntity/PendingReviewPackage.class" beforeDir="false" afterPath="$PROJECT_DIR$/entity/target/classes/com/feng/entity/packageStatusEntity/PendingReviewPackage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity/target/classes/com/feng/entity/returnClass/ServiceResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/entity/target/classes/com/feng/entity/returnClass/ServiceResult.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/target/classes/com/feng/service/impl/BePublishedPackageServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/target/classes/com/feng/service/impl/BePublishedPackageServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/target/classes/com/feng/service/impl/BeRemovedPackageServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/target/classes/com/feng/service/impl/BeRemovedPackageServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/target/classes/com/feng/service/impl/PendingReviewPackageServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/target/classes/com/feng/service/impl/PendingReviewPackageServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/target/classes/com/feng/utils/ZipUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/target/classes/com/feng/utils/ZipUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/feng/web/unifiedUserLogin/UnifiedUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/feng/web/unifiedUserLogin/UnifiedUserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/resources/static/css/262.ffc84dc6.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/resources/static/css/294.ffc84dc6.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/resources/static/css/381.bbdd4329.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/resources/static/css/493.6fb4a48a.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/resources/static/css/80.ffc84dc6.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/resources/static/css/812.e2a0cc40.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/resources/static/css/889.ffc84dc6.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/resources/static/css/96.ffc84dc6.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/resources/static/css/app.ecba9d3e.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/resources/static/img/1.e516bdbc.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/static/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/resources/static/ipConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/static/ipConfig.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/resources/static/js/20.9051bcb3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/resources/static/js/20.9051bcb3.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/resources/static/js/262.0b0e655c.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/resources/static/js/262.0b0e655c.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/resources/static/js/294.40ffaab9.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/resources/static/js/294.40ffaab9.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/resources/static/js/381.74081ca9.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/resources/static/js/381.74081ca9.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/resources/static/js/493.89917bd8.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/resources/static/js/493.89917bd8.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/resources/static/js/80.8bfa5dc3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/resources/static/js/80.8bfa5dc3.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/resources/static/js/812.adda7e7d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/resources/static/js/812.adda7e7d.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/resources/static/js/889.7e02a9bd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/resources/static/js/889.7e02a9bd.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/resources/static/js/96.4cc76901.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/resources/static/js/96.4cc76901.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/resources/static/js/app.a81f370e.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/resources/static/js/app.a81f370e.js.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/web/target/classes/H2DataBase/h2db.mv.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/target/classes/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/target/classes/com/feng/web/WebApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/target/classes/com/feng/web/WebTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/target/classes/com/feng/web/config/CorsConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/target/classes/com/feng/web/config/RestTemplateConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/target/classes/com/feng/web/config/SwaggerConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/target/classes/com/feng/web/controller/BePublishedPackageController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/target/classes/com/feng/web/controller/BeRemovedPackageController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/target/classes/com/feng/web/controller/FileController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/target/classes/com/feng/web/controller/PackageController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/target/classes/com/feng/web/controller/PendingReviewPackageController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/target/classes/com/feng/web/controller/UserController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/target/classes/log4j2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/target/test-classes/com/feng/web/WebApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/target/classes/com/feng/web/WebApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/classes/com/feng/web/WebApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/target/classes/com/feng/web/WebTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/classes/com/feng/web/WebTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/target/classes/com/feng/web/controller/PackageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/classes/com/feng/web/controller/PackageController.class" afterDir="false" />
     </list>
     <list id="b3fafbf8-f931-450f-8fe2-f159b60be56c" name="2月1日版本同步" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -230,7 +208,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.42490843" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.project.statistic.project.settings" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -245,11 +223,11 @@
       <recent name="C:\Users\冯金河\IdeaProjects\DeploymentResource\web\src\main\resources\static" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.feng.entity.User" />
       <recent name="com.feng.serviceRegistration" />
       <recent name="com.feng.web.unifiedUserLogin" />
       <recent name="com.feng.dao" />
       <recent name="com.feng.utils.impl" />
-      <recent name="com.feng.utils" />
     </key>
   </component>
   <component name="RunManager">
@@ -405,7 +383,21 @@
       <workItem from="1675858889936" duration="6908000" />
       <workItem from="1676083052047" duration="3848000" />
       <workItem from="1676108396699" duration="3815000" />
-      <workItem from="1676531631853" duration="3313000" />
+      <workItem from="1676531631853" duration="9789000" />
+      <workItem from="1676639696473" duration="1600000" />
+      <workItem from="1676701894925" duration="1459000" />
+      <workItem from="1676713987285" duration="1739000" />
+      <workItem from="1676875378754" duration="2833000" />
+      <workItem from="1676972163463" duration="632000" />
+      <workItem from="1677033873547" duration="3619000" />
+      <workItem from="1678344760376" duration="2185000" />
+      <workItem from="1678443034645" duration="623000" />
+      <workItem from="1678506878098" duration="3107000" />
+      <workItem from="1678710117408" duration="710000" />
+      <workItem from="1678761394716" duration="6050000" />
+      <workItem from="1678776625001" duration="720000" />
+      <workItem from="1678845092921" duration="1750000" />
+      <workItem from="1678931021225" duration="726000" />
     </task>
     <task id="LOCAL-00001" summary="0913">
       <created>1663025654424</created>
@@ -526,7 +518,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675213576883</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="0216 增加单点登录的处理逻辑">
+      <created>1676534985535</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1676534985535</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

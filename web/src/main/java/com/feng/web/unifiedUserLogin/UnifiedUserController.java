@@ -3,11 +3,12 @@ package com.feng.web.unifiedUserLogin;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 
+import com.feng.entity.User.User;
 import com.feng.entity.returnClass.Result;
 import com.feng.entity.returnClass.ServiceResult;
 import com.feng.serviceRegistration.impl.ConfigurationParameterServiceImpl;
 import com.feng.utils.impl.RestTemplateServiceImpl;
-import org.apache.catalina.User;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.http.ResponseEntity;
